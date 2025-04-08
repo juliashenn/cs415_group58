@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7op01st4cf44"]
+
+[ext_resource type="Texture2D" uid="uid://bpmuvoiy1mj6g" path="res://assets/UiCozyFree.png" id="1_fpkhv"]
+[ext_resource type="Script" path="res://scripts/PlayButt.gd" id="1_kn2bx"]
+
+[node name="Selection" type="Node2D"]
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 487.0
+offset_top = 280.0
+offset_right = 674.0
+offset_bottom = 346.0
+script = ExtResource("1_kn2bx")
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureButton"]
+texture_filter = 1
+position = Vector2(3, 5)
+scale = Vector2(2, 2)
+texture = ExtResource("1_fpkhv")
+centered = false
+region_enabled = true
+region_rect = Rect2(1, 5, 92, 27)
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
