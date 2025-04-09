@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgubvd7srdh0d"]
+
+[ext_resource type="Texture2D" uid="uid://bqltoog6325qx" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 80.png" id="1_fmu76"]
+[ext_resource type="Texture2D" uid="uid://obgtf0xdubrr" path="res://assets/kitchenUtensils-16x16-Sheet.png" id="2_rl3nf"]
+
+[node name="CuttingBoard" type="StaticBody2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_fmu76")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(20.75, 13.5)
+scale = Vector2(2.075, 1.45)
+texture = ExtResource("2_rl3nf")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(18, 72, 20, 20)
