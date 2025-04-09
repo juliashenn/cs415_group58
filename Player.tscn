@@ -1,10 +1,11 @@
-[gd_scene load_steps=77 format=3 uid="uid://c8xlhy0p8wot0"]
+[gd_scene load_steps=78 format=3 uid="uid://c8xlhy0p8wot0"]
 
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1_icn1u"]
 [ext_resource type="Texture2D" uid="uid://wqr38gyvug4o" path="res://assets/Modern tiles_Free/Characters_free/Bob_idle_anim_16x16.png" id="1_lfv3c"]
-[ext_resource type="Script" path="res://Player.gd" id="1_wmhib"]
 [ext_resource type="Texture2D" uid="uid://dmwvkd8kid8pn" path="res://assets/Modern tiles_Free/Characters_free/Bob_phone_16x16.png" id="2_yapur"]
 [ext_resource type="Texture2D" uid="uid://clc0wmksqa20k" path="res://assets/Modern tiles_Free/Characters_free/Bob_run_16x16.png" id="3_jlfik"]
 [ext_resource type="Texture2D" uid="uid://bl1p7lkrpt3xe" path="res://assets/Modern tiles_Free/Characters_free/Bob_sit3_16x16.png" id="4_pyvx1"]
+[ext_resource type="PackedScene" uid="uid://bvcxx71rhb85a" path="res://interaction_manager.tscn" id="6_j2vlu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_feoa0"]
 atlas = ExtResource("1_lfv3c")
@@ -551,14 +552,16 @@ animations = [{
 radius = 6.0
 height = 22.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+z_index = 1
 scale = Vector2(2, 2)
-script = ExtResource("1_wmhib")
+collision_mask = 9
+script = ExtResource("1_icn1u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_je0rw")
-animation = &"runRight"
+animation = &"phone"
 autoplay = "idleFront"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -567,3 +570,5 @@ shape = SubResource("CapsuleShape2D_gho0f")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
+
+[node name="InteractionManager" parent="." instance=ExtResource("6_j2vlu")]

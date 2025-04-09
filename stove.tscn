@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=3 uid="uid://dfy2v1213lere"]
+
+[ext_resource type="Script" path="res://scripts/stove.gd" id="1_gdtb6"]
+[ext_resource type="Texture2D" uid="uid://daupudxn6fhjo" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 19.png" id="1_knrlc"]
+[ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="2_mvdwu"]
+[ext_resource type="Texture2D" uid="uid://duua6v16bon3" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 493.png" id="4_stve1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1wp8"]
+size = Vector2(40, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8tfon"]
+size = Vector2(78, 91)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6wjoo"]
+bg_color = Color(0.552941, 0.87451, 0.603922, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="Stove" type="StaticBody2D"]
+script = ExtResource("1_gdtb6")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+texture = ExtResource("1_knrlc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 11.5)
+shape = SubResource("RectangleShape2D_g1wp8")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_mvdwu")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(0, 21)
+shape = SubResource("RectangleShape2D_8tfon")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+texture_filter = 1
+offset_left = -19.0
+offset_top = -16.0
+offset_right = 19.0
+offset_bottom = -8.0
+theme_override_font_sizes/font_size = 10
+theme_override_styles/fill = SubResource("StyleBoxFlat_6wjoo")
+value = 50.0
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+
+[node name="Pan" type="TextureRect" parent="."]
+visible = false
+texture_filter = 1
+offset_left = -2.0
+offset_top = 7.0
+offset_right = 15.0
+offset_bottom = 31.0
+texture = ExtResource("4_stve1")
+stretch_mode = 4
+flip_v = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

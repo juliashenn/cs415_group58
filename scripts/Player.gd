@@ -48,3 +48,12 @@ func update_run_animation(direction: Vector2):
 			animated_sprite.play("runFront")
 		else:
 			animated_sprite.play("runBack")
+			
+func update_sit_animation(direction: bool):
+	if direction:
+		animated_sprite.play("sitRight")
+	else:
+		animated_sprite.play("sitLeft")
+		
+func update_animation(ani: String):
+	animated_sprite.play(ani)
