@@ -6,6 +6,9 @@ class_name InteractionArea
 
 var interact: Callable = func():
 	pass
+	
+var type: Callable = func():
+	pass
 
 
 func _on_body_entered(body):

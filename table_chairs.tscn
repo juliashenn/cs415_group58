@@ -8,6 +8,7 @@
 size = Vector2(40, 39)
 
 [node name="TableChairs" type="StaticBody2D"]
+position = Vector2(-39, 2)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -16,6 +17,7 @@ offset_top = -23.0
 offset_right = 59.0
 offset_bottom = 17.0
 texture = ExtResource("1_wtghw")
+metadata/_edit_use_anchors_ = true
 
 [node name="chairRight" parent="." instance=ExtResource("2_qmllm")]
 

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c8ouyklhmtmxh" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 3.png" id="3_vr7gx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3t0ta"]
-size = Vector2(86, 90)
+size = Vector2(69, 70)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uv7g1"]
 size = Vector2(31, 32)
@@ -17,7 +17,7 @@ script = ExtResource("1_n8sj5")
 action_name = "sit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-position = Vector2(-1, 1)
+position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_3t0ta")
 
 [node name="TextureRect" type="TextureRect" parent="."]
