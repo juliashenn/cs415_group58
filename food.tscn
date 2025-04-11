@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://da0u2gmbyt6lu"]
+
+[ext_resource type="Script" path="res://scripts/food.gd" id="1_7id03"]
+[ext_resource type="Texture2D" uid="uid://y6mmp1yegjm5" path="res://assets/Ghostpixxells_pixelfood/05_apple_pie.png" id="1_sklqn"]
+[ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="3_jvgbc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_10rpn"]
+size = Vector2(46, 42)
+
+[node name="Food" type="Node2D" groups=["object"]]
+script = ExtResource("1_7id03")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_sklqn")
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_jvgbc")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("RectangleShape2D_10rpn")
