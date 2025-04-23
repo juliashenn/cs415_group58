@@ -30,10 +30,11 @@ func _on_food_button_pressed(button):
 	
 	foodref.setFood(foodtext.resource_path)
 	foodref.scale = Vector2(0.5, 0.5)
-	
+	foodref.name = "Food"
 	player.add_child(foodref)
 	player.updateObjectPosition(3)
 	player.holdingObject = true
+	
 	visible = false
 	fridge.close()
 	

@@ -1,6 +1,8 @@
 extends Node2D
+class_name Plate
 
 @onready var interaction_area: InteractionArea = $InteractionArea
+@onready var coll: CollisionShape2D = $InteractionArea/CollisionShape2D
 @onready var player = get_tree().get_first_node_in_group("player")
 @onready var food = $Food
 
@@ -13,6 +15,7 @@ func _ready():
 	food.visible = false
 
 func _on_interact():
+#	print("plate interaction")
 	if player.holdingObject and player.has_node("Food") and not hasFood:
 		var f = player.get_node("Food")
 		setFood(f.food)
@@ -40,4 +43,11 @@ func setFood(img):
 	foodpath = img
 
 func _on_check():
-	return player.holdingObject and player.has_node("Food")
+#	return player.holdingObject and player.has_node("Food")
+	if not player.holdingObject:
+		return false
+
+	for child in player.get_children():
+		if child is Food:
+			return true
+	return false

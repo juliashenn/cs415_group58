@@ -40,21 +40,26 @@ func _sort_by_distance_to_player(area1, area2):
 	var area2_to_player = player.position.distance_to(area2.global_position)
 	return area1_to_player < area2_to_player
 	
-	
+
 func _input(event):
 	if event.is_action_pressed("interact") && can_interact && not player.holdingObject:
 		if active_areas.size() > 0 && player.position.distance_to(active_areas[0].global_position) < 100:
-			can_interact = false
-#			label.visible = false
-			
+#			can_interact = false
 			await active_areas[0].interact.call()
-			await get_tree().create_timer(0.1).timeout
-			
-			can_interact = true
+#			can_interact = true
 	elif event.is_action_pressed("interact") and player.holdingObject and can_interact:
-		if active_areas.size() > 0 && player.position.distance_to(active_areas[0].global_position) < 100:
+#		print(active_areas.size())
+		if active_areas.size() > 1 && player.position.distance_to(active_areas[1].global_position) < 100:
+#			print(player.has_node("Food"))
+#			print(player.holdingObject)
+#			print(active_areas[1].type.call())
+#			print(player.position.distance_to(get_tree().get_first_node_in_group("stove").global_position))
+			if active_areas[1].type.call():
+				await active_areas[1].interact.call()
+			else:
+				player.dropObject()
+		elif active_areas.size() > 0 && player.position.distance_to(active_areas[0].global_position) < 100:
 			if active_areas[0].type.call():
 				await active_areas[0].interact.call()
 			else:
 				player.dropObject()
-
