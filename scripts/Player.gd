@@ -74,10 +74,11 @@ func update_animation(ani: String):
 
 func updateObjectPosition(direction: int): # 0 for center, 1 for when player faces left, 2 when facing right, 3 for back
 	var object = null
-	if has_node("Food"):
-		object = $Food
-	elif has_node("Plate"):
-		object = $Plate
+	for child in get_children():
+		if child is Food:
+			object = child
+		elif child is Plate:
+			object = child
 	if object:
 		if not object:
 			object = $Plate
@@ -96,11 +97,20 @@ func updateObjectPosition(direction: int): # 0 for center, 1 for when player fac
 			
 func dropObject():
 	if holdingObject:
+#		print("dropping")
 		var obj_ref
-		if has_node("Food"):
-			obj_ref = $Food
-		else:
-			obj_ref = $Plate
+		for child in get_children():
+			if child is Food:
+				obj_ref = child
+			elif child is Plate:
+				obj_ref = child
+#		if has_node("Food"):
+#			obj_ref = $Food
+#		elif has_node("Plate"):
+#			obj_ref = $Plate
+		if obj_ref == null:
+			holdingObject = false
+			return
 		var pos = obj_ref.global_position
 		remove_child(obj_ref)
 		world.add_child(obj_ref)
@@ -108,16 +118,11 @@ func dropObject():
 		obj_ref.z_index = 0
 		holdingObject = false
 		obj_ref.scale = Vector2(1, 1)
+
 	
-#func giveObject():
-#	if holdingObject:
-#		var obj_ref
-#		if has_node("Food"):
-#			obj_ref = $Food
-#		else:
-#			obj_ref = $Plate
-#
-#		var path = obj_ref.getFood()
-#		remove_child(obj_ref)
-#		obj_ref.queue_free()
+#func giveFood():
+#	if holdingObject and has_node("Food"):
+#		var path = $Food.getFood()
+#		holdingObject = false
+#		$Food.queue_free()
 #		return path

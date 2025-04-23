@@ -33,5 +33,6 @@ func _process(delta):
 	
 
 func _on_timer_timeout():
+	$Timer.stop()
 	$ProgressBar.visible = false
 	$Knife.visible = false

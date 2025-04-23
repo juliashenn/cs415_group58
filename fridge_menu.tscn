@@ -1,22 +1,16 @@
-[gd_scene load_steps=22 format=3 uid="uid://djl2sfnh1uyib"]
+[gd_scene load_steps=16 format=3 uid="uid://djl2sfnh1uyib"]
 
 [ext_resource type="Script" path="res://scripts/fridge_menu.gd" id="1_5hut5"]
 [ext_resource type="Texture2D" uid="uid://bpmuvoiy1mj6g" path="res://assets/UiCozyFree.png" id="1_ob7lp"]
-[ext_resource type="Texture2D" uid="uid://y6mmp1yegjm5" path="res://assets/Ghostpixxells_pixelfood/05_apple_pie.png" id="3_u8m4c"]
-[ext_resource type="Texture2D" uid="uid://bdc8nks6lbdgj" path="res://assets/Ghostpixxells_pixelfood/07_bread.png" id="4_6k0ru"]
-[ext_resource type="Texture2D" uid="uid://dqhxmnsbetx22" path="res://assets/Ghostpixxells_pixelfood/28_cookies.png" id="5_o7sr8"]
-[ext_resource type="Texture2D" uid="uid://y3aedvwg8lcv" path="res://assets/Ghostpixxells_pixelfood/11_bun.png" id="6_f3ufe"]
-[ext_resource type="Texture2D" uid="uid://cyltnxqsnaqsi" path="res://assets/Ghostpixxells_pixelfood/13_bacon.png" id="7_5hphe"]
-[ext_resource type="Texture2D" uid="uid://0cyfyq8edj2t" path="res://assets/Ghostpixxells_pixelfood/18_burrito.png" id="9_81wwc"]
-[ext_resource type="Texture2D" uid="uid://dc13is5wvbrna" path="res://assets/Ghostpixxells_pixelfood/20_bagel.png" id="10_xb2s6"]
-[ext_resource type="Texture2D" uid="uid://cq5ehi76wwrok" path="res://assets/Ghostpixxells_pixelfood/22_cheesecake.png" id="11_xlieb"]
-[ext_resource type="Texture2D" uid="uid://cjdwr8oibwgp4" path="res://assets/Ghostpixxells_pixelfood/26_chocolate.png" id="12_csjig"]
+[ext_resource type="Texture2D" uid="uid://e2rt3870y8w4" path="res://assets/ingredients/bacon_raw.png" id="3_w4jfd"]
+[ext_resource type="Texture2D" uid="uid://bx72dql32rdwf" path="res://assets/ingredients/fish.png" id="4_xbwlw"]
+[ext_resource type="Texture2D" uid="uid://cebrk6enfjlvc" path="res://assets/ingredients/meat.png" id="5_deaky"]
+[ext_resource type="Texture2D" uid="uid://h2udw4kypj45" path="res://assets/ingredients/milk.png" id="6_mr538"]
+[ext_resource type="Texture2D" uid="uid://ifme0rcg0cws" path="res://assets/ingredients/potato.png" id="7_74uid"]
+[ext_resource type="Texture2D" uid="uid://dye5yidv5kios" path="res://assets/ingredients/strawberry.png" id="7_emxdj"]
 [ext_resource type="Texture2D" uid="uid://dqjmmiqs6lt" path="res://assets/ingredients/egg.png" id="12_u1ael"]
-[ext_resource type="Texture2D" uid="uid://d0n6u5btk3iol" path="res://assets/Ghostpixxells_pixelfood/50_giantgummybear.png" id="15_o8ssd"]
 [ext_resource type="Texture2D" uid="uid://ew3afm0gpyvn" path="res://assets/ingredients/cabbage.png" id="16_n3287"]
-[ext_resource type="Texture2D" uid="uid://dmnsq4qrn5dfl" path="res://assets/Ghostpixxells_pixelfood/54_hotdog.png" id="16_ufqg0"]
 [ext_resource type="Texture2D" uid="uid://882k6vr74616" path="res://assets/ingredients/flour.png" id="17_0s4dt"]
-[ext_resource type="Texture2D" uid="uid://bn8lsbleo45e0" path="res://assets/Ghostpixxells_pixelfood/85_roastedchicken.png" id="17_hlx5m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rbb4e"]
 atlas = ExtResource("1_ob7lp")
@@ -76,39 +70,36 @@ columns = 5
 
 [node name="TextureButton" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
-texture_normal = ExtResource("3_u8m4c")
+texture_normal = ExtResource("3_w4jfd")
 
 [node name="TextureButton2" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
-texture_normal = ExtResource("4_6k0ru")
+texture_normal = ExtResource("4_xbwlw")
 
 [node name="TextureButton3" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
-texture_normal = ExtResource("5_o7sr8")
+texture_normal = ExtResource("5_deaky")
 
 [node name="TextureButton4" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
-texture_normal = ExtResource("6_f3ufe")
+texture_normal = ExtResource("6_mr538")
 
 [node name="TextureButton5" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
-texture_normal = ExtResource("7_5hphe")
+texture_normal = ExtResource("7_74uid")
 
 [node name="TextureButton6" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
-texture_normal = ExtResource("9_81wwc")
+texture_normal = ExtResource("7_emxdj")
 
 [node name="TextureButton7" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
-texture_normal = ExtResource("10_xb2s6")
 
 [node name="TextureButton8" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
-texture_normal = ExtResource("11_xlieb")
 
 [node name="TextureButton9" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
-texture_normal = ExtResource("12_csjig")
 
 [node name="TextureButton10" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 texture_filter = 1
@@ -117,15 +108,12 @@ texture_normal = ExtResource("12_u1ael")
 
 [node name="TextureButton11" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
-texture_normal = ExtResource("15_o8ssd")
 
 [node name="TextureButton12" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
-texture_normal = ExtResource("16_ufqg0")
 
 [node name="TextureButton13" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
-texture_normal = ExtResource("17_hlx5m")
 
 [node name="TextureButton14" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2

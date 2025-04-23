@@ -195,17 +195,17 @@ position = Vector2(217, 510)
 [node name="TableChairs10" parent="tables" instance=ExtResource("11_3undw")]
 position = Vector2(901, 504)
 
-[node name="Stove" parent="." instance=ExtResource("12_4ec08")]
+[node name="Stove" parent="." groups=["stove"] instance=ExtResource("12_4ec08")]
 position = Vector2(316, 48)
 
 [node name="CuttingBoard" parent="." instance=ExtResource("13_m22nn")]
 position = Vector2(406, 48)
 
-[node name="Food" parent="." instance=ExtResource("14_3qrsg")]
+[node name="Food" parent="." groups=["food"] instance=ExtResource("14_3qrsg")]
 z_index = 1
 position = Vector2(557, 255)
 
-[node name="Plate" parent="." instance=ExtResource("15_dg7ln")]
+[node name="Plate" parent="." groups=["plate"] instance=ExtResource("15_dg7ln")]
 position = Vector2(614, 252)
 
 [node name="Fridge" parent="." instance=ExtResource("16_dvxpe")]

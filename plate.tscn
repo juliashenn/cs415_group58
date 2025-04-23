@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c2iixnta5l20k"]
+[gd_scene load_steps=5 format=3 uid="uid://c2iixnta5l20k"]
 
-[ext_resource type="Texture2D" uid="uid://docl0dlgawl7w" path="res://assets/Ghostpixxells_pixelfood/01_dish.png" id="1_1vmdg"]
 [ext_resource type="Script" path="res://scripts/plate.gd" id="1_3pa1j"]
-[ext_resource type="Texture2D" uid="uid://y6mmp1yegjm5" path="res://assets/Ghostpixxells_pixelfood/05_apple_pie.png" id="2_psff2"]
+[ext_resource type="Texture2D" uid="uid://ce2f6tvbbau3v" path="res://assets/01_dish.png" id="2_nlu2m"]
 [ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="3_dfp54"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_drkwh"]
@@ -25,7 +24,7 @@ offset_bottom = 22.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("1_1vmdg")
+texture = ExtResource("2_nlu2m")
 
 [node name="Food" type="TextureRect" parent="."]
 visible = false
@@ -34,7 +33,6 @@ offset_left = -14.0
 offset_top = -14.0
 offset_right = 15.0
 offset_bottom = 17.0
-texture = ExtResource("2_psff2")
 expand_mode = 1
 stretch_mode = 4
 
