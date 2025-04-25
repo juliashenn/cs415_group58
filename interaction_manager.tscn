@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bvcxx71rhb85a"]
 
 [ext_resource type="FontFile" uid="uid://dpworkmlwrfwd" path="res://assets/Pixeloid_Font_0_5/TrueType (.ttf)/PixeloidSans.ttf" id="1_catpy"]
-[ext_resource type="Script" path="res://scripts/interaction_manager.gd" id="1_xjen7"]
+[ext_resource type="Script" uid="uid://m46dyr15oeb6" path="res://scripts/interaction_manager.gd" id="1_xjen7"]
 
 [node name="InteractionManager" type="Node2D"]
 script = ExtResource("1_xjen7")

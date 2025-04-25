@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://djl2sfnh1uyib"]
 
-[ext_resource type="Script" path="res://scripts/fridge_menu.gd" id="1_5hut5"]
+[ext_resource type="Script" uid="uid://bw7y4nr4xf0dp" path="res://scripts/fridge_menu.gd" id="1_5hut5"]
 [ext_resource type="Texture2D" uid="uid://bpmuvoiy1mj6g" path="res://assets/UiCozyFree.png" id="1_ob7lp"]
 [ext_resource type="Texture2D" uid="uid://e2rt3870y8w4" path="res://assets/ingredients/bacon_raw.png" id="3_w4jfd"]
 [ext_resource type="Texture2D" uid="uid://bx72dql32rdwf" path="res://assets/ingredients/fish.png" id="4_xbwlw"]

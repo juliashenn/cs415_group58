@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://da0u2gmbyt6lu"]
 
-[ext_resource type="Script" path="res://scripts/food.gd" id="1_7id03"]
+[ext_resource type="Script" uid="uid://e2037mjpq68k" path="res://scripts/food.gd" id="1_7id03"]
 [ext_resource type="Texture2D" uid="uid://bov8hhgc63t5v" path="res://assets/ingredients/banana.png" id="2_feuw1"]
 [ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="3_jvgbc"]
 
