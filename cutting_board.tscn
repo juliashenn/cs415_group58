@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cgubvd7srdh0d"]
 
 [ext_resource type="Texture2D" uid="uid://bqltoog6325qx" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 80.png" id="1_fmu76"]
-[ext_resource type="Script" path="res://scripts/cutting_board.gd" id="1_ry6cn"]
+[ext_resource type="Script" uid="uid://fi2ihlplh0f0" path="res://scripts/cutting_board.gd" id="1_ry6cn"]
 [ext_resource type="Texture2D" uid="uid://obgtf0xdubrr" path="res://assets/kitchenUtensils-16x16-Sheet.png" id="2_rl3nf"]
 [ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="4_qt2xl"]
 

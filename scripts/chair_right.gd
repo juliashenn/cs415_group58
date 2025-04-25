@@ -4,7 +4,7 @@ extends StaticBody2D
 @onready var player = get_tree().get_first_node_in_group("player")
 
 var is_occupied: bool = false
-var sit_right: bool = false  # false for left chairs
+var sit_right: bool = true  # false for left chairs
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -31,4 +31,4 @@ func seat_character(character: Node2D, sit_right: bool):
 	if character.has_method("update_sit_animation"):
 		character.update_sit_animation(sit_right)
 
-	is_occupied = false # false for left chair
+	is_occupied = true # false for left chair

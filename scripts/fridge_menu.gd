@@ -38,4 +38,3 @@ func _on_food_button_pressed(button):
 	visible = false
 	fridge.close()
 	
-

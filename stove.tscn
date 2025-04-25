@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dfy2v1213lere"]
 
-[ext_resource type="Script" path="res://scripts/stove.gd" id="1_gdtb6"]
+[ext_resource type="Script" uid="uid://doidrue4qfm3q" path="res://scripts/stove.gd" id="1_gdtb6"]
 [ext_resource type="Texture2D" uid="uid://daupudxn6fhjo" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 19.png" id="1_knrlc"]
 [ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="2_mvdwu"]
 [ext_resource type="Texture2D" uid="uid://y8ilq1yeqc21" path="res://assets/frying pan.png" id="4_jg10j"]

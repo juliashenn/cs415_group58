@@ -1,6 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://bmp4y3r64mrl4"]
+[gd_scene load_steps=21 format=3 uid="uid://bmp4y3r64mrl4"]
 
-[ext_resource type="Script" path="res://scripts/restaurant.gd" id="1_82xtb"]
+[ext_resource type="Script" uid="uid://npda5a57xqqa" path="res://scripts/restaurant.gd" id="1_82xtb"]
 [ext_resource type="PackedScene" uid="uid://c8xlhy0p8wot0" path="res://Player.tscn" id="2_u2x88"]
 [ext_resource type="Texture2D" uid="uid://dj6mkqdcxbf7o" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 63.png" id="3_2wmmu"]
 [ext_resource type="Texture2D" uid="uid://6tdxqq2h6d5q" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 81.png" id="4_5jf2j"]
@@ -16,12 +16,18 @@
 [ext_resource type="PackedScene" uid="uid://da0u2gmbyt6lu" path="res://food.tscn" id="14_3qrsg"]
 [ext_resource type="PackedScene" uid="uid://c2iixnta5l20k" path="res://plate.tscn" id="15_dg7ln"]
 [ext_resource type="PackedScene" uid="uid://8mw21oglmtr8" path="res://fridge.tscn" id="16_dvxpe"]
+[ext_resource type="PackedScene" uid="uid://4x4shgoweud" path="res://customer.tscn" id="17_mv1iw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i66li"]
 size = Vector2(1156, 72.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q6nsb"]
 size = Vector2(672, 67)
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_womg2"]
+vertices = PackedVector2Array(93, 209.508, 91.9766, 197.906, 121.117, 200.242, 123.133, 350.062, 96.8828, 554.023, 1059.08, 555.969, 1060.91, 344.062)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 0, 3), PackedInt32Array(5, 4, 3, 6)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(83, 210, 87, 564, 1069, 566, 1071, 334, 133, 340, 131, 191, 81, 187)])
 
 [node name="Restaurant" type="Node2D"]
 script = ExtResource("1_82xtb")
@@ -210,3 +216,28 @@ position = Vector2(614, 252)
 
 [node name="Fridge" parent="." instance=ExtResource("16_dvxpe")]
 position = Vector2(469, 22)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+visible = false
+navigation_polygon = SubResource("NavigationPolygon_womg2")
+
+[node name="Customer2" parent="." instance=ExtResource("17_mv1iw")]
+position = Vector2(910.957, 372.053)
+seat_container_path = NodePath("../tables")
+
+[node name="Customer" parent="." instance=ExtResource("17_mv1iw")]
+position = Vector2(111, 298)
+seat_container_path = NodePath("../tables")
+first_line_position = Vector2(108, 303)
+
+[node name="Customer3" parent="." instance=ExtResource("17_mv1iw")]
+seat_container_path = NodePath("../tables")
+
+[node name="Customer4" parent="." instance=ExtResource("17_mv1iw")]
+seat_container_path = NodePath("../tables")
+
+[node name="Customer5" parent="." instance=ExtResource("17_mv1iw")]
+seat_container_path = NodePath("../tables")
+
+[node name="CustomerLineStartMarker" type="Marker2D" parent="."]
+position = Vector2(108, 303)

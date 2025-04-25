@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b7op01st4cf44"]
 
 [ext_resource type="Texture2D" uid="uid://bpmuvoiy1mj6g" path="res://assets/UiCozyFree.png" id="1_fpkhv"]
-[ext_resource type="Script" path="res://scripts/PlayButt.gd" id="1_kn2bx"]
+[ext_resource type="Script" uid="uid://b00aisxbr1ff4" path="res://scripts/PlayButt.gd" id="1_kn2bx"]
 
 [node name="Selection" type="Node2D"]
 

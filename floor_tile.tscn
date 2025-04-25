@@ -1,9 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cq4io4xogukvg"]
-
-[ext_resource type="Texture2D" uid="uid://cx6hv6qd8ehh5" path="res://assets/Modern tiles_Free/Interiors_free/48x48/roombuilder.png" id="1_j8tgx"]
+[gd_scene load_steps=2 format=3 uid="uid://cq4io4xogukvg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dmj5q"]
-atlas = ExtResource("1_j8tgx")
 region = Rect2(528, 432, 144, 96)
 
 [node name="FloorTile" type="GridContainer"]
