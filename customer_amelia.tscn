@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://4x4shgoweud"]
+[gd_scene load_steps=59 format=3 uid="uid://4x4shgoweud"]
 
 [ext_resource type="Script" uid="uid://dl1ry5qu37jbx" path="res://scripts/customer.gd" id="1_f7asb"]
 [ext_resource type="Texture2D" uid="uid://xhh538qwew8c" path="res://assets/Modern tiles_Free/Characters_free/Amelia_run_16x16.png" id="1_r8ta2"]
@@ -406,7 +406,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Customer" type="CharacterBody2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a34gp"]
+radius = 6.0
+height = 22.0
+
+[node name="customer_amelia" type="CharacterBody2D"]
 z_index = 1
 scale = Vector2(2, 2)
 script = ExtResource("1_f7asb")
@@ -417,3 +421,14 @@ animation = &"runRight"
 autoplay = "idleFront"
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+shape = SubResource("CapsuleShape2D_a34gp")
+disabled = true
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
+radius = 8.0
+affect_navigation_mesh = true
+carve_navigation_mesh = true

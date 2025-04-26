@@ -32,3 +32,5 @@ func seat_character(character: Node2D, sit_right: bool):
 		character.update_sit_animation(sit_right)
 
 	is_occupied = true # false for left chair
+	
+	#character.leave_waiting_line()  # Make sure the customer leaves the queue
