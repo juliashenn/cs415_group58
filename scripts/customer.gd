@@ -5,7 +5,7 @@ extends CharacterBody2D
 @onready var sprite = $Sprite
 
 # Exported so you can set these in the editor
-@export var seat_container_path: NodePath  # Path to the node that holds all the chairs (e.g., "tables")
+@export var seat_container_path: NodePath
 @export var waiting_line_positions: Array[Vector2] = [] # List of positions where customers wait if no chairs are open
 
 @export var first_line_position: Vector2 = Vector2(100, 100)
@@ -50,17 +50,23 @@ func try_to_find_seat():
 	var container = get_node(seat_container_path)
 	var closest_seat: Node2D = null
 	var min_dist = INF
+	print("Seat container path is: ", seat_container_path)
+	print("Checking available seats in: ", seat_container_path)
+
 
 	for table in container.get_children():
 		for chair in table.get_children():
 			if chair.has_method("get") and chair.get("is_occupied") == false:
+				print("Table: ", table.name, " | Chair: ", chair.name, " | Occupied: ", chair.is_occupied)
 				var dist = global_position.distance_to(chair.global_position)
 				if dist < min_dist:
 					min_dist = dist
 					closest_seat = chair
+					
 	if closest_seat:
+		print("closest_Seat")
 		assigned_seat = closest_seat
-		assigned_seat.set("is_occupied", true)
+		assigned_seat.is_occupied = true
 		target_position = assigned_seat.global_position
 		agent.target_position = target_position
 	else:
