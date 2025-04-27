@@ -1,11 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://baep800syp21e"]
+[gd_scene load_steps=7 format=3 uid="uid://baep800syp21e"]
 
-[ext_resource type="Script" uid="uid://divofucxg6vke" path="res://scripts/chair_left.gd" id="1_2gsp2"]
+[ext_resource type="Script" path="res://scripts/chair_left.gd" id="1_2gsp2"]
 [ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="1_lid8i"]
 [ext_resource type="Texture2D" uid="uid://c8ouyklhmtmxh" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 3.png" id="2_nd5yd"]
+[ext_resource type="PackedScene" uid="uid://c2iixnta5l20k" path="res://plate.tscn" id="4_0jyi4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xoviv"]
-size = Vector2(71, 71.75)
+size = Vector2(86.5, 71.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ctq0h"]
 size = Vector2(31, 32)
@@ -17,7 +18,8 @@ script = ExtResource("1_2gsp2")
 action_name = "sit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-position = Vector2(-6, -1)
+position = Vector2(-13.75, -1)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_xoviv")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -42,3 +44,6 @@ visible = false
 position = Vector2(-2, -5)
 shape = SubResource("RectangleShape2D_ctq0h")
 disabled = true
+
+[node name="Plate" parent="." instance=ExtResource("4_0jyi4")]
+position = Vector2(-42, -9)

@@ -1,22 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvcxx71rhb85a"]
+[gd_scene load_steps=2 format=3 uid="uid://bvcxx71rhb85a"]
 
-[ext_resource type="FontFile" uid="uid://dpworkmlwrfwd" path="res://assets/Pixeloid_Font_0_5/TrueType (.ttf)/PixeloidSans.ttf" id="1_catpy"]
-[ext_resource type="Script" uid="uid://m46dyr15oeb6" path="res://scripts/interaction_manager.gd" id="1_xjen7"]
+[ext_resource type="Script" path="res://scripts/interaction_manager.gd" id="1_xjen7"]
 
 [node name="InteractionManager" type="Node2D"]
 script = ExtResource("1_xjen7")
-
-[node name="Label" type="Label" parent="."]
-visible = false
-z_index = 20
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -62.5
-offset_right = 62.5
-offset_bottom = 26.0
-grow_horizontal = 2
-theme_override_fonts/font = ExtResource("1_catpy")
-text = "[E] TO INTERACT"
-horizontal_alignment = 1
-vertical_alignment = 1

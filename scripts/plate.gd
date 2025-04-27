@@ -41,6 +41,11 @@ func setFood(img):
 	food.visible = true
 	food.texture = load(img)
 	foodpath = img
+	
+func clearFood():
+	hasFood = false
+	food.visible = false
+	
 
 func _on_check():
 #	return player.holdingObject and player.has_node("Food")

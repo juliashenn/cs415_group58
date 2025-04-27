@@ -13,11 +13,19 @@ var cookingdict = {
 	"res://assets/ingredients/strawberry.png": "res://assets/ingredients/jam_strawberry.png",
 	"res://assets/ingredients/milk.png": "res://assets/ingredients/pudding.png",
 	"res://assets/ingredients/meat.png": "res://assets/ingredients/steak.png",
-	"res://assets/ingredients/potato.png": "res://assets/ingredients/frenchfries.png",
+	"res://assets/ingredients/frenchfries.png": "res://assets/ingredients/fries.png",
 	"res://assets/ingredients/bacon_raw.png": "res://assets/ingredients/bacon.png",
 	"res://assets/ingredients/flour.png": "res://assets/ingredients/bread.png",
-	"res://assets/ingredients/fish.png": "res://assets/ingredients/sushi.png"
+	"res://assets/ingredients/fish.png": "res://assets/ingredients/fish_cooked.png",
+	"res://assets/ingredients/carrot.png": "res://assets/ingredients/carrot_cake.png"
 }
+
+var canchop = [
+	"res://assets/ingredients/friedegg.png", 
+	"res://assets/ingredients/bread.png"
+]
+
+#carrot -> carrot cake, corn -> popcorn
 
 func _ready():
 	$ProgressBar.visible = false
@@ -35,7 +43,7 @@ func _on_check(): # cooking is they are holding food, it gets onto stove, and it
 #	print(player.has_node("Food"))
 	for child in player.get_children():
 		if child is Food:
-			return true
+			return child.cookable
 	return false
 
 func _on_interact():
@@ -58,8 +66,8 @@ func _on_interact():
 		$Food.texture = load(foodpath)
 
 #		circle.visible = true
-		$Pan.visible = true
-		$Food.visible = true
+#		$Pan.visible = true
+#		$Food.visible = true
 #	elif not player.holdingObject:
 #	else:
 		$ProgressBar.visible = true
@@ -93,6 +101,8 @@ func _on_timer_timeout():
 		foodref.setFood(cookingdict[foodpath])
 		foodref.scale = Vector2(0.5, 0.5)
 		foodref.name = "Food"
+		if cookingdict[foodpath] in canchop:
+			foodref.choppable = true
 		player.add_child(foodref)
 		player.updateObjectPosition(3)
 		player.holdingObject = true

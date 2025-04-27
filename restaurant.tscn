@@ -1,6 +1,6 @@
-[gd_scene load_steps=22 format=3 uid="uid://bmp4y3r64mrl4"]
+[gd_scene load_steps=23 format=3 uid="uid://bmp4y3r64mrl4"]
 
-[ext_resource type="Script" uid="uid://npda5a57xqqa" path="res://scripts/restaurant.gd" id="1_82xtb"]
+[ext_resource type="Script" path="res://scripts/restaurant.gd" id="1_82xtb"]
 [ext_resource type="PackedScene" uid="uid://c8xlhy0p8wot0" path="res://Player.tscn" id="2_u2x88"]
 [ext_resource type="Texture2D" uid="uid://dj6mkqdcxbf7o" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 63.png" id="3_2wmmu"]
 [ext_resource type="Texture2D" uid="uid://6tdxqq2h6d5q" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 81.png" id="4_5jf2j"]
@@ -12,12 +12,13 @@
 [ext_resource type="Texture2D" uid="uid://c6rw1g01k7kis" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 83.png" id="9_eie4v"]
 [ext_resource type="PackedScene" uid="uid://bvb3s013wm172" path="res://table_chairs.tscn" id="11_3undw"]
 [ext_resource type="PackedScene" uid="uid://dfy2v1213lere" path="res://stove.tscn" id="12_4ec08"]
-[ext_resource type="PackedScene" uid="uid://cgubvd7srdh0d" path="res://cutting_board.tscn" id="13_m22nn"]
 [ext_resource type="PackedScene" uid="uid://da0u2gmbyt6lu" path="res://food.tscn" id="14_3qrsg"]
 [ext_resource type="PackedScene" uid="uid://c2iixnta5l20k" path="res://plate.tscn" id="15_dg7ln"]
 [ext_resource type="PackedScene" uid="uid://8mw21oglmtr8" path="res://fridge.tscn" id="16_dvxpe"]
 [ext_resource type="PackedScene" uid="uid://4x4shgoweud" path="res://customer_amelia.tscn" id="17_mv1iw"]
-[ext_resource type="Script" uid="uid://cvukqdxbhanbc" path="res://customer_spawner.gd" id="18_obl2x"]
+[ext_resource type="Script" path="res://customer_spawner.gd" id="18_obl2x"]
+[ext_resource type="PackedScene" uid="uid://qhj16dyijiao" path="res://cutting_board.tscn" id="19_3pth6"]
+[ext_resource type="PackedScene" uid="uid://bwlmenkk8j66g" path="res://dish_pile.tscn" id="19_q8ksr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i66li"]
 size = Vector2(1156, 72.25)
@@ -30,7 +31,7 @@ vertices = PackedVector2Array(93, 209.508, 91.9766, 197.906, 121.117, 200.242, 1
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 0, 3), PackedInt32Array(5, 4, 3, 6)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(83, 210, 87, 564, 1069, 566, 1071, 334, 133, 340, 131, 191, 81, 187)])
 
-[node name="Restaurant" type="Node2D"]
+[node name="Restaurant" type="Node2D" groups=["restaurant"]]
 script = ExtResource("1_82xtb")
 
 [node name="Floor" type="TextureRect" parent="."]
@@ -205,9 +206,6 @@ position = Vector2(901, 504)
 [node name="Stove" parent="." groups=["stove"] instance=ExtResource("12_4ec08")]
 position = Vector2(316, 48)
 
-[node name="CuttingBoard" parent="." instance=ExtResource("13_m22nn")]
-position = Vector2(406, 48)
-
 [node name="Food" parent="." groups=["food"] instance=ExtResource("14_3qrsg")]
 z_index = 1
 position = Vector2(557, 255)
@@ -237,3 +235,9 @@ seat_container_path = NodePath("../tables")
 [node name="SpawnTimer" type="Timer" parent="CustomerSpawner"]
 wait_time = 0.5
 autostart = true
+
+[node name="Cutting" parent="." instance=ExtResource("19_3pth6")]
+position = Vector2(389, 48)
+
+[node name="dishPile" parent="." instance=ExtResource("19_q8ksr")]
+position = Vector2(535, 45)
