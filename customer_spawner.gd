@@ -19,7 +19,7 @@ func _on_spawn_timer_timeout():
 	var waiting_customers = get_tree().get_nodes_in_group("waiting_customers")
 	
 	if waiting_customers.size() >= 5:
-		print("Waiting line full! Not spawning new customer.")
+#		print("Waiting line full! Not spawning new customer.")
 		return  # Don't spawn if 5 or more customers are waiting
 
 	spawn_random_customer()

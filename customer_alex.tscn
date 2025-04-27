@@ -1,6 +1,6 @@
 [gd_scene load_steps=55 format=3 uid="uid://dqk5shdm1rnw3"]
 
-[ext_resource type="Script" uid="uid://dl1ry5qu37jbx" path="res://scripts/customer.gd" id="1_5od4o"]
+[ext_resource type="Script" path="res://scripts/customer.gd" id="1_5od4o"]
 [ext_resource type="Texture2D" uid="uid://cilovyt31kgeb" path="res://assets/Modern tiles_Free/Characters_free/Alex_idle_anim_16x16.png" id="1_63mbx"]
 [ext_resource type="Texture2D" uid="uid://d1jrhtyobx2st" path="res://assets/Modern tiles_Free/Characters_free/Alex_run_16x16.png" id="2_5od4o"]
 [ext_resource type="Texture2D" uid="uid://cwb3qpuvj1s5v" path="res://assets/Modern tiles_Free/Characters_free/Alex_sit3_16x16.png" id="3_5fpov"]
@@ -394,6 +394,7 @@ scale = Vector2(2, 2)
 script = ExtResource("1_5od4o")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_xktha")
 animation = &"sitRight"
 autoplay = "idleFront"
@@ -407,5 +408,3 @@ disabled = true
 
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
 radius = 8.0
-affect_navigation_mesh = true
-carve_navigation_mesh = true

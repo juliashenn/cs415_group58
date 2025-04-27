@@ -6,6 +6,20 @@ extends Control
 
 const FoodScene = preload("res://food.tscn")
 
+var cookchop = {
+	"res://assets/ingredients/meat.png": [true, true],
+	"res://assets/ingredients/flour.png": [true, false],
+	"res://assets/ingredients/egg.png": [true, false],
+	"res://assets/ingredients/corn.png": [true, false],
+	"res://assets/ingredients/carrot.png": [true, false],
+	"res://assets/ingredients/cabbage.png": [false, true],
+	"res://assets/ingredients/chocolate.png": [false, false],
+	"res://assets/ingredients/fish.png": [true, true],
+	"res://assets/ingredients/milk.png": [true, false],
+	"res://assets/ingredients/potato.png": [false, true],
+	"res://assets/ingredients/strawberry.png": [true, false]
+}
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	for button in get_tree().get_nodes_in_group("foodButton"):
@@ -27,10 +41,15 @@ func _on_texture_button_pressed():
 func _on_food_button_pressed(button):
 	var foodtext = button.texture_normal
 	var foodref = load("res://food.tscn").instantiate()
-	
-	foodref.setFood(foodtext.resource_path)
+	if foodtext is AtlasTexture:
+		foodtext = foodtext.atlas.resource_path
+	else:
+		foodtext = foodtext.resource_path
+	foodref.setFood(foodtext)
 	foodref.scale = Vector2(0.5, 0.5)
 	foodref.name = "Food"
+	foodref.cookable = cookchop[foodtext][0]
+	foodref.choppable = cookchop[foodtext][1]
 	player.add_child(foodref)
 	player.updateObjectPosition(3)
 	player.holdingObject = true

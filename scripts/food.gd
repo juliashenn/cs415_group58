@@ -9,7 +9,8 @@ var food: String = ""
 @onready var player = get_tree().get_first_node_in_group("player")
 
 var SPEED: float = 1
-
+var cookable = false
+var choppable = false
 
 func _ready():
 	interaction_area.interact = Callable(self, "_on_interact")

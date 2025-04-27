@@ -1,14 +1,16 @@
-[gd_scene load_steps=16 format=3 uid="uid://djl2sfnh1uyib"]
+[gd_scene load_steps=20 format=3 uid="uid://djl2sfnh1uyib"]
 
-[ext_resource type="Script" uid="uid://bw7y4nr4xf0dp" path="res://scripts/fridge_menu.gd" id="1_5hut5"]
+[ext_resource type="Script" path="res://scripts/fridge_menu.gd" id="1_5hut5"]
 [ext_resource type="Texture2D" uid="uid://bpmuvoiy1mj6g" path="res://assets/UiCozyFree.png" id="1_ob7lp"]
-[ext_resource type="Texture2D" uid="uid://e2rt3870y8w4" path="res://assets/ingredients/bacon_raw.png" id="3_w4jfd"]
 [ext_resource type="Texture2D" uid="uid://bx72dql32rdwf" path="res://assets/ingredients/fish.png" id="4_xbwlw"]
 [ext_resource type="Texture2D" uid="uid://cebrk6enfjlvc" path="res://assets/ingredients/meat.png" id="5_deaky"]
 [ext_resource type="Texture2D" uid="uid://h2udw4kypj45" path="res://assets/ingredients/milk.png" id="6_mr538"]
 [ext_resource type="Texture2D" uid="uid://ifme0rcg0cws" path="res://assets/ingredients/potato.png" id="7_74uid"]
 [ext_resource type="Texture2D" uid="uid://dye5yidv5kios" path="res://assets/ingredients/strawberry.png" id="7_emxdj"]
+[ext_resource type="Texture2D" uid="uid://dissc6j6rqiht" path="res://assets/ingredients/corn.png" id="9_rvfqa"]
+[ext_resource type="Texture2D" uid="uid://b1sk3o2pwuwdm" path="res://assets/ingredients/carrot.png" id="11_64w1d"]
 [ext_resource type="Texture2D" uid="uid://dqjmmiqs6lt" path="res://assets/ingredients/egg.png" id="12_u1ael"]
+[ext_resource type="Texture2D" uid="uid://bd3aneqj1dnvp" path="res://assets/ingredients/chocolate.png" id="13_tg21c"]
 [ext_resource type="Texture2D" uid="uid://ew3afm0gpyvn" path="res://assets/ingredients/cabbage.png" id="16_n3287"]
 [ext_resource type="Texture2D" uid="uid://882k6vr74616" path="res://assets/ingredients/flour.png" id="17_0s4dt"]
 
@@ -17,6 +19,16 @@ atlas = ExtResource("1_ob7lp")
 region = Rect2(0, 160, 100, 100)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5w8er"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cx748"]
+atlas = ExtResource("9_rvfqa")
+region = Rect2(0, 0, 16, 16)
+margin = Rect2(3, 3, 6, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m45f1"]
+atlas = ExtResource("11_64w1d")
+region = Rect2(0, 0, 16, 16)
+margin = Rect2(3, 3, 6, 6)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a6luc"]
 atlas = ExtResource("1_ob7lp")
@@ -70,7 +82,7 @@ columns = 5
 
 [node name="TextureButton" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
-texture_normal = ExtResource("3_w4jfd")
+texture_normal = ExtResource("17_0s4dt")
 
 [node name="TextureButton2" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
@@ -86,7 +98,7 @@ texture_normal = ExtResource("6_mr538")
 
 [node name="TextureButton5" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
-texture_normal = ExtResource("7_74uid")
+texture_normal = ExtResource("12_u1ael")
 
 [node name="TextureButton6" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
@@ -94,17 +106,22 @@ texture_normal = ExtResource("7_emxdj")
 
 [node name="TextureButton7" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
+texture_normal = SubResource("AtlasTexture_cx748")
+stretch_mode = 0
 
 [node name="TextureButton8" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
+texture_normal = ExtResource("16_n3287")
 
 [node name="TextureButton9" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
+texture_normal = SubResource("AtlasTexture_m45f1")
+stretch_mode = 0
 
 [node name="TextureButton10" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 texture_filter = 1
 layout_mode = 2
-texture_normal = ExtResource("12_u1ael")
+texture_normal = ExtResource("7_74uid")
 
 [node name="TextureButton11" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
@@ -117,11 +134,10 @@ layout_mode = 2
 
 [node name="TextureButton14" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
-texture_normal = ExtResource("16_n3287")
+texture_normal = ExtResource("13_tg21c")
 
 [node name="TextureButton15" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
-texture_normal = ExtResource("17_0s4dt")
 
 [node name="TextureButton" type="TextureButton" parent="."]
 texture_filter = 1

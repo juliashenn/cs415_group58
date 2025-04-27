@@ -5,22 +5,26 @@ extends StaticBody2D
 
 var is_occupied: bool = false
 var sit_right: bool = false  # false for left chairs
+var servedFood = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	interaction_area.interact = Callable(self, "_on_interact")
+	interaction_area.type = Callable(self, "_on_check")
 
-#func _on_interact():
-##	$CollisionShape2D.disabled = true
-	#player.position = $TextureRect.global_position
-	#player.position.x += 18
-	#player.position.y -= 8
-	#print("Player sitting at left chair: ", player.position)
-#
-	#player.update_sit_animation(false)
-	#
+func _on_check(): # cooking is they are holding food, it gets onto board, and itll return to their hands chopped
+#	print(player.holdingObject)
+	if not player.holdingObject:
+		return false
+#	print(player.has_node("Food"))
+	for child in player.get_children():
+		if child is Plate:
+			return child.hasFood
+	return false
+
 func _on_interact():
-	seat_character(player, sit_right)
+	pass
+#	seat_character(player, sit_right)
 	
 # seating customers and players
 func seat_character(character: Node2D, sit_right: bool):
