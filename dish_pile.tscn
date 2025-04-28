@@ -27,7 +27,7 @@ position = Vector2(41.5, 8.5)
 shape = SubResource("RectangleShape2D_s0phm")
 
 [node name="InteractionArea" parent="." instance=ExtResource("3_hc7un")]
-position = Vector2(41, 10)
+position = Vector2(41, -2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 position = Vector2(2, 22.375)

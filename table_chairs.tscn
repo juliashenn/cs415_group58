@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://baep800syp21e" path="res://chair_left.tscn" id="3_7lscr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1cu6v"]
-size = Vector2(63, 49)
+size = Vector2(63, 22)
 
 [node name="TableChairs" type="StaticBody2D"]
 position = Vector2(-39, 2)
@@ -27,6 +27,5 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(107, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(50.5, 1.5)
+position = Vector2(50.5, -12)
 shape = SubResource("RectangleShape2D_1cu6v")

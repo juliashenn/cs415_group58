@@ -34,13 +34,13 @@ func _sort_by_distance_to_player(area1, area2):
 
 func _input(event):
 	if event.is_action_pressed("interact") && can_interact && not player.holdingObject:
-		if active_areas.size() > 0 && player.position.distance_to(active_areas[0].global_position) < 50:
+		if active_areas.size() > 0 && active_areas[0].has_player_inside():
 #			can_interact = false
 			await active_areas[0].interact.call()
 #			can_interact = true
 	elif event.is_action_pressed("interact") and player.holdingObject and can_interact:
 #		print(active_areas.size())
-		if active_areas.size() > 1 && player.position.distance_to(active_areas[1].global_position) < 50:
+		if active_areas.size() > 1 && active_areas[1].has_player_inside():
 #			print(player.has_node("Food"))
 #			print(player.holdingObject)
 #			print(active_areas[1].type.call())
@@ -49,7 +49,7 @@ func _input(event):
 				await active_areas[1].interact.call()
 			else:
 				player.dropObject()
-		elif active_areas.size() > 0 && player.position.distance_to(active_areas[0].global_position) < 50:
+		elif active_areas.size() > 0 && active_areas[0].has_player_inside():
 			print(active_areas[0].type.call())
 			if active_areas[0].type.call():
 				await active_areas[0].interact.call()
