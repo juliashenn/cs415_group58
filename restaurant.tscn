@@ -27,11 +27,11 @@ size = Vector2(1156, 72.25)
 size = Vector2(672, 67)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_womg2"]
-vertices = PackedVector2Array(93, 209.508, 91.9766, 197.906, 121.117, 200.242, 123.133, 350.062, 96.8828, 554.023, 1059.08, 555.969, 1060.91, 344.062)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 0, 3), PackedInt32Array(5, 4, 3, 6)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(83, 210, 87, 564, 1069, 566, 1071, 334, 133, 340, 131, 191, 81, 187)])
+vertices = PackedVector2Array(83, 210, 81, 187, 131, 191, 133, 340, 87, 564, 1069, 566, 1070.13, 434.522, 1071, 334)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 0, 3), PackedInt32Array(5, 4, 3, 6), PackedInt32Array(6, 3, 7)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(83, 210, 87, 564, 1069, 566, 1070.13, 434.522, 1071, 334, 133, 340, 131, 191, 81, 187)])
 
-[node name="Restaurant" type="Node2D" groups=["restaurant"]]
+[node name="Restaurant" type="Node2D"]
 script = ExtResource("1_82xtb")
 
 [node name="Floor" type="TextureRect" parent="."]
@@ -174,34 +174,34 @@ one_way_collision = true
 [node name="tables" type="Node" parent="."]
 
 [node name="TableChairs" parent="tables" instance=ExtResource("11_3undw")]
-position = Vector2(563, 408)
+position = Vector2(542, 386)
 
 [node name="TableChairs2" parent="tables" instance=ExtResource("11_3undw")]
-position = Vector2(734, 407)
+position = Vector2(734, 384)
 
 [node name="TableChairs3" parent="tables" instance=ExtResource("11_3undw")]
-position = Vector2(392, 410)
+position = Vector2(350, 387)
 
 [node name="TableChairs4" parent="tables" instance=ExtResource("11_3undw")]
-position = Vector2(220, 412)
+position = Vector2(157, 386)
 
 [node name="TableChairs5" parent="tables" instance=ExtResource("11_3undw")]
-position = Vector2(904, 406)
+position = Vector2(923, 385)
 
 [node name="TableChairs6" parent="tables" instance=ExtResource("11_3undw")]
-position = Vector2(560, 506)
+position = Vector2(542, 524)
 
 [node name="TableChairs7" parent="tables" instance=ExtResource("11_3undw")]
-position = Vector2(731, 505)
+position = Vector2(734, 522)
 
 [node name="TableChairs8" parent="tables" instance=ExtResource("11_3undw")]
-position = Vector2(389, 508)
+position = Vector2(350, 525)
 
 [node name="TableChairs9" parent="tables" instance=ExtResource("11_3undw")]
-position = Vector2(217, 510)
+position = Vector2(157, 524)
 
 [node name="TableChairs10" parent="tables" instance=ExtResource("11_3undw")]
-position = Vector2(901, 504)
+position = Vector2(923, 523)
 
 [node name="Stove" parent="." groups=["stove"] instance=ExtResource("12_4ec08")]
 position = Vector2(316, 48)
