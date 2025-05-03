@@ -1,8 +1,16 @@
 extends Node2D
 class_name Food
 
-var food: String = "" 
+var food: String = "" #string of the filepath of the food texture
 
+#logic will be if the food its interacting with is in the array from this dict then
+#the on check should return true for interacting and then one of the foods gets deleted
+#and the other sets the image to the new guy, will need to have another dict of pairs of food that
+#have key of the two foods and value of the new one.
+
+var combodict = {
+	"res://assets/ingredients/bread_sliced.png": ["res://assets/ingredients/jam_strawberry.png"]
+}
 
 @onready var interaction_area: InteractionArea = $InteractionArea
 #@onready var coll: CollisionShape2D = $InteractionArea/CollisionShape2D
