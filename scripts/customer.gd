@@ -116,3 +116,4 @@ func update_sit_animation(direction: bool):
 		sprite.play("sitRight")
 	else:
 		sprite.play("sitLeft")
+

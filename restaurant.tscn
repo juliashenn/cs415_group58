@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bmp4y3r64mrl4"]
+[gd_scene load_steps=24 format=3 uid="uid://bmp4y3r64mrl4"]
 
 [ext_resource type="Script" path="res://scripts/restaurant.gd" id="1_82xtb"]
 [ext_resource type="PackedScene" uid="uid://c8xlhy0p8wot0" path="res://Player.tscn" id="2_u2x88"]
@@ -19,6 +19,7 @@
 [ext_resource type="Script" path="res://customer_spawner.gd" id="18_obl2x"]
 [ext_resource type="PackedScene" uid="uid://qhj16dyijiao" path="res://cutting_board.tscn" id="19_3pth6"]
 [ext_resource type="PackedScene" uid="uid://bwlmenkk8j66g" path="res://dish_pile.tscn" id="19_q8ksr"]
+[ext_resource type="PackedScene" uid="uid://cgg3wj7qmm82k" path="res://ui.tscn" id="21_ts0aw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i66li"]
 size = Vector2(1156, 72.25)
@@ -206,15 +207,21 @@ position = Vector2(923, 523)
 [node name="Stove" parent="." groups=["stove"] instance=ExtResource("12_4ec08")]
 position = Vector2(316, 48)
 
+[node name="CuttingBoard" parent="." instance=ExtResource("19_3pth6")]
+position = Vector2(389, 48)
+
+[node name="Fridge" parent="." instance=ExtResource("16_dvxpe")]
+position = Vector2(469, 22)
+
+[node name="dishPile" parent="." instance=ExtResource("19_q8ksr")]
+position = Vector2(535, 45)
+
 [node name="Food" parent="." groups=["food"] instance=ExtResource("14_3qrsg")]
 z_index = 1
 position = Vector2(557, 255)
 
 [node name="Plate" parent="." groups=["plate"] instance=ExtResource("15_dg7ln")]
 position = Vector2(614, 252)
-
-[node name="Fridge" parent="." instance=ExtResource("16_dvxpe")]
-position = Vector2(469, 22)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 visible = false
@@ -236,8 +243,6 @@ seat_container_path = NodePath("../tables")
 wait_time = 0.5
 autostart = true
 
-[node name="Cutting" parent="." instance=ExtResource("19_3pth6")]
-position = Vector2(389, 48)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="dishPile" parent="." instance=ExtResource("19_q8ksr")]
-position = Vector2(535, 45)
+[node name="UI" parent="CanvasLayer" groups=["ui"] instance=ExtResource("21_ts0aw")]

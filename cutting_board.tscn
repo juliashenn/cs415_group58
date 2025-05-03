@@ -11,7 +11,7 @@
 size = Vector2(40, 21)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8tfon"]
-size = Vector2(45, 73)
+size = Vector2(45, 61)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6wjoo"]
 bg_color = Color(0.552941, 0.87451, 0.603922, 1)
@@ -54,7 +54,7 @@ shape = SubResource("RectangleShape2D_g1wp8")
 [node name="InteractionArea" parent="." instance=ExtResource("4_qt2xl")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-position = Vector2(-0.5, 35.5)
+position = Vector2(-0.5, 29.5)
 shape = SubResource("RectangleShape2D_8tfon")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
