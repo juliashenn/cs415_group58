@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://hr8cp36sur3w"]
+
+[ext_resource type="FontFile" uid="uid://dpworkmlwrfwd" path="res://assets/Pixeloid_Font_0_5/TrueType (.ttf)/PixeloidSans.ttf" id="1_2f5xy"]
+
+[node name="PopupPanel" type="PopupPanel"]
+initial_position = 1
+size = Vector2i(204, 51)
+visible = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 200.0
+offset_bottom = 47.0
+theme_override_fonts/font = ExtResource("1_2f5xy")
+theme_override_font_sizes/font_size = 32
+text = "PURCHASED!"
+horizontal_alignment = 1
+vertical_alignment = 1

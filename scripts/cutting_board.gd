@@ -98,3 +98,7 @@ func _on_timer_timeout():
 		player.updateObjectPosition(3)
 		player.holdingObject = true
 		cutting = false
+
+func levelUp():
+	SPEED += 1
+	$Timer.wait_time /= SPEED

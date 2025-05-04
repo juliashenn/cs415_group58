@@ -303,6 +303,7 @@ texture_normal = SubResource("AtlasTexture_5dpug")
 stretch_mode = 4
 
 [node name="ColorRect" type="ColorRect" parent="Recipe/CookingButton"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 10.0
 offset_right = 34.0

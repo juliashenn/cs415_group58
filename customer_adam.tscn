@@ -402,6 +402,8 @@ autoplay = "idleFront"
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 2
+visibility_layer = 2
 position = Vector2(0, 5)
 shape = SubResource("CapsuleShape2D_ysria")
 disabled = true

@@ -108,3 +108,6 @@ func _on_timer_timeout():
 		player.holdingObject = true
 		cooking = false
 
+func levelUp():
+	SPEED += 1
+	$Timer.wait_time /= SPEED

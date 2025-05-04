@@ -50,7 +50,7 @@ func _input(event):
 			else:
 				player.dropObject()
 		elif active_areas.size() > 0 && active_areas[0].has_player_inside():
-			print(active_areas[0].type.call())
+#			print(active_areas[0].type.call())
 			if active_areas[0].type.call():
 				await active_areas[0].interact.call()
 			else:
