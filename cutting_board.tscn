@@ -24,7 +24,7 @@ corner_radius_bottom_left = 3
 atlas = ExtResource("2_rl3nf")
 region = Rect2(36, 16, 6, 24)
 
-[node name="Cutting" type="StaticBody2D"]
+[node name="Cutting" type="StaticBody2D" groups=["cuttingBoard"]]
 script = ExtResource("1_ry6cn")
 
 [node name="TextureRect" type="TextureRect" parent="."]

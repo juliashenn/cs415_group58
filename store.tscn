@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://buqmkep1ld8xc"]
+[gd_scene load_steps=76 format=3 uid="uid://buqmkep1ld8xc"]
 
 [ext_resource type="Script" path="res://scripts/Store.gd" id="1_nyeqj"]
 [ext_resource type="Texture2D" uid="uid://bpmuvoiy1mj6g" path="res://assets/UiCozyFree.png" id="2_kpw2b"]
@@ -62,6 +62,13 @@
 [ext_resource type="Texture2D" uid="uid://bjxkl7ppfxoa5" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 359.png" id="58_2b61s"]
 [ext_resource type="Texture2D" uid="uid://1sjedaqciqq1" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 352.png" id="59_idciq"]
 [ext_resource type="Texture2D" uid="uid://c6k4w1v2haegh" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 350.png" id="60_f7wiq"]
+[ext_resource type="Texture2D" uid="uid://daupudxn6fhjo" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 19.png" id="61_anua1"]
+[ext_resource type="Texture2D" uid="uid://2op48i8jje7m" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 275.png" id="61_njkfs"]
+[ext_resource type="Texture2D" uid="uid://bjgcgra2f25p2" path="res://assets/chopping board.png" id="62_ehdqs"]
+[ext_resource type="Texture2D" uid="uid://csyx3kfpriodc" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 276.png" id="62_g2bht"]
+[ext_resource type="Texture2D" uid="uid://dsdx2osxf0brp" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 282.png" id="63_7emli"]
+[ext_resource type="Texture2D" uid="uid://y8ilq1yeqc21" path="res://assets/frying pan.png" id="65_cbiuw"]
+[ext_resource type="PackedScene" uid="uid://hr8cp36sur3w" path="res://popup_panel.tscn" id="66_i45e8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_poiip"]
 atlas = ExtResource("2_kpw2b")
@@ -81,6 +88,13 @@ region = Rect2(16, 65, 16, 16)
 atlas = ExtResource("2_kpw2b")
 region = Rect2(32, 64, 16, 16)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nr7q0"]
+bg_color = Color(0.458824, 0.309804, 0.305882, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
 [node name="Store" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -92,6 +106,7 @@ script = ExtResource("1_nyeqj")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
+layout_mode = 0
 offset_left = 306.0
 offset_top = 39.0
 offset_right = 481.0
@@ -102,6 +117,7 @@ expand_mode = 1
 
 [node name="TextureButton" type="TextureButton" parent="."]
 texture_filter = 1
+layout_mode = 0
 offset_left = 749.0
 offset_top = 76.0
 offset_right = 789.0
@@ -1900,13 +1916,205 @@ theme_override_fonts/font = ExtResource("5_tq4q4")
 theme_override_font_sizes/font_size = 14
 text = "100"
 
+[node name="VSplitContainer23" type="VBoxContainer" parent="Misc/GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="TextureButton" parent="Misc/GridContainer/VSplitContainer23" groups=["furnitureButton"]]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("61_njkfs")
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Misc/GridContainer/VSplitContainer23"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Misc/GridContainer/VSplitContainer23/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("4_mhflm")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Misc/GridContainer/VSplitContainer23/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_tq4q4")
+theme_override_font_sizes/font_size = 14
+text = "100"
+
+[node name="VSplitContainer24" type="VBoxContainer" parent="Misc/GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="TextureButton" parent="Misc/GridContainer/VSplitContainer24" groups=["furnitureButton"]]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("62_g2bht")
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Misc/GridContainer/VSplitContainer24"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Misc/GridContainer/VSplitContainer24/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("4_mhflm")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Misc/GridContainer/VSplitContainer24/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_tq4q4")
+theme_override_font_sizes/font_size = 14
+text = "100"
+
+[node name="VSplitContainer25" type="VBoxContainer" parent="Misc/GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="TextureButton" parent="Misc/GridContainer/VSplitContainer25" groups=["furnitureButton"]]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("63_7emli")
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Misc/GridContainer/VSplitContainer25"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Misc/GridContainer/VSplitContainer25/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("4_mhflm")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Misc/GridContainer/VSplitContainer25/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_tq4q4")
+theme_override_font_sizes/font_size = 14
+text = "100"
+
+[node name="Level" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Level" type="ScrollContainer" parent="Level"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 389.0
+offset_top = 148.0
+offset_right = 589.0
+offset_bottom = 329.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.7, 1.7)
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hoejt")
+
+[node name="GridContainer" type="GridContainer" parent="Level/Level"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 0
+columns = 2
+
+[node name="VSplitContainer" type="VBoxContainer" parent="Level/Level/GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="TextureButton" parent="Level/Level/GridContainer/VSplitContainer" groups=["levelStove"]]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("61_anua1")
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Level/Level/GridContainer/VSplitContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Level/Level/GridContainer/VSplitContainer/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("4_mhflm")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Level/Level/GridContainer/VSplitContainer/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_tq4q4")
+theme_override_font_sizes/font_size = 14
+text = "1000"
+
+[node name="VSplitContainer2" type="VBoxContainer" parent="Level/Level/GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="TextureButton" parent="Level/Level/GridContainer/VSplitContainer2" groups=["levelCutting"]]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("62_ehdqs")
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Level/Level/GridContainer/VSplitContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Level/Level/GridContainer/VSplitContainer2/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("4_mhflm")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Level/Level/GridContainer/VSplitContainer2/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_tq4q4")
+theme_override_font_sizes/font_size = 14
+text = "1000"
+
+[node name="Label" type="Label" parent="Level"]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 183.0
+offset_right = 765.0
+offset_bottom = 209.0
+theme_override_colors/font_shadow_color = Color(0.686275, 0.396078, 0.172549, 1)
+theme_override_fonts/font = ExtResource("5_tq4q4")
+text = "SPEED UP YOUR COOKING & CHOPPING TIME!"
+horizontal_alignment = 1
+
 [node name="ChairButton" type="TextureButton" parent="."]
 texture_filter = 1
 layout_mode = 2
-offset_left = 505.5
-offset_top = 480.0
-offset_right = 546.5
-offset_bottom = 522.0
+offset_left = 484.0
+offset_top = 481.0
+offset_right = 525.0
+offset_bottom = 523.0
 texture_normal = SubResource("AtlasTexture_ys2l4")
 stretch_mode = 4
 
@@ -1936,10 +2144,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -20.5
-offset_top = -168.0
-offset_right = 20.5
-offset_bottom = -125.0
+offset_left = -42.0
+offset_top = -167.0
+offset_right = -1.0
+offset_bottom = -124.0
 grow_horizontal = 2
 grow_vertical = 0
 texture_normal = SubResource("AtlasTexture_ys2l4")
@@ -1965,10 +2173,10 @@ expand_mode = 1
 [node name="MiscButton" type="TextureButton" parent="."]
 texture_filter = 1
 layout_mode = 2
-offset_left = 605.5
-offset_top = 480.0
-offset_right = 646.5
-offset_bottom = 523.0
+offset_left = 584.0
+offset_top = 481.0
+offset_right = 625.0
+offset_bottom = 524.0
 texture_normal = SubResource("AtlasTexture_ys2l4")
 stretch_mode = 4
 
@@ -1989,6 +2197,33 @@ offset_bottom = 29.0
 texture = ExtResource("41_ody2l")
 expand_mode = 1
 
+[node name="LevelButton" type="TextureButton" parent="."]
+texture_filter = 1
+layout_mode = 2
+offset_left = 631.0
+offset_top = 480.0
+offset_right = 672.0
+offset_bottom = 523.0
+texture_normal = SubResource("AtlasTexture_ys2l4")
+stretch_mode = 4
+
+[node name="ColorRect" type="ColorRect" parent="LevelButton"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 34.0
+offset_bottom = 25.0
+color = Color(0.890196, 0.835294, 0.752941, 1)
+
+[node name="Plant" type="TextureRect" parent="LevelButton"]
+layout_mode = 0
+offset_left = 10.5
+offset_top = 9.0
+offset_right = 30.5
+offset_bottom = 29.0
+texture = ExtResource("65_cbiuw")
+expand_mode = 1
+
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 508.0
@@ -2000,7 +2235,13 @@ theme_override_font_sizes/font_size = 32
 text = "STORE"
 horizontal_alignment = 1
 
+[node name="PopupPanel" parent="." instance=ExtResource("66_i45e8")]
+size = Vector2i(204, 43)
+visible = false
+theme_override_styles/panel = SubResource("StyleBoxFlat_nr7q0")
+
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="ChairButton" to="." method="_on_chair_button_pressed"]
 [connection signal="pressed" from="TableButton" to="." method="_on_table_button_pressed"]
 [connection signal="pressed" from="MiscButton" to="." method="_on_misc_button_pressed"]
+[connection signal="pressed" from="LevelButton" to="." method="_on_level_button_pressed"]
