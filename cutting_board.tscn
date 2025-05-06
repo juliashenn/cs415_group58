@@ -1,17 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://qhj16dyijiao"]
+[gd_scene load_steps=12 format=3 uid="uid://qhj16dyijiao"]
 
-[ext_resource type="Script" path="res://scripts/cutting_board.gd" id="1_ry6cn"]
+[ext_resource type="Script" uid="uid://fi2ihlplh0f0" path="res://scripts/cutting_board.gd" id="1_ry6cn"]
 [ext_resource type="Texture2D" uid="uid://obgtf0xdubrr" path="res://assets/kitchenUtensils-16x16-Sheet.png" id="2_rl3nf"]
 [ext_resource type="Texture2D" uid="uid://daogl6iteot4b" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 41.png" id="2_vxi5d"]
-[ext_resource type="Texture2D" uid="uid://bjgcgra2f25p2" path="res://assets/chopping board.png" id="3_tsc4r"]
+[ext_resource type="Texture2D" uid="uid://btsfu0eruqlal" path="res://assets/chopping board.png" id="3_tsc4r"]
 [ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="4_qt2xl"]
 [ext_resource type="Texture2D" uid="uid://dordhrtho8o6g" path="res://assets/ingredients/bacon.png" id="6_i2mi3"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1wp8"]
-size = Vector2(40, 21)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8tfon"]
-size = Vector2(45, 61)
+size = Vector2(45, 73)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6wjoo"]
 bg_color = Color(0.552941, 0.87451, 0.603922, 1)
@@ -24,7 +21,13 @@ corner_radius_bottom_left = 3
 atlas = ExtResource("2_rl3nf")
 region = Rect2(36, 16, 6, 24)
 
-[node name="Cutting" type="StaticBody2D" groups=["cuttingBoard"]]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3tbc"]
+size = Vector2(40, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jhklc"]
+size = Vector2(35, 20)
+
+[node name="Cutting" type="Sprite2D"]
 script = ExtResource("1_ry6cn")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -47,14 +50,11 @@ offset_right = 42.0
 offset_bottom = 32.0
 texture = ExtResource("3_tsc4r")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 11.5)
-shape = SubResource("RectangleShape2D_g1wp8")
-
 [node name="InteractionArea" parent="." instance=ExtResource("4_qt2xl")]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-position = Vector2(-0.5, 29.5)
+position = Vector2(-0.5, 35.5)
 shape = SubResource("RectangleShape2D_8tfon")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
@@ -92,4 +92,17 @@ texture = ExtResource("6_i2mi3")
 expand_mode = 1
 stretch_mode = 4
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout" flags=18]
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 14.7059)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -2.7059)
+shape = SubResource("RectangleShape2D_w3tbc")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1.5, 12)
+shape = SubResource("RectangleShape2D_jhklc")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

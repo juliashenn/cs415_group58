@@ -1,112 +1,16 @@
-[gd_scene load_steps=13 format=3 uid="uid://cgg3wj7qmm82k"]
+[gd_scene load_steps=0 format=3 uid="uid://vkf0jss4u454"]
 
-[ext_resource type="Texture2D" uid="uid://bpmuvoiy1mj6g" path="res://assets/UiCozyFree.png" id="1_0nmgk"]
-[ext_resource type="Script" path="res://scripts/ui.gd" id="1_jrgg3"]
-[ext_resource type="Texture2D" uid="uid://cth5vx3cewy68" path="res://assets/coin.png" id="2_nl5x1"]
-[ext_resource type="FontFile" uid="uid://dpworkmlwrfwd" path="res://assets/Pixeloid_Font_0_5/TrueType (.ttf)/PixeloidSans.ttf" id="3_3ad0y"]
-[ext_resource type="PackedScene" uid="uid://b0lpmhv6mixl3" path="res://esc_menu.tscn" id="5_7r1d0"]
-[ext_resource type="PackedScene" uid="uid://djl2sfnh1uyib" path="res://fridge_menu.tscn" id="6_q2og3"]
-[ext_resource type="PackedScene" uid="uid://buqmkep1ld8xc" path="res://store.tscn" id="7_6lp0b"]
+[node name="UI" type="CanvasLayer"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4i3wi"]
-atlas = ExtResource("1_0nmgk")
-region = Rect2(162, 165, 50, 85)
+[node name="Panel" type="Panel" parent="."]
+offset_left = 1024.0
+offset_right = 1152.0
+offset_bottom = 48.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2d231"]
-atlas = ExtResource("1_0nmgk")
-region = Rect2(32, 80, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o0o4e"]
-atlas = ExtResource("1_0nmgk")
-region = Rect2(48, 80, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pw85p"]
-atlas = ExtResource("1_0nmgk")
-region = Rect2(32, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_504f6"]
-atlas = ExtResource("1_0nmgk")
-region = Rect2(48, 32, 16, 16)
-
-[node name="UI" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_jrgg3")
-
-[node name="Coin" type="Control" parent="."]
-anchors_preset = 0
-offset_left = 945.0
-offset_top = 10.0
-offset_right = 985.0
-offset_bottom = 50.0
-
-[node name="Box" type="TextureRect" parent="Coin"]
-texture_filter = 1
-layout_mode = 0
-offset_left = -29.0
-offset_top = 43.0
-offset_right = 37.0
-offset_bottom = 166.0
-rotation = 4.71239
-scale = Vector2(0.7, 1)
-texture = SubResource("AtlasTexture_4i3wi")
-
-[node name="CoinImg" type="TextureRect" parent="Coin"]
-texture_filter = 1
-layout_mode = 0
-offset_left = -22.0
-offset_right = 23.0
-offset_bottom = 40.0
-texture = ExtResource("2_nl5x1")
-
-[node name="CoinCount" type="Label" parent="Coin"]
-texture_filter = 1
-layout_mode = 0
-offset_left = 14.0
-offset_top = 9.0
-offset_right = 62.0
-offset_bottom = 32.0
-theme_override_fonts/font = ExtResource("3_3ad0y")
-text = "1000"
+[node name="Label" type="Label" parent="."]
+offset_left = 1024.0
+offset_right = 1152.0
+offset_bottom = 48.0
+text = "Money"
+horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Shop" type="TextureButton" parent="."]
-texture_filter = 1
-layout_mode = 0
-offset_left = 1042.0
-offset_top = 5.0
-offset_right = 1058.0
-offset_bottom = 21.0
-scale = Vector2(3, 3)
-texture_normal = SubResource("AtlasTexture_2d231")
-texture_pressed = SubResource("AtlasTexture_o0o4e")
-
-[node name="EscButton" type="TextureButton" parent="."]
-texture_filter = 1
-layout_mode = 0
-offset_left = 1093.0
-offset_top = 5.0
-offset_right = 1109.0
-offset_bottom = 21.0
-scale = Vector2(3, 3)
-texture_normal = SubResource("AtlasTexture_pw85p")
-texture_pressed = SubResource("AtlasTexture_504f6")
-
-[node name="EscMenu" parent="." instance=ExtResource("5_7r1d0")]
-visible = false
-layout_mode = 1
-
-[node name="FridgeMenu" parent="." instance=ExtResource("6_q2og3")]
-visible = false
-layout_mode = 1
-
-[node name="Store" parent="." instance=ExtResource("7_6lp0b")]
-visible = false
-layout_mode = 1
-
-[connection signal="pressed" from="Shop" to="." method="_on_shop_pressed"]
-[connection signal="pressed" from="EscButton" to="." method="_on_esc_button_pressed"]

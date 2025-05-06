@@ -1,12 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dfy2v1213lere"]
+[gd_scene load_steps=11 format=3 uid="uid://dfy2v1213lere"]
 
-[ext_resource type="Script" path="res://scripts/stove.gd" id="1_gdtb6"]
+[ext_resource type="Script" uid="uid://doidrue4qfm3q" path="res://scripts/stove.gd" id="1_gdtb6"]
 [ext_resource type="Texture2D" uid="uid://daupudxn6fhjo" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 19.png" id="1_knrlc"]
 [ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="2_mvdwu"]
 [ext_resource type="Texture2D" uid="uid://y8ilq1yeqc21" path="res://assets/frying pan.png" id="4_jg10j"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1wp8"]
-size = Vector2(40, 21)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8tfon"]
 size = Vector2(45, 73)
@@ -28,7 +25,13 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.5, 0)
 
-[node name="Stove" type="StaticBody2D" groups=["stove"]]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eim6s"]
+size = Vector2(36.4118, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v45k4"]
+size = Vector2(38, 20)
+
+[node name="Stove" type="Sprite2D"]
 script = ExtResource("1_gdtb6")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -42,11 +45,8 @@ offset_bottom = 40.0
 grow_horizontal = 2
 texture = ExtResource("1_knrlc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 11.5)
-shape = SubResource("RectangleShape2D_g1wp8")
-
 [node name="InteractionArea" parent="." instance=ExtResource("2_mvdwu")]
+visible = false
 position = Vector2(0, -11)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
@@ -94,5 +94,19 @@ offset_bottom = -21.0
 texture = SubResource("GradientTexture2D_sg4c5")
 expand_mode = 1
 stretch_mode = 4
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 14.7059)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2(1.79412, -2.7059)
+shape = SubResource("RectangleShape2D_eim6s")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1, 12)
+shape = SubResource("RectangleShape2D_v45k4")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

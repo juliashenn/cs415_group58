@@ -1,0 +1,97 @@
+[gd_scene load_steps=2 format=3 uid="uid://8igjmiuacc1p"]
+
+[ext_resource type="Script" uid="uid://71a517c60y8b" path="res://scripts/shop.gd" id="1_viryw"]
+
+[node name="Shop" type="CanvasLayer"]
+script = ExtResource("1_viryw")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 56.0
+offset_top = 56.0
+offset_right = 1080.0
+offset_bottom = 568.0
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 256.0
+offset_bottom = 160.0
+text = "Fridge: $10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 128.0
+offset_top = 192.0
+offset_right = 256.0
+offset_bottom = 224.0
+text = "Stove: $30"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 312.0
+offset_top = 128.0
+offset_right = 440.0
+offset_bottom = 160.0
+text = "Table: $10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 320.0
+offset_top = 192.0
+offset_right = 448.0
+offset_bottom = 224.0
+text = "Chair: $10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 128.0
+offset_top = 256.0
+offset_right = 256.0
+offset_bottom = 288.0
+text = "Cutting: $10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BuyFridge" type="Button" parent="."]
+offset_left = 128.0
+offset_top = 160.0
+offset_right = 256.0
+offset_bottom = 192.0
+text = "Buy Fridge
+"
+
+[node name="BuyCutting" type="Button" parent="."]
+offset_left = 128.0
+offset_top = 288.0
+offset_right = 256.0
+offset_bottom = 320.0
+text = "Buy Cutting
+"
+
+[node name="BuyStove" type="Button" parent="."]
+offset_left = 128.0
+offset_top = 224.0
+offset_right = 256.0
+offset_bottom = 256.0
+text = "Buy Stove
+"
+
+[node name="BuyChair" type="Button" parent="."]
+offset_left = 320.0
+offset_top = 224.0
+offset_right = 448.0
+offset_bottom = 256.0
+text = "Buy Chair
+"
+
+[node name="BuyTable" type="Button" parent="."]
+offset_left = 320.0
+offset_top = 160.0
+offset_right = 448.0
+offset_bottom = 192.0
+text = "Buy Table
+"
