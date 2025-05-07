@@ -1,47 +1,79 @@
-[gd_scene load_steps=7 format=3 uid="uid://8mw21oglmtr8"]
+[gd_scene load_steps=9 format=3 uid="uid://8mw21oglmtr8"]
 
-[ext_resource type="Script" path="res://scripts/fridge.gd" id="1_aph4j"]
+[ext_resource type="Script" uid="uid://djtjicrc8gdc6" path="res://scripts/fridge.gd" id="1_aph4j"]
 [ext_resource type="Texture2D" uid="uid://c1pj8pu1ht4rb" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 181.png" id="1_bdcp8"]
 [ext_resource type="Texture2D" uid="uid://c544ha2mueu8i" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 198.png" id="3_o6ws4"]
 [ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="3_vjfkb"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vm3qv"]
-size = Vector2(20, 14.9412)
+[ext_resource type="PackedScene" uid="uid://djl2sfnh1uyib" path="res://fridge_menu.tscn" id="5_a68f8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqjlr"]
-size = Vector2(26, 58.5)
+size = Vector2(28.2647, 61.1765)
 
-[node name="Fridge" type="StaticBody2D" groups=["fridge"]]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7sr2"]
+size = Vector2(28.2353, 47.0588)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ofhc"]
+size = Vector2(28.2353, 23.4081)
+
+[node name="Fridge" type="Sprite2D" groups=["fridge"]]
+position = Vector2(0, 7.62939e-06)
 scale = Vector2(1.7, 1.7)
 script = ExtResource("1_aph4j")
 
 [node name="Closed" type="TextureRect" parent="."]
 texture_filter = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -11.0
-offset_right = 11.0
-offset_bottom = 40.0
+anchors_preset = -1
+anchor_left = -3.64706
+anchor_top = -7.82352
+anchor_right = 2.3529
+anchor_bottom = -0.823481
+offset_left = -10.3529
+offset_top = -25.1765
+offset_right = 11.6471
+offset_bottom = 14.8235
 grow_horizontal = 2
 texture = ExtResource("1_bdcp8")
-stretch_mode = 4
+metadata/_edit_use_anchors_ = true
 
 [node name="Opened" type="TextureRect" parent="."]
 visible = false
 texture_filter = 1
-offset_left = -27.0
-offset_right = 9.0
-offset_bottom = 40.0
+anchors_preset = -1
+anchor_left = -0.470634
+anchor_top = 0.0588341
+anchor_right = 14.5293
+anchor_bottom = 7.05886
+offset_left = -36.5294
+offset_top = -33.0588
+offset_right = -0.529318
+offset_bottom = 6.94114
 texture = ExtResource("3_o6ws4")
+metadata/_edit_use_anchors_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 5.47059)
-shape = SubResource("RectangleShape2D_vm3qv")
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="FridgeMenu" parent="CanvasLayer" instance=ExtResource("5_a68f8")]
+metadata/_edit_use_anchors_ = true
 
 [node name="InteractionArea" parent="." instance=ExtResource("3_vjfkb")]
 position = Vector2(0, 14.7059)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-position = Vector2(-1.17647, 12.9412)
+position = Vector2(-0.014718, -17.0588)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_lqjlr")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 14.7059)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1.06587e-05, -24.1177)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_x7sr2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-7.29281e-06, -21.1158)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_6ofhc")

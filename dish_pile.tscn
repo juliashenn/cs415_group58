@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://bwlmenkk8j66g"]
 
-[ext_resource type="Script" path="res://scripts/dishPile.gd" id="1_4ya3h"]
+[ext_resource type="Script" uid="uid://bisc6axd0cnc5" path="res://scripts/dishPile.gd" id="1_4ya3h"]
 [ext_resource type="Texture2D" uid="uid://dsihqsuco766k" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 106.png" id="2_737dp"]
 [ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="3_hc7un"]
-[ext_resource type="Texture2D" uid="uid://cjqorfj5dnu31" path="res://assets/03_dish_pile.png" id="4_7vwwp"]
+[ext_resource type="Texture2D" uid="uid://oa4gvswbri5o" path="res://assets/03_dish_pile.png" id="4_7vwwp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s0phm"]
 size = Vector2(83, 17)

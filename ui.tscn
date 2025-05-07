@@ -1,11 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://cgg3wj7qmm82k"]
+[gd_scene load_steps=13 format=3 uid="uid://cgg3wj7qmm82k"]
 
-[ext_resource type="Texture2D" uid="uid://dadmt2ub5vw78" path="res://assets/UiCozyFree.png" id="1_0nmgk"]
-[ext_resource type="Script" uid="uid://c77far18bt1d1" path="res://scripts/ui.gd" id="1_jrgg3"]
-[ext_resource type="Texture2D" uid="uid://m32urgor4lr" path="res://assets/coin.png" id="2_nl5x1"]
-[ext_resource type="FontFile" uid="uid://bys72k5hg488e" path="res://assets/Pixeloid_Font_0_5/TrueType (.ttf)/PixeloidSans.ttf" id="3_3ad0y"]
+[ext_resource type="Texture2D" uid="uid://bpmuvoiy1mj6g" path="res://assets/UiCozyFree.png" id="1_0nmgk"]
+[ext_resource type="Script" uid="uid://b60yb7iasjqnd" path="res://scripts/ui.gd" id="1_jrgg3"]
+[ext_resource type="Texture2D" uid="uid://b5ywn2ijxceqf" path="res://assets/coin.png" id="2_nl5x1"]
+[ext_resource type="FontFile" uid="uid://dpworkmlwrfwd" path="res://assets/Pixeloid_Font_0_5/TrueType (.ttf)/PixeloidSans.ttf" id="3_3ad0y"]
 [ext_resource type="PackedScene" uid="uid://b0lpmhv6mixl3" path="res://esc_menu.tscn" id="5_7r1d0"]
-[ext_resource type="Texture2D" uid="uid://bamlbg5mwsaks" path="res://assets/basket_metal.png" id="5_ek2fw"]
 [ext_resource type="PackedScene" uid="uid://djl2sfnh1uyib" path="res://fridge_menu.tscn" id="6_q2og3"]
 [ext_resource type="PackedScene" uid="uid://buqmkep1ld8xc" path="res://store.tscn" id="7_6lp0b"]
 
@@ -85,24 +84,6 @@ offset_bottom = 21.0
 scale = Vector2(3, 3)
 texture_normal = SubResource("AtlasTexture_2d231")
 texture_pressed = SubResource("AtlasTexture_o0o4e")
-
-[node name="ColorRect" type="ColorRect" parent="Shop"]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 3.0
-offset_right = 13.0
-offset_bottom = 12.0
-color = Color(0.890196, 0.835294, 0.752941, 1)
-
-[node name="TextureRect" type="TextureRect" parent="Shop"]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 3.0
-offset_right = 13.0
-offset_bottom = 13.0
-texture = ExtResource("5_ek2fw")
-expand_mode = 1
-stretch_mode = 4
 
 [node name="EscButton" type="TextureButton" parent="."]
 texture_filter = 1

@@ -1,50 +1,23 @@
-[gd_scene load_steps=56 format=3 uid="uid://b0lpmhv6mixl3"]
+[gd_scene load_steps=25 format=3 uid="uid://b0lpmhv6mixl3"]
 
-[ext_resource type="Script" path="res://scripts/esc_menu.gd" id="1_emqnc"]
+[ext_resource type="Script" uid="uid://b76ldcxboku8g" path="res://scripts/esc_menu.gd" id="1_emqnc"]
 [ext_resource type="Texture2D" uid="uid://bpmuvoiy1mj6g" path="res://assets/UiCozyFree.png" id="1_yrcdm"]
 [ext_resource type="FontFile" uid="uid://dpworkmlwrfwd" path="res://assets/Pixeloid_Font_0_5/TrueType (.ttf)/PixeloidSans.ttf" id="3_xge4l"]
-[ext_resource type="Texture2D" uid="uid://b1sk3o2pwuwdm" path="res://assets/ingredients/carrot.png" id="4_66yjw"]
+[ext_resource type="Texture2D" uid="uid://b73dib18jlpql" path="res://assets/ingredients/carrot.png" id="4_66yjw"]
 [ext_resource type="Texture2D" uid="uid://y8ilq1yeqc21" path="res://assets/frying pan.png" id="5_4wn8u"]
-[ext_resource type="Texture2D" uid="uid://hrbgp2dk0sqx" path="res://assets/ingredients/carrot_cake.png" id="6_2owem"]
-[ext_resource type="Texture2D" uid="uid://dissc6j6rqiht" path="res://assets/ingredients/corn.png" id="7_2i5jg"]
-[ext_resource type="Texture2D" uid="uid://cnaeohysjil4" path="res://assets/ingredients/popcorn.png" id="8_0ubt4"]
+[ext_resource type="Texture2D" uid="uid://t4ygm00pcpko" path="res://assets/ingredients/carrot_cake.png" id="6_2owem"]
+[ext_resource type="Texture2D" uid="uid://c3egowkl21sq3" path="res://assets/ingredients/corn.png" id="7_2i5jg"]
+[ext_resource type="Texture2D" uid="uid://ctyfsktcq7523" path="res://assets/ingredients/popcorn.png" id="8_0ubt4"]
 [ext_resource type="Texture2D" uid="uid://dqjmmiqs6lt" path="res://assets/ingredients/egg.png" id="9_ddmc2"]
 [ext_resource type="Texture2D" uid="uid://b2aao2eyo5rh0" path="res://assets/ingredients/friedegg.png" id="10_fxj6v"]
 [ext_resource type="Texture2D" uid="uid://dye5yidv5kios" path="res://assets/ingredients/strawberry.png" id="11_gopul"]
 [ext_resource type="Texture2D" uid="uid://vippkw60bx0p" path="res://assets/ingredients/jam_strawberry.png" id="12_usqxo"]
 [ext_resource type="Texture2D" uid="uid://h2udw4kypj45" path="res://assets/ingredients/milk.png" id="13_guefc"]
 [ext_resource type="Texture2D" uid="uid://2lthw251fgs0" path="res://assets/ingredients/pudding.png" id="14_tcw2l"]
-[ext_resource type="Texture2D" uid="uid://bx72dql32rdwf" path="res://assets/ingredients/fish.png" id="15_aulir"]
 [ext_resource type="Texture2D" uid="uid://cebrk6enfjlvc" path="res://assets/ingredients/meat.png" id="15_fmc2x"]
 [ext_resource type="Texture2D" uid="uid://do8l4o5b8uq8j" path="res://assets/ingredients/steak.png" id="16_dhqmx"]
-[ext_resource type="Texture2D" uid="uid://ch8embsx4xikd" path="res://assets/ingredients/fish_cooked.png" id="16_yafms"]
 [ext_resource type="Texture2D" uid="uid://obgtf0xdubrr" path="res://assets/kitchenUtensils-16x16-Sheet.png" id="17_5eus6"]
-[ext_resource type="Texture2D" uid="uid://e2rt3870y8w4" path="res://assets/ingredients/bacon_raw.png" id="17_jnpsq"]
 [ext_resource type="FontFile" uid="uid://d2ox07o0ma2nt" path="res://assets/Pixeloid_Font_0_5/TrueType (.ttf)/PixeloidSans-Bold.ttf" id="18_u5ulf"]
-[ext_resource type="Texture2D" uid="uid://dordhrtho8o6g" path="res://assets/ingredients/bacon.png" id="18_x3nj0"]
-[ext_resource type="Texture2D" uid="uid://bvvokqr4xt7mk" path="res://assets/ingredients/frenchfries.png" id="19_wdhs7"]
-[ext_resource type="Texture2D" uid="uid://m230fpsyi85j" path="res://assets/ingredients/fries.png" id="20_apyb0"]
-[ext_resource type="Texture2D" uid="uid://d0env6xtlm86m" path="res://assets/ingredients/sushi.png" id="22_4wreo"]
-[ext_resource type="Texture2D" uid="uid://ew3afm0gpyvn" path="res://assets/ingredients/cabbage.png" id="23_0kset"]
-[ext_resource type="Texture2D" uid="uid://cap1bc50lgicl" path="res://assets/ingredients/salad.png" id="24_68dtv"]
-[ext_resource type="Texture2D" uid="uid://kfc8p5lx75v7" path="res://assets/ingredients/egg_salad.png" id="25_uql0d"]
-[ext_resource type="Texture2D" uid="uid://ifme0rcg0cws" path="res://assets/ingredients/potato.png" id="26_w3bt7"]
-[ext_resource type="Texture2D" uid="uid://882k6vr74616" path="res://assets/ingredients/flour.png" id="27_fmovt"]
-[ext_resource type="Texture2D" uid="uid://bh3vpgm31kldq" path="res://assets/ingredients/bread.png" id="28_wbw68"]
-[ext_resource type="Texture2D" uid="uid://csvrgw3gxlhiw" path="res://assets/ingredients/garlic.png" id="29_aypjx"]
-[ext_resource type="Texture2D" uid="uid://c2bdsnc1bmouw" path="res://assets/ingredients/garlicbread.png" id="30_x6c53"]
-[ext_resource type="Texture2D" uid="uid://bd3aneqj1dnvp" path="res://assets/ingredients/chocolate.png" id="31_ik6as"]
-[ext_resource type="Texture2D" uid="uid://dvyyhutxbuf1x" path="res://assets/ingredients/chocolate_bread.png" id="32_d0fbk"]
-[ext_resource type="Texture2D" uid="uid://cxqm3o30ax8l3" path="res://assets/ingredients/sandwich.png" id="33_duhf1"]
-[ext_resource type="Texture2D" uid="uid://d2tvmfxe6gky0" path="res://assets/ingredients/burger.png" id="34_nb0t8"]
-[ext_resource type="Texture2D" uid="uid://b1m5uj43octw4" path="res://assets/ingredients/bagel.png" id="35_4vf2q"]
-[ext_resource type="Texture2D" uid="uid://dfnsh8xd1l1ds" path="res://assets/ingredients/donut.png" id="36_c3fcb"]
-[ext_resource type="Texture2D" uid="uid://cfy06vryfryyq" path="res://assets/ingredients/cookie.png" id="37_3woec"]
-[ext_resource type="Texture2D" uid="uid://cvhhr3xtm5l40" path="res://assets/ingredients/strawberrycake.png" id="38_e6biw"]
-[ext_resource type="Texture2D" uid="uid://dsm23kfu42tdy" path="res://assets/ingredients/cake.png" id="41_wq887"]
-[ext_resource type="Texture2D" uid="uid://bitktkergkv33" path="res://assets/ingredients/apple.png" id="42_4axu1"]
-[ext_resource type="Texture2D" uid="uid://ch23hsc8nqql8" path="res://assets/ingredients/applepie.png" id="43_87pn1"]
-[ext_resource type="Texture2D" uid="uid://cnk2ywtw1tmkk" path="res://assets/whisk.png" id="44_jdgkg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kjgr3"]
 atlas = ExtResource("1_yrcdm")
@@ -59,25 +32,6 @@ region = Rect2(0, 65, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_omobf"]
 atlas = ExtResource("1_yrcdm")
 region = Rect2(16, 65, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_osp55"]
-atlas = ExtResource("17_5eus6")
-region = Rect2(37.5411, 19.5127, 5.67515, 16.8823)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tdtov"]
-atlas = ExtResource("29_aypjx")
-region = Rect2(0, 0, 16, 16)
-margin = Rect2(3, 3, 6, 6)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b55dq"]
-atlas = ExtResource("32_d0fbk")
-region = Rect2(0, 0, 32, 32)
-margin = Rect2(4, 4, 8, 8)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wndhu"]
-atlas = ExtResource("4_66yjw")
-region = Rect2(0, 0, 16, 16)
-margin = Rect2(3, 3, 6, 6)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5dpug"]
 atlas = ExtResource("1_yrcdm")
@@ -167,7 +121,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Cooking" type="ScrollContainer" parent="Recipe"]
-visible = false
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -188,6 +141,31 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_bbmff")
 layout_mode = 2
 theme_override_constants/h_separation = 15
 columns = 5
+
+[node name="Carrot" type="TextureRect" parent="Recipe/Cooking/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_66yjw")
+expand_mode = 2
+
+[node name="Plus" type="Label" parent="Recipe/Cooking/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_xge4l")
+text = "+"
+
+[node name="Pan" type="TextureRect" parent="Recipe/Cooking/GridContainer"]
+layout_mode = 2
+texture = ExtResource("5_4wn8u")
+expand_mode = 2
+
+[node name="Makes" type="Label" parent="Recipe/Cooking/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_xge4l")
+text = "->"
+
+[node name="CarrotCake" type="TextureRect" parent="Recipe/Cooking/GridContainer"]
+layout_mode = 2
+texture = ExtResource("6_2owem")
+stretch_mode = 4
 
 [node name="Corn" type="TextureRect" parent="Recipe/Cooking/GridContainer"]
 layout_mode = 2
@@ -314,542 +292,12 @@ layout_mode = 2
 texture = ExtResource("16_dhqmx")
 stretch_mode = 4
 
-[node name="fish" type="TextureRect" parent="Recipe/Cooking/GridContainer"]
-layout_mode = 2
-texture = ExtResource("15_aulir")
-expand_mode = 2
-
-[node name="Plus7" type="Label" parent="Recipe/Cooking/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "+"
-
-[node name="Pan7" type="TextureRect" parent="Recipe/Cooking/GridContainer"]
-layout_mode = 2
-texture = ExtResource("5_4wn8u")
-expand_mode = 2
-
-[node name="Makes7" type="Label" parent="Recipe/Cooking/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "->"
-
-[node name="fishcooked" type="TextureRect" parent="Recipe/Cooking/GridContainer"]
-layout_mode = 2
-texture = ExtResource("16_yafms")
-stretch_mode = 4
-
-[node name="baconraw" type="TextureRect" parent="Recipe/Cooking/GridContainer"]
-layout_mode = 2
-texture = ExtResource("17_jnpsq")
-expand_mode = 2
-
-[node name="Plus8" type="Label" parent="Recipe/Cooking/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "+"
-
-[node name="Pan8" type="TextureRect" parent="Recipe/Cooking/GridContainer"]
-layout_mode = 2
-texture = ExtResource("5_4wn8u")
-expand_mode = 2
-
-[node name="Makes8" type="Label" parent="Recipe/Cooking/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "->"
-
-[node name="bacon" type="TextureRect" parent="Recipe/Cooking/GridContainer"]
-layout_mode = 2
-texture = ExtResource("18_x3nj0")
-stretch_mode = 4
-
-[node name="rawfries" type="TextureRect" parent="Recipe/Cooking/GridContainer"]
-layout_mode = 2
-texture = ExtResource("19_wdhs7")
-expand_mode = 2
-
-[node name="Plus9" type="Label" parent="Recipe/Cooking/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "+"
-
-[node name="Pan9" type="TextureRect" parent="Recipe/Cooking/GridContainer"]
-layout_mode = 2
-texture = ExtResource("5_4wn8u")
-expand_mode = 2
-
-[node name="Makes9" type="Label" parent="Recipe/Cooking/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "->"
-
-[node name="fries" type="TextureRect" parent="Recipe/Cooking/GridContainer"]
-layout_mode = 2
-texture = ExtResource("20_apyb0")
-stretch_mode = 4
-
-[node name="Cutting" type="ScrollContainer" parent="Recipe"]
-visible = false
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 405.0
-offset_top = 156.0
-offset_right = 605.0
-offset_bottom = 337.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.6, 1.6)
-theme_override_styles/panel = SubResource("StyleBoxEmpty_bbmff")
-
-[node name="GridContainer" type="GridContainer" parent="Recipe/Cutting"]
-layout_mode = 2
-theme_override_constants/h_separation = 15
-columns = 5
-
-[node name="Meat" type="TextureRect" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-texture = ExtResource("15_fmc2x")
-expand_mode = 2
-
-[node name="Plus" type="Label" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "+"
-
-[node name="Knife" type="TextureRect" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-texture = SubResource("AtlasTexture_osp55")
-expand_mode = 2
-stretch_mode = 5
-
-[node name="Makes" type="Label" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "->"
-
-[node name="Bacon" type="TextureRect" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-texture = ExtResource("17_jnpsq")
-
-[node name="Fish" type="TextureRect" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-texture = ExtResource("15_aulir")
-expand_mode = 2
-
-[node name="Plus2" type="Label" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "+"
-
-[node name="Knife2" type="TextureRect" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-texture = SubResource("AtlasTexture_osp55")
-expand_mode = 2
-stretch_mode = 5
-
-[node name="Makes2" type="Label" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "->"
-
-[node name="Sushi" type="TextureRect" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-texture = ExtResource("22_4wreo")
-
-[node name="Cabbage" type="TextureRect" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-texture = ExtResource("23_0kset")
-expand_mode = 2
-
-[node name="Plus3" type="Label" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "+"
-
-[node name="Knife3" type="TextureRect" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-texture = SubResource("AtlasTexture_osp55")
-expand_mode = 2
-stretch_mode = 5
-
-[node name="Makes3" type="Label" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "->"
-
-[node name="Salad" type="TextureRect" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-texture = ExtResource("24_68dtv")
-
-[node name="Friedegg" type="TextureRect" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-texture = ExtResource("10_fxj6v")
-expand_mode = 2
-
-[node name="Plus4" type="Label" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "+"
-
-[node name="Knife4" type="TextureRect" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-texture = SubResource("AtlasTexture_osp55")
-expand_mode = 2
-stretch_mode = 5
-
-[node name="Makes4" type="Label" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "->"
-
-[node name="Eggsalad" type="TextureRect" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-texture = ExtResource("25_uql0d")
-
-[node name="Potato" type="TextureRect" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-texture = ExtResource("26_w3bt7")
-expand_mode = 2
-
-[node name="Plus5" type="Label" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "+"
-
-[node name="Knife5" type="TextureRect" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-texture = SubResource("AtlasTexture_osp55")
-expand_mode = 2
-stretch_mode = 5
-
-[node name="Makes5" type="Label" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "->"
-
-[node name="rawfries" type="TextureRect" parent="Recipe/Cutting/GridContainer"]
-layout_mode = 2
-texture = ExtResource("19_wdhs7")
-
-[node name="Combining" type="ScrollContainer" parent="Recipe"]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 405.0
-offset_top = 156.0
-offset_right = 605.0
-offset_bottom = 337.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.6, 1.6)
-theme_override_styles/panel = SubResource("StyleBoxEmpty_bbmff")
-
-[node name="GridContainer" type="GridContainer" parent="Recipe/Combining"]
-layout_mode = 2
-theme_override_constants/h_separation = 15
-columns = 5
-
-[node name="flour5" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("27_fmovt")
-
-[node name="Plus10" type="Label" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "+"
-
-[node name="egg" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("9_ddmc2")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="Makes10" type="Label" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "->"
-
-[node name="bread" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("28_wbw68")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="Bread" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("28_wbw68")
-expand_mode = 2
-
-[node name="Plus" type="Label" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "+"
-
-[node name="garlic" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = SubResource("AtlasTexture_tdtov")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="Makes" type="Label" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "->"
-
-[node name="garlicbread" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("30_x6c53")
-
-[node name="Bread2" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("28_wbw68")
-
-[node name="Plus2" type="Label" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "+"
-
-[node name="chocolate" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("31_ik6as")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="Makes2" type="Label" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "->"
-
-[node name="chocobread" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = SubResource("AtlasTexture_b55dq")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="Bread3" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("28_wbw68")
-
-[node name="Plus3" type="Label" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "+"
-
-[node name="bacon" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("18_x3nj0")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="Makes3" type="Label" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "->"
-
-[node name="sandwich" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("33_duhf1")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="Bread4" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("28_wbw68")
-
-[node name="Plus4" type="Label" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "+"
-
-[node name="steak" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("16_dhqmx")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="Makes4" type="Label" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "->"
-
-[node name="burger" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("34_nb0t8")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="bagel" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("35_4vf2q")
-
-[node name="Plus5" type="Label" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "+"
-
-[node name="chocolate2" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("31_ik6as")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="Makes5" type="Label" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "->"
-
-[node name="donut" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("36_c3fcb")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="flour" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("27_fmovt")
-
-[node name="Plus6" type="Label" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "+"
-
-[node name="chocolate3" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("31_ik6as")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="Makes6" type="Label" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "->"
-
-[node name="cookie" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("37_3woec")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="flour2" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("27_fmovt")
-
-[node name="Plus7" type="Label" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "+"
-
-[node name="strawberry" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("11_gopul")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="Makes7" type="Label" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "->"
-
-[node name="strawberrycake" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("38_e6biw")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="flour3" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("27_fmovt")
-
-[node name="Plus8" type="Label" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "+"
-
-[node name="carrot" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = SubResource("AtlasTexture_wndhu")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="Makes8" type="Label" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "->"
-
-[node name="carrotcake" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("6_2owem")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="flour4" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("27_fmovt")
-
-[node name="Plus9" type="Label" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "+"
-
-[node name="milk" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("13_guefc")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="Makes9" type="Label" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "->"
-
-[node name="cake" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("41_wq887")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="flour6" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("27_fmovt")
-
-[node name="Plus11" type="Label" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "+"
-
-[node name="apple" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("42_4axu1")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="Makes11" type="Label" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xge4l")
-text = "->"
-
-[node name="applepie" type="TextureRect" parent="Recipe/Combining/GridContainer"]
-layout_mode = 2
-texture = ExtResource("43_87pn1")
-expand_mode = 1
-stretch_mode = 4
-
 [node name="CookingButton" type="TextureButton" parent="Recipe"]
 texture_filter = 1
 layout_mode = 2
-offset_left = 498.0
+offset_left = 518.0
 offset_top = 472.0
-offset_right = 539.0
+offset_right = 559.0
 offset_bottom = 523.0
 texture_normal = SubResource("AtlasTexture_5dpug")
 stretch_mode = 4
@@ -875,9 +323,9 @@ stretch_mode = 4
 [node name="CuttingButton" type="TextureButton" parent="Recipe"]
 texture_filter = 1
 layout_mode = 2
-offset_left = 560.0
+offset_left = 591.0
 offset_top = 471.0
-offset_right = 601.0
+offset_right = 632.0
 offset_bottom = 522.0
 texture_normal = SubResource("AtlasTexture_5dpug")
 stretch_mode = 4
@@ -901,36 +349,6 @@ texture = SubResource("AtlasTexture_2u0xm")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="CombineButton" type="TextureButton" parent="Recipe"]
-texture_filter = 1
-layout_mode = 2
-offset_left = 623.0
-offset_top = 471.0
-offset_right = 664.0
-offset_bottom = 522.0
-texture_normal = SubResource("AtlasTexture_5dpug")
-stretch_mode = 4
-
-[node name="ColorRect" type="ColorRect" parent="Recipe/CombineButton"]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 10.0
-offset_right = 34.0
-offset_bottom = 25.0
-color = Color(0.890196, 0.835294, 0.752941, 1)
-
-[node name="Bowl" type="TextureRect" parent="Recipe/CombineButton"]
-layout_mode = 0
-offset_left = 7.0
-offset_top = 8.0
-offset_right = 33.0
-offset_bottom = 33.0
-rotation = -0.13439
-texture = ExtResource("44_jdgkg")
-expand_mode = 1
-stretch_mode = 4
-flip_h = true
-
 [node name="Label" type="Label" parent="Recipe"]
 layout_mode = 0
 offset_left = 508.0
@@ -951,10 +369,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -183.0
-offset_top = -161.0
-offset_right = 66.0
-offset_bottom = 64.0
+offset_left = -160.0
+offset_top = -132.0
+offset_right = 40.0
+offset_bottom = 49.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.6, 1.6)
@@ -964,47 +382,9 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_bbmff")
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("3_xge4l")
 theme_override_fonts/bold_font = ExtResource("18_u5ulf")
-text = "Welcome to your new restaurant! 
-
-Here’s everything you need to know to start cooking and serving customers:
-
-🎮 Controls
-Move: WASD or Arrow Keys
-
-Interact / Pick Up / Use: E or Spacebar
-
-🍽️ Gameplay
-1. Customers will walk in, go to a table, and place their order.
-
-2. Check what the customer wants—then it's time to cook!
-
-3. Gather ingredients from the fridge.
-
-4 Prepare the food:
-
-- Use the cutting station to chop.
-
-- Use the cooking station to cook.
-
-- Combine ingredients if needed.
-
-- Check the Recipes if you ever get lost!
-
-5. Once the dish is ready, serve it to the correct customer.
-
-6. If the customer gets the correct meal, you'll earn gold!
-
-💰 Using Gold
-Buy furniture and decorations to customize your restaurant.
-
-Upgrade stations to speed up cooking and cutting time.
-
-🛠️ Tips
-Serve food quickly to keep customers happy!
-
-Upgraded stations mean faster prep and more happy customers.
-
-Now get cooking, Chef! 🍳🍔🥗"
+text = "asdfasdfasdfasdfasdfsadf
+asdfadsfasdfasdfasdf
+asdfasdfasdfadsfasdfasdfasdfasdfasdfasdflsajdlgkjasdlgjsldfsdfjlkasjdflkasjdflkjadslkjasdlfjlaksdfjlaksdjflkasjdflkajsdflkjaslkdfjlkasjdflkajsdlfkjalksdjflasjdflaasdfapsdkflasdjflaksdflaskdfjlakjflkasdfj"
 
 [node name="Settings" type="PanelContainer" parent="."]
 visible = false
@@ -1033,6 +413,3 @@ theme_override_constants/separation = 23
 [connection signal="pressed" from="Selection/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Selection/VBoxContainer/SaveButton" to="." method="_on_save_button_pressed"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
-[connection signal="pressed" from="Recipe/CookingButton" to="." method="_on_cooking_button_pressed"]
-[connection signal="pressed" from="Recipe/CuttingButton" to="." method="_on_cutting_button_pressed"]
-[connection signal="pressed" from="Recipe/CombineButton" to="." method="_on_combine_button_pressed"]

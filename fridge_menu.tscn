@@ -1,21 +1,17 @@
-[gd_scene load_steps=25 format=3 uid="uid://djl2sfnh1uyib"]
+[gd_scene load_steps=20 format=3 uid="uid://djl2sfnh1uyib"]
 
-[ext_resource type="Script" path="res://scripts/fridge_menu.gd" id="1_5hut5"]
+[ext_resource type="Script" uid="uid://bw7y4nr4xf0dp" path="res://scripts/fridge_menu.gd" id="1_5hut5"]
 [ext_resource type="Texture2D" uid="uid://bpmuvoiy1mj6g" path="res://assets/UiCozyFree.png" id="1_ob7lp"]
 [ext_resource type="Texture2D" uid="uid://bx72dql32rdwf" path="res://assets/ingredients/fish.png" id="4_xbwlw"]
 [ext_resource type="Texture2D" uid="uid://cebrk6enfjlvc" path="res://assets/ingredients/meat.png" id="5_deaky"]
 [ext_resource type="Texture2D" uid="uid://h2udw4kypj45" path="res://assets/ingredients/milk.png" id="6_mr538"]
 [ext_resource type="Texture2D" uid="uid://ifme0rcg0cws" path="res://assets/ingredients/potato.png" id="7_74uid"]
 [ext_resource type="Texture2D" uid="uid://dye5yidv5kios" path="res://assets/ingredients/strawberry.png" id="7_emxdj"]
-[ext_resource type="Texture2D" uid="uid://bitktkergkv33" path="res://assets/ingredients/apple.png" id="9_8r252"]
-[ext_resource type="Texture2D" uid="uid://dissc6j6rqiht" path="res://assets/ingredients/corn.png" id="9_rvfqa"]
-[ext_resource type="Texture2D" uid="uid://b1sk3o2pwuwdm" path="res://assets/ingredients/carrot.png" id="11_64w1d"]
+[ext_resource type="Texture2D" uid="uid://c3egowkl21sq3" path="res://assets/ingredients/corn.png" id="9_rvfqa"]
+[ext_resource type="Texture2D" uid="uid://b73dib18jlpql" path="res://assets/ingredients/carrot.png" id="11_64w1d"]
 [ext_resource type="Texture2D" uid="uid://dqjmmiqs6lt" path="res://assets/ingredients/egg.png" id="12_u1ael"]
 [ext_resource type="Texture2D" uid="uid://bd3aneqj1dnvp" path="res://assets/ingredients/chocolate.png" id="13_tg21c"]
-[ext_resource type="Texture2D" uid="uid://csvrgw3gxlhiw" path="res://assets/ingredients/garlic.png" id="14_tixn7"]
-[ext_resource type="Texture2D" uid="uid://b1m5uj43octw4" path="res://assets/ingredients/bagel.png" id="15_q7txh"]
 [ext_resource type="Texture2D" uid="uid://ew3afm0gpyvn" path="res://assets/ingredients/cabbage.png" id="16_n3287"]
-[ext_resource type="Texture2D" uid="uid://bh3vpgm31kldq" path="res://assets/ingredients/bread.png" id="16_yx4oo"]
 [ext_resource type="Texture2D" uid="uid://882k6vr74616" path="res://assets/ingredients/flour.png" id="17_0s4dt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rbb4e"]
@@ -31,11 +27,6 @@ margin = Rect2(3, 3, 6, 6)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m45f1"]
 atlas = ExtResource("11_64w1d")
-region = Rect2(0, 0, 16, 16)
-margin = Rect2(3, 3, 6, 6)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ed4o2"]
-atlas = ExtResource("14_tixn7")
 region = Rect2(0, 0, 16, 16)
 margin = Rect2(3, 3, 6, 6)
 
@@ -76,8 +67,8 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -200.0
-offset_top = -126.0
-offset_bottom = 48.0
+offset_top = -174.0
+offset_bottom = 26.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 1.9)
@@ -86,7 +77,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_5w8er")
 [node name="GridContainer" type="GridContainer" parent="PanelContainer"]
 layout_mode = 2
 theme_override_constants/h_separation = 10
-theme_override_constants/v_separation = 20
+theme_override_constants/v_separation = 0
 columns = 5
 
 [node name="TextureButton" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
@@ -113,10 +104,6 @@ texture_normal = ExtResource("12_u1ael")
 layout_mode = 2
 texture_normal = ExtResource("7_emxdj")
 
-[node name="TextureButton15" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
-layout_mode = 2
-texture_normal = ExtResource("9_8r252")
-
 [node name="TextureButton7" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_cx748")
@@ -136,22 +123,21 @@ texture_filter = 1
 layout_mode = 2
 texture_normal = ExtResource("7_74uid")
 
-[node name="TextureButton12" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_ed4o2")
-stretch_mode = 0
-
 [node name="TextureButton11" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
-texture_normal = ExtResource("15_q7txh")
+
+[node name="TextureButton12" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
+layout_mode = 2
 
 [node name="TextureButton13" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
-texture_normal = ExtResource("16_yx4oo")
 
 [node name="TextureButton14" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
 layout_mode = 2
 texture_normal = ExtResource("13_tg21c")
+
+[node name="TextureButton15" type="TextureButton" parent="PanelContainer/GridContainer" groups=["foodButton"]]
+layout_mode = 2
 
 [node name="TextureButton" type="TextureButton" parent="."]
 texture_filter = 1

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://kvpwqlrjvt84" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 2.png" id="1_wtghw"]
 [ext_resource type="PackedScene" uid="uid://dj11dvrsclnqr" path="res://chair_right.tscn" id="2_qmllm"]
-[ext_resource type="PackedScene" uid="uid://d4gcbh2a1hnqh" path="res://leftchair.tscn" id="4_fneis"]
+[ext_resource type="PackedScene" uid="uid://baep800syp21e" path="res://chair_left.tscn" id="3_7lscr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1cu6v"]
 size = Vector2(63, 22)
@@ -23,9 +23,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="chairRight" parent="." instance=ExtResource("2_qmllm")]
 
+[node name="chairLeft" parent="." instance=ExtResource("3_7lscr")]
+position = Vector2(107, 0)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(50.5, -12)
 shape = SubResource("RectangleShape2D_1cu6v")
-
-[node name="Leftchair" parent="." instance=ExtResource("4_fneis")]
-position = Vector2(109, -1)

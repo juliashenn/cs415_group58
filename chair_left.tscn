@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://divofucxg6vke" path="res://scripts/chair_left.gd" id="1_2gsp2"]
 [ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="1_lid8i"]
-[ext_resource type="Texture2D" uid="uid://ofc3y8ikgtad" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 3.png" id="2_nd5yd"]
-[ext_resource type="Texture2D" uid="uid://4k1c8durqjpo" path="res://assets/01_dish.png" id="4_kxr2f"]
-[ext_resource type="Texture2D" uid="uid://qqqcqab6vgqt" path="res://assets/ingredients/salad.png" id="5_5rt8f"]
+[ext_resource type="Texture2D" uid="uid://c8ouyklhmtmxh" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 3.png" id="2_nd5yd"]
+[ext_resource type="Texture2D" uid="uid://ce2f6tvbbau3v" path="res://assets/01_dish.png" id="4_kxr2f"]
+[ext_resource type="Texture2D" uid="uid://eeudslx7eost" path="res://assets/ingredients/salad.png" id="5_5rt8f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xoviv"]
-size = Vector2(96, 112)
+size = Vector2(180, 148)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ctq0h"]
 size = Vector2(31, 32)
@@ -28,7 +28,7 @@ script = ExtResource("1_2gsp2")
 action_name = "sit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-position = Vector2(-9, -1)
+position = Vector2(-14, 4)
 shape = SubResource("RectangleShape2D_xoviv")
 
 [node name="TextureRect" type="TextureRect" parent="."]
