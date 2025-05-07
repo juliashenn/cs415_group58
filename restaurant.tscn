@@ -18,6 +18,21 @@
 [ext_resource type="PackedScene" uid="uid://8mw21oglmtr8" path="res://fridge.tscn" id="16_dvxpe"]
 [ext_resource type="PackedScene" uid="uid://4x4shgoweud" path="res://customer_amelia.tscn" id="17_mv1iw"]
 [ext_resource type="Script" uid="uid://cvukqdxbhanbc" path="res://customer_spawner.gd" id="18_obl2x"]
+<<<<<<< Updated upstream
+=======
+[ext_resource type="PackedScene" uid="uid://qhj16dyijiao" path="res://cutting_board.tscn" id="19_3pth6"]
+[ext_resource type="PackedScene" uid="uid://bwlmenkk8j66g" path="res://dish_pile.tscn" id="19_q8ksr"]
+[ext_resource type="PackedScene" uid="uid://cgg3wj7qmm82k" path="res://ui.tscn" id="21_ts0aw"]
+[ext_resource type="Texture2D" uid="uid://dumxhpmnphsu8" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 130.png" id="22_1jckj"]
+[ext_resource type="PackedScene" uid="uid://c6mna2joda3xo" path="res://coin.tscn" id="25_3s3im"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0l62f"]
+atlas = ExtResource("11_wf0ci")
+region = Rect2(0, 0, 13, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ohj6q"]
+size = Vector2(499, 25)
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i66li"]
 size = Vector2(1156, 72.25)
@@ -26,9 +41,15 @@ size = Vector2(1156, 72.25)
 size = Vector2(672, 67)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_womg2"]
+<<<<<<< Updated upstream
 vertices = PackedVector2Array(93, 209.508, 91.9766, 197.906, 121.117, 200.242, 123.133, 350.062, 96.8828, 554.023, 1059.08, 555.969, 1060.91, 344.062)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 0, 3), PackedInt32Array(5, 4, 3, 6)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(83, 210, 87, 564, 1069, 566, 1071, 334, 133, 340, 131, 191, 81, 187)])
+=======
+vertices = PackedVector2Array(93, 209.773, 87.8203, 61.4766, 121.047, 91.9531, 1066.74, 104.859, 1061, 333.828, 96.8828, 554.023, 1059.08, 555.969, 1060.13, 434.43)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(0, 2, 3, 4, 5), PackedInt32Array(6, 5, 4, 7)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(83, 210, 87, 564, 1069, 566, 1070.13, 434.522, 1071, 334, 1065, 122, 126, 116, 77, 38)])
+>>>>>>> Stashed changes
 
 [node name="Restaurant" type="Node2D"]
 script = ExtResource("1_82xtb")
@@ -219,7 +240,6 @@ position = Vector2(614, 252)
 position = Vector2(469, 22)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-visible = false
 navigation_polygon = SubResource("NavigationPolygon_womg2")
 
 [node name="Customer" parent="." instance=ExtResource("17_mv1iw")]
@@ -237,3 +257,16 @@ seat_container_path = NodePath("../tables")
 [node name="SpawnTimer" type="Timer" parent="CustomerSpawner"]
 wait_time = 0.5
 autostart = true
+<<<<<<< Updated upstream
+=======
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" groups=["ui"] instance=ExtResource("21_ts0aw")]
+
+[node name="coin" parent="." instance=ExtResource("25_3s3im")]
+position = Vector2(331, 196)
+
+[node name="DoorMarker" type="Marker2D" parent="."]
+position = Vector2(98, 53)
+>>>>>>> Stashed changes
