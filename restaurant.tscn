@@ -13,9 +13,15 @@
 [ext_resource type="Texture2D" uid="uid://ci6e045k26876" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 129.png" id="10_ykpet"]
 [ext_resource type="Texture2D" uid="uid://c2mlx7npmfgmr" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 489.png" id="11_wf0ci"]
 [ext_resource type="Texture2D" uid="uid://dadmggrqb5w55" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 488.png" id="12_bi1dk"]
-[ext_resource type="PackedScene" uid="uid://ddqm50capt6uw" path="res://furniture/chair1.tscn" id="15_lqurk"]
-[ext_resource type="PackedScene" uid="uid://cx3p6qbuxp3p1" path="res://furniture/chair2.tscn" id="16_c81dn"]
-[ext_resource type="Script" uid="uid://cvukqdxbhanbc" path="res://scripts/customer_spawner.gd" id="18_obl2x"]
+[ext_resource type="Texture2D" uid="uid://ccm6dm7usuche" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 90.png" id="12_i0gfi"]
+[ext_resource type="PackedScene" uid="uid://da0u2gmbyt6lu" path="res://food.tscn" id="14_3qrsg"]
+[ext_resource type="PackedScene" uid="uid://c3mvml62iyc8p" path="res://counter.tscn" id="14_bvwq6"]
+[ext_resource type="PackedScene" uid="uid://c2iixnta5l20k" path="res://plate.tscn" id="15_dg7ln"]
+[ext_resource type="PackedScene" uid="uid://drc5ahbsufdex" path="res://counter_2.tscn" id="15_tqc25"]
+[ext_resource type="PackedScene" uid="uid://8mw21oglmtr8" path="res://fridge.tscn" id="16_dvxpe"]
+[ext_resource type="PackedScene" uid="uid://4x4shgoweud" path="res://customer_amelia.tscn" id="17_mv1iw"]
+[ext_resource type="Script" uid="uid://uq7etdip2dmy" path="res://customer_spawner.gd" id="18_obl2x"]
+[ext_resource type="PackedScene" uid="uid://qhj16dyijiao" path="res://cutting_board.tscn" id="19_3pth6"]
 [ext_resource type="PackedScene" uid="uid://bwlmenkk8j66g" path="res://dish_pile.tscn" id="19_q8ksr"]
 [ext_resource type="PackedScene" uid="uid://cgg3wj7qmm82k" path="res://ui.tscn" id="21_ts0aw"]
 [ext_resource type="Texture2D" uid="uid://dumxhpmnphsu8" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 130.png" id="22_1jckj"]
@@ -26,9 +32,6 @@ tile_size = Vector2i(32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_0l62f"]
 atlas = ExtResource("11_wf0ci")
 region = Rect2(0, 0, 13, 32)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ohj6q"]
-size = Vector2(499, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i66li"]
 size = Vector2(1156, 72.25)
@@ -288,4 +291,14 @@ autostart = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" groups=["ui"] instance=ExtResource("21_ts0aw")]
-mouse_filter = 2
+
+[node name="coin" parent="." instance=ExtResource("25_3s3im")]
+position = Vector2(331, 196)
+
+[node name="DoorMarker" type="Marker2D" parent="."]
+position = Vector2(98, 53)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("26_5qofs")
+volume_db = -30.0
+autoplay = true

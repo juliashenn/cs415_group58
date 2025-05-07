@@ -16,6 +16,17 @@ func _ready():
 	$ProgressBar.visible = false
 	$Plate.visible = false
 
+#func _on_interact():
+##	$CollisionShape2D.disabled = true
+	#player.position = $TextureRect.global_position
+	#player.position.x += 18
+	#player.position.y -= 8
+	#print("Player sitting at left chair: ", player.position)
+#
+	#player.update_sit_animation(false)
+	#
+#func _on_interact():
+	#seat_character(player, sit_right)
 	
 func _on_check(): # cooking is they are holding food, it gets onto board, and itll return to their hands chopped
 #	print(player.holdingObject)

@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://c6mna2joda3xo"]
 
 [ext_resource type="Script" uid="uid://dt03h3ch3rc0p" path="res://scripts/coin.gd" id="1_jjhsu"]
-[ext_resource type="Texture2D" uid="uid://m32urgor4lr" path="res://assets/coin.png" id="2_hmrog"]
+[ext_resource type="Texture2D" uid="uid://cth5vx3cewy68" path="res://assets/coin.png" id="2_hmrog"]
 [ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="3_3w6my"]
-[ext_resource type="AudioStream" uid="uid://bcoqx1555s2l6" path="res://assets/sound/512216__mateusz_chenc__coins.mp3" id="4_pdq0q"]
+[ext_resource type="AudioStream" uid="uid://o6o4t54p5g0q" path="res://assets/sound/512216__mateusz_chenc__coins.mp3" id="4_pdq0q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v7riw"]
 size = Vector2(100, 100)
@@ -23,6 +23,5 @@ texture = ExtResource("2_hmrog")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource("RectangleShape2D_v7riw")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_pdq0q")
-volume_db = 24.0

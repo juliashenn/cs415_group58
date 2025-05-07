@@ -103,14 +103,4 @@ metadata/_edit_use_anchors_ = true
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(0, 14.7059)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -14.7059)
-shape = SubResource("RectangleShape2D_w3tbc")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, -12)
-shape = SubResource("RectangleShape2D_jhklc")
-
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

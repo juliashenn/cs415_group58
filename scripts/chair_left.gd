@@ -15,6 +15,18 @@ func _ready():
 	$ProgressBar.visible = false
 	$Plate.visible = false
 
+#func _on_interact():
+##	$CollisionShape2D.disabled = true
+	#player.position = $TextureRect.global_position
+	#player.position.x += 18
+	#player.position.y -= 8
+	#print("Player sitting at left chair: ", player.position)
+#
+	#player.update_sit_animation(false)
+	#
+#func _on_interact():
+	#seat_character(player, sit_right)
+	
 func _on_check(): # cooking is they are holding food, it gets onto board, and itll return to their hands chopped
 #	print(player.holdingObject)
 	if servedFood and finishedEating:
@@ -73,3 +85,15 @@ func _on_timer_timeout():
 	$ProgressBar.visible = false
 	finishedEating = true
 	$Plate/Food.visible = false
+
+	# Customer paying
+	var coin = preload("res://Coin.tscn").instantiate()
+	coin.global_position = $Plate.global_position + Vector2(10, 8)
+	get_tree().current_scene.add_child(coin)
+
+	# Tell customer to leave
+	if seated_customer:
+		seated_customer.leave_restaurant()
+		seated_customer.assigned_seat = null
+		seated_customer.in_queue = false
+		seated_customer.queue_index = -1
