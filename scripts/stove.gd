@@ -35,7 +35,7 @@ func _ready():
 	circle.visible = false
 	
 func _on_check(): # cooking is they are holding food, it gets onto stove, and itll return to their hands cooked
-#	print(player.holdingObject)
+	print(player.holdingObject)
 	if not player.holdingObject:
 		return false
 #	print(player.has_node("Food"))
@@ -45,7 +45,7 @@ func _on_check(): # cooking is they are holding food, it gets onto stove, and it
 	return false
 
 func _on_interact():
-#	print("Interaction triggered")
+	print("Interaction triggered")
 #	$CollisionShape2D.disabled = true
 	var hasFood = false
 	var foodobj = null
@@ -55,7 +55,9 @@ func _on_interact():
 			foodobj = child
 	if cooking:
 		$Timer.paused = false
+		$AudioStreamPlayer.play()
 	elif hasFood:
+		$AudioStreamPlayer.play()
 		foodpath = foodobj.getFood()
 		player.holdingObject = false
 		player.remove_child(foodobj)
@@ -83,6 +85,7 @@ func _process(delta):
 		$ProgressBar.value = ($Timer.wait_time - $Timer.time_left)/$Timer.wait_time*100
 	elif $ProgressBar.visible:
 		$Timer.paused = true
+		$AudioStreamPlayer.stop()
 #		$ProgressBar.visible = false
 #		$Pan.visible = false
 #		cooking = false
@@ -93,7 +96,7 @@ func _on_timer_timeout():
 	$Pan.visible = false
 	$Food.visible = false
 	if cooking:
-	
+		$AudioStreamPlayer.stop()
 		var foodref = load("res://food.tscn").instantiate()
 
 		foodref.setFood(cookingdict[foodpath])

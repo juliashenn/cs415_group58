@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://qhj16dyijiao"]
+[gd_scene load_steps=12 format=3 uid="uid://qhj16dyijiao"]
 
 [ext_resource type="Script" path="res://scripts/cutting_board.gd" id="1_ry6cn"]
 [ext_resource type="Texture2D" uid="uid://obgtf0xdubrr" path="res://assets/kitchenUtensils-16x16-Sheet.png" id="2_rl3nf"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bjgcgra2f25p2" path="res://assets/chopping board.png" id="3_tsc4r"]
 [ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="4_qt2xl"]
 [ext_resource type="Texture2D" uid="uid://dordhrtho8o6g" path="res://assets/ingredients/bacon.png" id="6_i2mi3"]
+[ext_resource type="AudioStream" uid="uid://dcd3ty0fjgeyk" path="res://assets/sound/393788__obiedaz__chopping-onion.wav" id="7_paprl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1wp8"]
 size = Vector2(40, 21)
@@ -91,5 +92,9 @@ offset_bottom = 24.0
 texture = ExtResource("6_i2mi3")
 expand_mode = 1
 stretch_mode = 4
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_paprl")
+volume_db = -10.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout" flags=18]

@@ -96,10 +96,10 @@ color = Color(0.890196, 0.835294, 0.752941, 1)
 
 [node name="TextureRect" type="TextureRect" parent="Shop"]
 layout_mode = 0
-offset_left = 3.33334
-offset_top = 2.33333
-offset_right = 13.3333
-offset_bottom = 12.3333
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 13.0
+offset_bottom = 13.0
 texture = ExtResource("5_ek2fw")
 expand_mode = 1
 stretch_mode = 4

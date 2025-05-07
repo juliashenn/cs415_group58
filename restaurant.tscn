@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bmp4y3r64mrl4"]
+[gd_scene load_steps=32 format=3 uid="uid://bmp4y3r64mrl4"]
 
 [ext_resource type="Script" path="res://scripts/restaurant.gd" id="1_82xtb"]
 [ext_resource type="PackedScene" uid="uid://c8xlhy0p8wot0" path="res://Player.tscn" id="2_u2x88"]
@@ -10,28 +10,27 @@
 [ext_resource type="Texture2D" uid="uid://rlqsik4t3rf3" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 73.png" id="7_ryk5y"]
 [ext_resource type="Texture2D" uid="uid://cfp101yodgesd" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 67.png" id="8_vy8mu"]
 [ext_resource type="Texture2D" uid="uid://c6rw1g01k7kis" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 83.png" id="9_eie4v"]
-[ext_resource type="Texture2D" uid="uid://ci6e045k26876" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 129.png" id="10_ykpet"]
 [ext_resource type="PackedScene" uid="uid://bvb3s013wm172" path="res://table_chairs.tscn" id="11_3undw"]
 [ext_resource type="Texture2D" uid="uid://c2mlx7npmfgmr" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 489.png" id="11_wf0ci"]
 [ext_resource type="PackedScene" uid="uid://dfy2v1213lere" path="res://stove.tscn" id="12_4ec08"]
 [ext_resource type="Texture2D" uid="uid://dadmggrqb5w55" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 488.png" id="12_bi1dk"]
+[ext_resource type="Texture2D" uid="uid://ccm6dm7usuche" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 90.png" id="12_i0gfi"]
 [ext_resource type="PackedScene" uid="uid://da0u2gmbyt6lu" path="res://food.tscn" id="14_3qrsg"]
+[ext_resource type="PackedScene" uid="uid://c3mvml62iyc8p" path="res://counter.tscn" id="14_bvwq6"]
 [ext_resource type="PackedScene" uid="uid://c2iixnta5l20k" path="res://plate.tscn" id="15_dg7ln"]
+[ext_resource type="PackedScene" uid="uid://drc5ahbsufdex" path="res://counter_2.tscn" id="15_tqc25"]
 [ext_resource type="PackedScene" uid="uid://8mw21oglmtr8" path="res://fridge.tscn" id="16_dvxpe"]
 [ext_resource type="PackedScene" uid="uid://4x4shgoweud" path="res://customer_amelia.tscn" id="17_mv1iw"]
 [ext_resource type="Script" path="res://customer_spawner.gd" id="18_obl2x"]
 [ext_resource type="PackedScene" uid="uid://qhj16dyijiao" path="res://cutting_board.tscn" id="19_3pth6"]
 [ext_resource type="PackedScene" uid="uid://bwlmenkk8j66g" path="res://dish_pile.tscn" id="19_q8ksr"]
 [ext_resource type="PackedScene" uid="uid://cgg3wj7qmm82k" path="res://ui.tscn" id="21_ts0aw"]
-[ext_resource type="Texture2D" uid="uid://dumxhpmnphsu8" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 130.png" id="22_1jckj"]
 [ext_resource type="PackedScene" uid="uid://c6mna2joda3xo" path="res://coin.tscn" id="25_3s3im"]
+[ext_resource type="AudioStream" uid="uid://cel4mvgsl22lc" path="res://assets/sound/Aylex - Italy (freetouse.com).mp3" id="26_5qofs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0l62f"]
 atlas = ExtResource("11_wf0ci")
 region = Rect2(0, 0, 13, 32)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ohj6q"]
-size = Vector2(499, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i66li"]
 size = Vector2(1156, 72.25)
@@ -158,24 +157,7 @@ texture = ExtResource("9_eie4v")
 
 [node name="Furniture" type="StaticBody2D" parent="."]
 texture_filter = 1
-
-[node name="TextureRect" type="TextureRect" parent="Furniture"]
-offset_left = 501.0
-offset_top = 48.0
-offset_right = 579.0
-offset_bottom = 88.0
-texture = ExtResource("10_ykpet")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="TextureRect5" type="TextureRect" parent="Furniture"]
-offset_left = 614.0
-offset_top = 48.0
-offset_right = 692.0
-offset_bottom = 88.0
-texture = ExtResource("22_1jckj")
-expand_mode = 1
-stretch_mode = 4
+position = Vector2(1, 0)
 
 [node name="TextureRect2" type="TextureRect" parent="Furniture"]
 offset_left = 834.0
@@ -187,40 +169,30 @@ expand_mode = 1
 stretch_mode = 4
 flip_h = true
 
-[node name="TextureRect3" type="TextureRect" parent="Furniture/TextureRect2"]
-layout_mode = 0
-offset_left = -75.0
-offset_top = 31.0
-offset_right = 3.0
-offset_bottom = 71.0
-texture = ExtResource("10_ykpet")
-expand_mode = 1
-stretch_mode = 4
+[node name="Counter3" parent="Furniture/TextureRect2" instance=ExtResource("15_tqc25")]
+position = Vector2(-75, 31)
 
 [node name="TextureRect4" type="TextureRect" parent="Furniture"]
-offset_left = 361.0
-offset_top = 17.0
-offset_right = 447.0
-offset_bottom = 88.0
+offset_left = 264.0
+offset_top = 15.0
+offset_right = 350.0
+offset_bottom = 86.0
 texture = SubResource("AtlasTexture_0l62f")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="TextureRect5" type="TextureRect" parent="Furniture/TextureRect4"]
+[node name="Counter3" parent="Furniture/TextureRect4" instance=ExtResource("15_tqc25")]
+position = Vector2(26, 31)
+
+[node name="TextureRect" type="TextureRect" parent="Furniture/TextureRect4"]
 layout_mode = 0
-offset_left = 26.0
+offset_left = 103.0
 offset_top = 31.0
-offset_right = 104.0
+offset_right = 143.0
 offset_bottom = 71.0
-texture = ExtResource("10_ykpet")
-expand_mode = 1
-stretch_mode = 4
+texture = ExtResource("12_i0gfi")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture"]
-position = Vector2(611.5, 57.5)
-shape = SubResource("RectangleShape2D_ohj6q")
-
-[node name="TextureRect3" type="TextureRect" parent="Furniture"]
+[node name="Door" type="TextureRect" parent="Furniture"]
 offset_left = 83.0
 offset_top = 12.0
 offset_right = 115.0
@@ -228,6 +200,12 @@ offset_bottom = 74.0
 texture = ExtResource("12_bi1dk")
 expand_mode = 1
 stretch_mode = 4
+
+[node name="Counter" parent="Furniture" instance=ExtResource("14_bvwq6")]
+position = Vector2(615, 48)
+
+[node name="Counter2" parent="Furniture" instance=ExtResource("15_tqc25")]
+position = Vector2(472, 47)
 
 [node name="Player" parent="." instance=ExtResource("2_u2x88")]
 position = Vector2(517, 243)
@@ -290,10 +268,10 @@ position = Vector2(157, 524)
 position = Vector2(923, 523)
 
 [node name="Stove" parent="." instance=ExtResource("12_4ec08")]
-position = Vector2(482, 48)
+position = Vector2(428, 46)
 
 [node name="CuttingBoard" parent="." instance=ExtResource("19_3pth6")]
-position = Vector2(596, 48)
+position = Vector2(585, 46)
 
 [node name="Fridge" parent="." instance=ExtResource("16_dvxpe")]
 position = Vector2(672, 20)
@@ -335,3 +313,8 @@ autostart = true
 
 [node name="coin" parent="." instance=ExtResource("25_3s3im")]
 position = Vector2(331, 196)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("26_5qofs")
+volume_db = -30.0
+autoplay = true

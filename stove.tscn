@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://dfy2v1213lere"]
+[gd_scene load_steps=11 format=3 uid="uid://dfy2v1213lere"]
 
 [ext_resource type="Script" path="res://scripts/stove.gd" id="1_gdtb6"]
 [ext_resource type="Texture2D" uid="uid://daupudxn6fhjo" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 19.png" id="1_knrlc"]
 [ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="2_mvdwu"]
 [ext_resource type="Texture2D" uid="uid://y8ilq1yeqc21" path="res://assets/frying pan.png" id="4_jg10j"]
+[ext_resource type="AudioStream" uid="uid://bd6saoam5tjus" path="res://assets/sound/140453__aesqe__cooking_02.wav" id="5_yqlgm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1wp8"]
 size = Vector2(40, 21)
@@ -94,5 +95,9 @@ offset_bottom = -21.0
 texture = SubResource("GradientTexture2D_sg4c5")
 expand_mode = 1
 stretch_mode = 4
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_yqlgm")
+volume_db = -10.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

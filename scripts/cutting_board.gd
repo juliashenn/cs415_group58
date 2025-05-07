@@ -50,7 +50,9 @@ func _on_interact():
 			foodobj = child
 	if cutting:
 		$Timer.paused = false
+		$AudioStreamPlayer.play()
 	elif hasFood:
+		$AudioStreamPlayer.play()
 		cutting = true
 		
 		foodpath = foodobj.getFood()
@@ -74,6 +76,7 @@ func _process(delta):
 		$ProgressBar.value = ($Timer.wait_time - $Timer.time_left)/$Timer.wait_time*100
 	elif $ProgressBar.visible:
 		$Timer.paused = true
+		$AudioStreamPlayer.stop()
 #	else:
 #		$Timer.stop()
 #		$ProgressBar.visible = false
@@ -85,6 +88,7 @@ func _on_timer_timeout():
 	$ProgressBar.visible = false
 	$Knife.visible = false
 	$Food.visible = false
+	$AudioStreamPlayer.stop()
 	if cutting:
 	
 		var foodref = load("res://food.tscn").instantiate()
