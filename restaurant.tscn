@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://drc5ahbsufdex" path="res://counter_2.tscn" id="15_tqc25"]
 [ext_resource type="PackedScene" uid="uid://8mw21oglmtr8" path="res://fridge.tscn" id="16_dvxpe"]
 [ext_resource type="PackedScene" uid="uid://4x4shgoweud" path="res://customer_amelia.tscn" id="17_mv1iw"]
-[ext_resource type="Script" uid="uid://uq7etdip2dmy" path="res://customer_spawner.gd" id="18_obl2x"]
+[ext_resource type="Script" uid="uid://cvukqdxbhanbc" path="res://customer_spawner.gd" id="18_obl2x"]
 [ext_resource type="PackedScene" uid="uid://qhj16dyijiao" path="res://cutting_board.tscn" id="19_3pth6"]
 [ext_resource type="PackedScene" uid="uid://bwlmenkk8j66g" path="res://dish_pile.tscn" id="19_q8ksr"]
 [ext_resource type="PackedScene" uid="uid://cgg3wj7qmm82k" path="res://ui.tscn" id="21_ts0aw"]

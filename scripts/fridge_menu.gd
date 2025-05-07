@@ -8,16 +8,20 @@ const FoodScene = preload("res://food.tscn")
 
 var cookchop = {
 	"res://assets/ingredients/meat.png": [true, true],
-	"res://assets/ingredients/flour.png": [true, false],
+	"res://assets/ingredients/flour.png": [false, false],
 	"res://assets/ingredients/egg.png": [true, false],
 	"res://assets/ingredients/corn.png": [true, false],
-	"res://assets/ingredients/carrot.png": [true, false],
+	"res://assets/ingredients/carrot.png": [false, false],
 	"res://assets/ingredients/cabbage.png": [false, true],
 	"res://assets/ingredients/chocolate.png": [false, false],
 	"res://assets/ingredients/fish.png": [true, true],
 	"res://assets/ingredients/milk.png": [true, false],
 	"res://assets/ingredients/potato.png": [false, true],
-	"res://assets/ingredients/strawberry.png": [true, false]
+	"res://assets/ingredients/strawberry.png": [true, false],
+	"res://assets/ingredients/apple.png": [false, false],
+	"res://assets/ingredients/garlic.png": [false, false],
+	"res://assets/ingredients/bagel.png": [false, false],
+	"res://assets/ingredients/bread.png": [false, false]
 }
 
 # Called when the node enters the scene tree for the first time.

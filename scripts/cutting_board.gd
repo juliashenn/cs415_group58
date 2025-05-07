@@ -12,7 +12,6 @@ var cuttingdict = {
 	"res://assets/ingredients/cabbage.png" : "res://assets/ingredients/salad.png",
 	"res://assets/ingredients/fish.png": "res://assets/ingredients/sushi.png",
 	"res://assets/ingredients/friedegg.png": "res://assets/ingredients/egg_salad.png",
-	"res://assets/ingredients/bread.png": "res://assets/ingredients/bread_sliced.png",
 	"res://assets/ingredients/potato.png": "res://assets/ingredients/frenchfries.png"
 }
 

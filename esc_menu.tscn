@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=3 uid="uid://b0lpmhv6mixl3"]
 
-[ext_resource type="Script" uid="uid://bwthyx0n6cdb6" path="res://scripts/esc_menu.gd" id="1_emqnc"]
+[ext_resource type="Script" uid="uid://bnp8p5qrdkvfq" path="res://scripts/esc_menu.gd" id="1_emqnc"]
 [ext_resource type="Texture2D" uid="uid://bpmuvoiy1mj6g" path="res://assets/UiCozyFree.png" id="1_yrcdm"]
 [ext_resource type="FontFile" uid="uid://dpworkmlwrfwd" path="res://assets/Pixeloid_Font_0_5/TrueType (.ttf)/PixeloidSans.ttf" id="3_xge4l"]
 [ext_resource type="Texture2D" uid="uid://b73dib18jlpql" path="res://assets/ingredients/carrot.png" id="4_66yjw"]
