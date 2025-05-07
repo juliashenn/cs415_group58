@@ -1,5 +1,7 @@
 extends Control
 
+signal buy_furniture(item_name)
+
 @onready var chair = $Chairs
 @onready var table = $Tables
 @onready var misc = $Misc
@@ -22,18 +24,39 @@ func _ready():
 		button.pressed.connect(_on_level_stove_button_pressed.bind(button))
 
 func _on_furniture_button_pressed(button):
-	ui.removeCoins(100)
 	pop()
+	if button == $Chairs/GridContainer/VSplitContainer/Button:
+		emit_signal("buy_furniture", "chair1")
+	if button == $Chairs/GridContainer/VSplitContainer2/Button:
+		emit_signal("buy_furniture", "chair2")
+	if button == $Chairs/GridContainer/VSplitContainer3/Button:
+		emit_signal("buy_furniture", "chair3")
+		
+	if button == $Tables/GridContainer/VSplitContainer/Button:
+		emit_signal("buy_furniture", "table1")
+	if button == $Tables/GridContainer/VSplitContainer2/Button:
+		emit_signal("buy_furniture", "table2")
+	if button == $Tables/GridContainer/VSplitContainer3/Button:
+		emit_signal("buy_furniture", "table3")
+	
+	if button == $Misc/GridContainer/VSplitContainer23/Button:
+		emit_signal("buy_furniture", "stove")
+	if button == $Misc/GridContainer/VSplitContainer24/Button:
+		emit_signal("buy_furniture", "fridge")
+	if button == $Misc/GridContainer/VSplitContainer25/Button:
+		emit_signal("buy_furniture", "cutting")
+	
+	_on_texture_button_pressed()
 	
 func _on_level_cutting_button_pressed(button):
 	pop()
-	ui.removeCoins(1000*cuttingBoard.SPEED)
+	Global.money -= (1000*cuttingBoard.SPEED)
 	cuttingBoard.levelUp()
 	$Level/Level/GridContainer/VSplitContainer2/HBoxContainer/Label.text = str(1000*cuttingBoard.SPEED)
 	
 func _on_level_stove_button_pressed(button):
 	pop()
-	ui.removeCoins(1000*stove.SPEED)
+	Global.money -= (1000*stove.SPEED)
 	stove.levelUp()
 	$Level/Level/GridContainer/VSplitContainer/HBoxContainer/Label.text = str(1000*stove.SPEED)
 	
