@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://c3mvml62iyc8p"]
+
+[ext_resource type="Script" path="res://scripts/counter.gd" id="1_1gfkg"]
+[ext_resource type="Texture2D" uid="uid://dumxhpmnphsu8" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 130.png" id="2_1lgj3"]
+[ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="3_suobk"]
+[ext_resource type="Texture2D" uid="uid://bov8hhgc63t5v" path="res://assets/ingredients/banana.png" id="4_1roqf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mnax2"]
+size = Vector2(40, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gl2wf"]
+size = Vector2(40, 66)
+
+[node name="Counter" type="StaticBody2D"]
+texture_filter = 1
+script = ExtResource("1_1gfkg")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_1lgj3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(20, 6)
+shape = SubResource("RectangleShape2D_mnax2")
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_suobk")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(20, 31)
+shape = SubResource("RectangleShape2D_gl2wf")
+
+[node name="Item" type="TextureRect" parent="."]
+offset_left = 7.0
+offset_top = -9.0
+offset_right = 33.0
+offset_bottom = 18.0
+texture = ExtResource("4_1roqf")
+expand_mode = 1
+stretch_mode = 4
