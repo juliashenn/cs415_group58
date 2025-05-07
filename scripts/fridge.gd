@@ -8,14 +8,14 @@ var SPEED: float = 1
 
 @onready var openedImg = $Opened
 @onready var closedImg = $Closed
-@onready var menu = $CanvasLayer/FridgeMenu
+@onready var ui = get_tree().get_first_node_in_group("ui")
 
 var opened = false
 
 func _ready():
 	interaction_area.interact = Callable(self, "_on_interact")
 	openedImg.visible = false
-	menu.visible = false
+	ui.closeFridge()
 
 func _on_interact():
 	player.position = openedImg.global_position
@@ -33,10 +33,10 @@ func open():
 	opened = true
 	openedImg.visible = true
 	closedImg.visible = false
-	menu.visible = true
+	ui.openFridge()
 	
 func close():
 	opened = false
 	openedImg.visible = false
 	closedImg.visible = true
-	menu.visible = false
+	ui.closeFridge()

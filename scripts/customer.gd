@@ -51,27 +51,27 @@ func try_to_find_seat():
 	var container = get_node(seat_container_path)
 	var closest_seat: Node2D = null
 	var min_dist = INF
-	print("Seat container path is: ", seat_container_path)
-	print("Checking available seats in: ", seat_container_path)
+#	print("Seat container path is: ", seat_container_path)
+#	print("Checking available seats in: ", seat_container_path)
 
 
 	for table in container.get_children():
 		for chair in table.get_children():
 			if chair.has_method("get") and chair.get("is_occupied") == false:
-				print("Table: ", table.name, " | Chair: ", chair.name, " | Occupied: ", chair.is_occupied)
+#				print("Table: ", table.name, " | Chair: ", chair.name, " | Occupied: ", chair.is_occupied)
 				var dist = global_position.distance_to(chair.global_position)
 				if dist < min_dist:
 					min_dist = dist
 					closest_seat = chair
 					
 	if closest_seat:
-		print("closest_Seat")
+#		print("closest_Seat")
 		assigned_seat = closest_seat
 		assigned_seat.is_occupied = true
 		target_position = assigned_seat.global_position
 		agent.target_position = target_position
 	else:
-		print("No seats available → waiting in line")
+#		print("No seats available → waiting in line")
 		join_waiting_line()
 
 # Put this customer into the waiting line
@@ -125,3 +125,4 @@ func update_sit_animation(direction: bool):
 		sprite.play("sitRight")
 	else:
 		sprite.play("sitLeft")
+

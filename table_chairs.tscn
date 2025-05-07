@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://kvpwqlrjvt84" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 2.png" id="1_wtghw"]
 [ext_resource type="PackedScene" uid="uid://dj11dvrsclnqr" path="res://chair_right.tscn" id="2_qmllm"]
-[ext_resource type="PackedScene" uid="uid://baep800syp21e" path="res://chair_left.tscn" id="3_7lscr"]
+[ext_resource type="PackedScene" uid="uid://d4gcbh2a1hnqh" path="res://leftchair.tscn" id="4_fneis"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1cu6v"]
-size = Vector2(40, 39)
+size = Vector2(63, 22)
 
 [node name="TableChairs" type="StaticBody2D"]
 position = Vector2(-39, 2)
@@ -16,14 +16,16 @@ offset_left = 19.0
 offset_top = -23.0
 offset_right = 59.0
 offset_bottom = 17.0
+scale = Vector2(1.6, 1.3)
 texture = ExtResource("1_wtghw")
+expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="chairRight" parent="." instance=ExtResource("2_qmllm")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(39, -3.5)
+position = Vector2(50.5, -12)
 shape = SubResource("RectangleShape2D_1cu6v")
 
-[node name="chairLeft" parent="." instance=ExtResource("3_7lscr")]
-position = Vector2(88, 0)
+[node name="Leftchair" parent="." instance=ExtResource("4_fneis")]
+position = Vector2(109, -1)

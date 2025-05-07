@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://8mw21oglmtr8"]
+[gd_scene load_steps=7 format=3 uid="uid://8mw21oglmtr8"]
 
-[ext_resource type="Script" uid="uid://djtjicrc8gdc6" path="res://scripts/fridge.gd" id="1_aph4j"]
+[ext_resource type="Script" path="res://scripts/fridge.gd" id="1_aph4j"]
 [ext_resource type="Texture2D" uid="uid://c1pj8pu1ht4rb" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 181.png" id="1_bdcp8"]
 [ext_resource type="Texture2D" uid="uid://c544ha2mueu8i" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 198.png" id="3_o6ws4"]
 [ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="3_vjfkb"]
-[ext_resource type="PackedScene" uid="uid://djl2sfnh1uyib" path="res://fridge_menu.tscn" id="5_a68f8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vm3qv"]
 size = Vector2(20, 14.9412)
@@ -41,12 +40,8 @@ position = Vector2(-1, 5.47059)
 shape = SubResource("RectangleShape2D_vm3qv")
 
 [node name="InteractionArea" parent="." instance=ExtResource("3_vjfkb")]
+position = Vector2(0, 14.7059)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-position = Vector2(-1, 30)
+position = Vector2(-1.17647, 12.9412)
 shape = SubResource("RectangleShape2D_lqjlr")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="FridgeMenu" parent="CanvasLayer" instance=ExtResource("5_a68f8")]
-visible = false

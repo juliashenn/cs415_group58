@@ -10,6 +10,7 @@ size = Vector2(100, 100)
 [node name="coin" type="Node2D"]
 z_index = 5
 z_as_relative = false
+
 texture_filter = 1
 scale = Vector2(2, 2)
 script = ExtResource("1_jjhsu")
@@ -21,3 +22,4 @@ texture = ExtResource("2_hmrog")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource("RectangleShape2D_v7riw")
+
