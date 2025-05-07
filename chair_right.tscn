@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ce2f6tvbbau3v" path="res://assets/01_dish.png" id="4_3f2ev"]
 [ext_resource type="Texture2D" uid="uid://cap1bc50lgicl" path="res://assets/ingredients/salad.png" id="5_46fpf"]
 
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3t0ta"]
 size = Vector2(96.8125, 111)
 

@@ -31,6 +31,9 @@
 [sub_resource type="AtlasTexture" id="AtlasTexture_0l62f"]
 atlas = ExtResource("11_wf0ci")
 region = Rect2(0, 0, 13, 32)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ohj6q"]
+size = Vector2(499, 25)
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i66li"]
 size = Vector2(1156, 72.25)
@@ -39,9 +42,11 @@ size = Vector2(1156, 72.25)
 size = Vector2(672, 67)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_womg2"]
+
 vertices = PackedVector2Array(83, 210, 81, 187, 131, 191, 133, 340, 87, 564, 1069, 566, 1070.13, 434.522, 1071, 334)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 0, 3), PackedInt32Array(5, 4, 3, 6), PackedInt32Array(6, 3, 7)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(83, 210, 87, 564, 1069, 566, 1070.13, 434.522, 1071, 334, 133, 340, 131, 191, 81, 187)])
+
 
 [node name="Restaurant" type="Node2D"]
 script = ExtResource("1_82xtb")
@@ -288,7 +293,6 @@ position = Vector2(557, 255)
 position = Vector2(614, 252)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-visible = false
 navigation_polygon = SubResource("NavigationPolygon_womg2")
 
 [node name="Customer" parent="." instance=ExtResource("17_mv1iw")]
@@ -307,6 +311,7 @@ seat_container_path = NodePath("../tables")
 wait_time = 0.5
 autostart = true
 
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" groups=["ui"] instance=ExtResource("21_ts0aw")]
@@ -314,6 +319,8 @@ autostart = true
 [node name="coin" parent="." instance=ExtResource("25_3s3im")]
 position = Vector2(331, 196)
 
+[node name="DoorMarker" type="Marker2D" parent="."]
+position = Vector2(98, 53)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("26_5qofs")
 volume_db = -30.0

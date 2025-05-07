@@ -9,6 +9,7 @@ extends CharacterBody2D
 @export var waiting_line_positions: Array[Vector2] = [] # List of positions where customers wait if no chairs are open
 
 @export var first_line_position: Vector2 = Vector2(100, 100)
+@export var exit_position: Vector2 = Vector2(98,43)
 @export var spacing: float = 32.0
 @export var max_waiting_customers: int = 5
 
@@ -103,6 +104,14 @@ func check_if_seat_open():
 func leave_waiting_line():
 	remove_from_group("waiting_customers")
 	queue_index = -1
+	
+
+# Customer leaving a seat
+func leave_restaurant():
+	agent.target_position = exit_position
+	await agent.navigation_finished
+	queue_free()
+
 
 # Animate based on direction of movement
 func play_run_animation(dir: Vector2):
