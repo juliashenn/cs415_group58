@@ -15,14 +15,12 @@ var cookingdict = {
 	"res://assets/ingredients/meat.png": "res://assets/ingredients/steak.png",
 	"res://assets/ingredients/frenchfries.png": "res://assets/ingredients/fries.png",
 	"res://assets/ingredients/bacon_raw.png": "res://assets/ingredients/bacon.png",
-	"res://assets/ingredients/flour.png": "res://assets/ingredients/bread.png",
 	"res://assets/ingredients/fish.png": "res://assets/ingredients/fish_cooked.png",
-	"res://assets/ingredients/carrot.png": "res://assets/ingredients/carrot_cake.png"
+	"res://assets/ingredients/corn.png": "res://assets/ingredients/popcorn.png"
 }
 
 var canchop = [
-	"res://assets/ingredients/friedegg.png", 
-	"res://assets/ingredients/bread.png"
+	"res://assets/ingredients/friedegg.png"
 ]
 
 #carrot -> carrot cake, corn -> popcorn

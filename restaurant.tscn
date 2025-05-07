@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://bmp4y3r64mrl4"]
+[gd_scene load_steps=31 format=3 uid="uid://bmp4y3r64mrl4"]
 
 [ext_resource type="Script" path="res://scripts/restaurant.gd" id="1_82xtb"]
 [ext_resource type="PackedScene" uid="uid://c8xlhy0p8wot0" path="res://Player.tscn" id="2_u2x88"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://bwlmenkk8j66g" path="res://dish_pile.tscn" id="19_q8ksr"]
 [ext_resource type="PackedScene" uid="uid://cgg3wj7qmm82k" path="res://ui.tscn" id="21_ts0aw"]
 [ext_resource type="Texture2D" uid="uid://dumxhpmnphsu8" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 130.png" id="22_1jckj"]
+[ext_resource type="PackedScene" uid="uid://c6mna2joda3xo" path="res://coin.tscn" id="25_3s3im"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0l62f"]
 atlas = ExtResource("11_wf0ci")
@@ -331,3 +332,6 @@ autostart = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" groups=["ui"] instance=ExtResource("21_ts0aw")]
+
+[node name="coin" parent="." instance=ExtResource("25_3s3im")]
+position = Vector2(331, 196)
