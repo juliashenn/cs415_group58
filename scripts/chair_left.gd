@@ -73,3 +73,4 @@ func _on_timer_timeout():
 	$ProgressBar.visible = false
 	finishedEating = true
 	$Plate/Food.visible = false
+	
