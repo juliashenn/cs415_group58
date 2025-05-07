@@ -1,11 +1,12 @@
 extends Control
 
-@onready var coins = int($Coin/CoinCount.text)
+#@onready var coins = int($Coin/CoinCount.text)
 @onready var font = $Coin/CoinCount.get_theme_font("font")
 @onready var coinLable = $Coin/CoinCount
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	updateCoins()
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	$EscMenu.visible = false
 	$FridgeMenu.visible = false
@@ -23,8 +24,7 @@ func update_font_size_to_fit():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
-
+	updateCoins()
 
 func openEsc():
 	$EscMenu.visible = true
@@ -42,13 +42,7 @@ func closeFridge():
 func _on_shop_pressed():
 	get_tree().paused = not get_tree().paused
 	$Store.visible = true
-	
-func addCoins(amount):
-	$Coin/CoinCount.text = str(coins + amount)
-	coins = coins + amount
-	update_font_size_to_fit()
 
-func removeCoins(amount):
-	$Coin/CoinCount.text = str(coins - amount)
-	coins = coins - amount
+func updateCoins():
+	$Coin/CoinCount.text = str(Global.money)
 	update_font_size_to_fit()

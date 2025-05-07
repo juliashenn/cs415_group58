@@ -19,6 +19,7 @@ func unregister_area(area: InteractionArea):
 	active_areas.erase(area)
 
 func _process(delta):
+	#print(active_areas)
 	if player == null:
 		player = get_tree().get_first_node_in_group("player")
 	else: 
@@ -34,7 +35,7 @@ func _sort_by_distance_to_player(area1, area2):
 
 func _input(event):
 	if event.is_action_pressed("interact") && can_interact && not player.holdingObject:
-		if active_areas.size() > 0 && active_areas[0].has_player_inside():
+		if active_areas.size() > 0 && (active_areas[0].has_player_inside()):
 #			can_interact = false
 			await active_areas[0].interact.call()
 #			can_interact = true

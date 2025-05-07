@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://4y2xwxf7b6t"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_left = 896.0
+offset_top = 64.0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="FridgeLabel" type="Label" parent="."]
+offset_left = 960.0
+offset_top = 128.0
+offset_right = 1088.0
+offset_bottom = 160.0
+text = "Fridge"
+horizontal_alignment = 1
+
+[node name="StoveLabel" type="Label" parent="."]
+offset_left = 960.0
+offset_top = 192.0
+offset_right = 1088.0
+offset_bottom = 224.0
+text = "Stove"
+horizontal_alignment = 1
+
+[node name="CuttingLabel" type="Label" parent="."]
+offset_left = 960.0
+offset_top = 256.0
+offset_right = 1088.0
+offset_bottom = 288.0
+text = "Cutting"
+horizontal_alignment = 1
+
+[node name="TableLabel" type="Label" parent="."]
+offset_left = 960.0
+offset_top = 320.0
+offset_right = 1088.0
+offset_bottom = 352.0
+text = "Table"
+horizontal_alignment = 1
+
+[node name="ChairLabel" type="Label" parent="."]
+offset_left = 960.0
+offset_top = 384.0
+offset_right = 1088.0
+offset_bottom = 412.0
+text = "Chair"
+horizontal_alignment = 1
+
+[node name="PlaceFridge" type="Button" parent="."]
+offset_left = 960.0
+offset_top = 160.0
+offset_right = 1088.0
+offset_bottom = 192.0
+text = "Place Fridge"
+
+[node name="PlaceStove" type="Button" parent="."]
+offset_left = 960.0
+offset_top = 224.0
+offset_right = 1088.0
+offset_bottom = 256.0
+text = "Place Stove"
+
+[node name="PlaceCutting" type="Button" parent="."]
+offset_left = 960.0
+offset_top = 288.0
+offset_right = 1088.0
+offset_bottom = 320.0
+text = "Place Cutting"
+
+[node name="PlaceTable" type="Button" parent="."]
+offset_left = 960.0
+offset_top = 352.0
+offset_right = 1088.0
+offset_bottom = 384.0
+text = "Place Table"
+
+[node name="PlaceChair" type="Button" parent="."]
+offset_left = 960.0
+offset_top = 416.0
+offset_right = 1088.0
+offset_bottom = 448.0
+text = "Place Chair"

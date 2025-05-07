@@ -1,5 +1,4 @@
-extends StaticBody2D
-
+extends placed_item
 
 @onready var interaction_area: InteractionArea = $InteractionArea
 @onready var player = get_tree().get_first_node_in_group("player")
@@ -13,7 +12,7 @@ var cuttingdict = {
 	"res://assets/ingredients/cabbage.png" : "res://assets/ingredients/salad.png",
 	"res://assets/ingredients/fish.png": "res://assets/ingredients/sushi.png",
 	"res://assets/ingredients/friedegg.png": "res://assets/ingredients/egg_salad.png",
-	
+	"res://assets/ingredients/bread.png": "res://assets/ingredients/bread_sliced.png",
 	"res://assets/ingredients/potato.png": "res://assets/ingredients/frenchfries.png"
 }
 
@@ -30,6 +29,9 @@ func _ready():
 	$Food.visible = false
 	interaction_area.interact = Callable(self, "_on_interact")
 	interaction_area.type = Callable(self, "_on_check")
+	
+	item_type = "cutting"
+	super()
 	
 func _on_check(): # cooking is they are holding food, it gets onto board, and itll return to their hands chopped
 #	print(player.holdingObject)
@@ -50,9 +52,7 @@ func _on_interact():
 			foodobj = child
 	if cutting:
 		$Timer.paused = false
-		$AudioStreamPlayer.play()
 	elif hasFood:
-		$AudioStreamPlayer.play()
 		cutting = true
 		
 		foodpath = foodobj.getFood()
@@ -66,9 +66,9 @@ func _on_interact():
 		$Timer.start()
 		$Knife.visible = true
 		$Food.visible = true
-		player.position = $TextureRect.global_position
-		player.position.y += 8
-		player.position.x += 20
+		#player.position = $TextureRect.global_position
+		#player.position.y += 8
+		#player.position.x += 20
 		player.update_animation("idleBack")
 	
 func _process(delta):
@@ -76,19 +76,17 @@ func _process(delta):
 		$ProgressBar.value = ($Timer.wait_time - $Timer.time_left)/$Timer.wait_time*100
 	elif $ProgressBar.visible:
 		$Timer.paused = true
-		$AudioStreamPlayer.stop()
 #	else:
 #		$Timer.stop()
 #		$ProgressBar.visible = false
 #		$Knife.visible = false
-	
+	super(delta)
 
 func _on_timer_timeout():
 	$Timer.stop()
 	$ProgressBar.visible = false
 	$Knife.visible = false
 	$Food.visible = false
-	$AudioStreamPlayer.stop()
 	if cutting:
 	
 		var foodref = load("res://food.tscn").instantiate()
@@ -102,7 +100,3 @@ func _on_timer_timeout():
 		player.updateObjectPosition(3)
 		player.holdingObject = true
 		cutting = false
-
-func levelUp():
-	SPEED += 1
-	$Timer.wait_time /= SPEED
