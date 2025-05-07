@@ -1,11 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://dj11dvrsclnqr"]
 
-[ext_resource type="Script" path="res://scripts/chair_right.gd" id="1_n8sj5"]
+[ext_resource type="Script" uid="uid://bwmlcptsmd73y" path="res://scripts/chair_right.gd" id="1_n8sj5"]
 [ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="2_2vxbp"]
 [ext_resource type="Texture2D" uid="uid://c8ouyklhmtmxh" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 3.png" id="3_vr7gx"]
 [ext_resource type="Texture2D" uid="uid://ce2f6tvbbau3v" path="res://assets/01_dish.png" id="4_3f2ev"]
 [ext_resource type="Texture2D" uid="uid://cap1bc50lgicl" path="res://assets/ingredients/salad.png" id="5_46fpf"]
-
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3t0ta"]
 size = Vector2(96.8125, 111)

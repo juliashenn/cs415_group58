@@ -1,6 +1,6 @@
 [gd_scene load_steps=78 format=3 uid="uid://c8xlhy0p8wot0"]
 
-[ext_resource type="Script" path="res://scripts/Player.gd" id="1_icn1u"]
+[ext_resource type="Script" uid="uid://ctxlq4iiv4oer" path="res://scripts/Player.gd" id="1_icn1u"]
 [ext_resource type="Texture2D" uid="uid://wqr38gyvug4o" path="res://assets/Modern tiles_Free/Characters_free/Bob_idle_anim_16x16.png" id="1_lfv3c"]
 [ext_resource type="Texture2D" uid="uid://dmwvkd8kid8pn" path="res://assets/Modern tiles_Free/Characters_free/Bob_phone_16x16.png" id="2_yapur"]
 [ext_resource type="Texture2D" uid="uid://clc0wmksqa20k" path="res://assets/Modern tiles_Free/Characters_free/Bob_run_16x16.png" id="3_jlfik"]

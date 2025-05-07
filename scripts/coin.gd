@@ -13,6 +13,7 @@ func _ready():
 
 func _on_pickup():
 	# Find the UI node and add coins
+	$AudioStreamPlayer.play()
 	var ui = get_tree().get_root().get_node("Restaurant/CanvasLayer/UI")  # Adjust path if needed
 	ui.addCoins(coin_value)
 	queue_free()  # Remove coin from scene after pickup

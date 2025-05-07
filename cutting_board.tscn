@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://qhj16dyijiao"]
 
-[ext_resource type="Script" path="res://scripts/cutting_board.gd" id="1_ry6cn"]
+[ext_resource type="Script" uid="uid://fi2ihlplh0f0" path="res://scripts/cutting_board.gd" id="1_ry6cn"]
 [ext_resource type="Texture2D" uid="uid://obgtf0xdubrr" path="res://assets/kitchenUtensils-16x16-Sheet.png" id="2_rl3nf"]
 [ext_resource type="Texture2D" uid="uid://daogl6iteot4b" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 41.png" id="2_vxi5d"]
 [ext_resource type="Texture2D" uid="uid://bjgcgra2f25p2" path="res://assets/chopping board.png" id="3_tsc4r"]
@@ -97,4 +97,4 @@ stretch_mode = 4
 stream = ExtResource("7_paprl")
 volume_db = -10.0
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout" flags=18]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

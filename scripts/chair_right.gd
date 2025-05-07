@@ -4,7 +4,7 @@ extends StaticBody2D
 @onready var player = get_tree().get_first_node_in_group("player")
 
 var is_occupied: bool = false
-var sit_right: bool = right  # false for left chairs
+var sit_right: bool = true  # false for left chairs
 var servedFood = false
 var finishedEating = false
 var seated_customer: Node2D = null
@@ -25,8 +25,8 @@ func _ready():
 #
 	#player.update_sit_animation(false)
 	#
-func _on_interact():
-	seat_character(player, sit_right)
+#func _on_interact():
+	#seat_character(player, sit_right)
 	
 func _on_check(): # cooking is they are holding food, it gets onto board, and itll return to their hands chopped
 #	print(player.holdingObject)
@@ -103,4 +103,3 @@ func _on_timer_timeout():
 		seated_customer.assigned_seat = null
 		seated_customer.in_queue = false
 		seated_customer.queue_index = -1
-

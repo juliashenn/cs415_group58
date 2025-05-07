@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://d4gcbh2a1hnqh"]
 
-[ext_resource type="Script" path="res://scripts/leftchair.gd" id="1_t2ubj"]
+[ext_resource type="Script" uid="uid://bp5trr2jjlx7d" path="res://scripts/leftchair.gd" id="1_t2ubj"]
 [ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="2_7ral4"]
 [ext_resource type="Texture2D" uid="uid://c8ouyklhmtmxh" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 3.png" id="3_7chmv"]
 [ext_resource type="Texture2D" uid="uid://ce2f6tvbbau3v" path="res://assets/01_dish.png" id="4_78okm"]

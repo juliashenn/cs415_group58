@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=3 uid="uid://djl2sfnh1uyib"]
 
-[ext_resource type="Script" path="res://scripts/fridge_menu.gd" id="1_5hut5"]
+[ext_resource type="Script" uid="uid://bw7y4nr4xf0dp" path="res://scripts/fridge_menu.gd" id="1_5hut5"]
 [ext_resource type="Texture2D" uid="uid://bpmuvoiy1mj6g" path="res://assets/UiCozyFree.png" id="1_ob7lp"]
 [ext_resource type="Texture2D" uid="uid://bx72dql32rdwf" path="res://assets/ingredients/fish.png" id="4_xbwlw"]
 [ext_resource type="Texture2D" uid="uid://cebrk6enfjlvc" path="res://assets/ingredients/meat.png" id="5_deaky"]
