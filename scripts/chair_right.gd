@@ -4,7 +4,7 @@ extends StaticBody2D
 @onready var player = get_tree().get_first_node_in_group("player")
 
 var is_occupied: bool = false
-var sit_right: bool = right  # false for left chairs
+var sit_right: bool = true  # false for left chairs
 var servedFood = false
 var finishedEating = false
 var seated_customer: Node2D = null
@@ -16,17 +16,6 @@ func _ready():
 	$ProgressBar.visible = false
 	$Plate.visible = false
 
-#func _on_interact():
-##	$CollisionShape2D.disabled = true
-	#player.position = $TextureRect.global_position
-	#player.position.x += 18
-	#player.position.y -= 8
-	#print("Player sitting at left chair: ", player.position)
-#
-	#player.update_sit_animation(false)
-	#
-func _on_interact():
-	seat_character(player, sit_right)
 	
 func _on_check(): # cooking is they are holding food, it gets onto board, and itll return to their hands chopped
 #	print(player.holdingObject)
@@ -45,7 +34,6 @@ func _process(delta):
 		$ProgressBar.value = ($Timer.wait_time - $Timer.time_left)/$Timer.wait_time*100
 		
 func _on_interact():
-
 	var hasFood = false
 	var foodobj = null
 	for child in player.get_children():
@@ -94,6 +82,7 @@ func _on_timer_timeout():
 
 	# Customer paying
 	var coin = preload("res://Coin.tscn").instantiate()
+	print('right')
 	coin.global_position = $Plate.global_position + Vector2(10, 8)
 	get_tree().current_scene.add_child(coin)
 
@@ -103,4 +92,3 @@ func _on_timer_timeout():
 		seated_customer.assigned_seat = null
 		seated_customer.in_queue = false
 		seated_customer.queue_index = -1
-
