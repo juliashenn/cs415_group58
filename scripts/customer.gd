@@ -63,6 +63,14 @@ func try_to_find_seat():
 				if dist < min_dist:
 					min_dist = dist
 					closest_seat = chair
+	
+	for chair in container.get_children():
+		if chair.has_method("get") and chair.get("is_occupied") == false:
+#				print("Table: ", table.name, " | Chair: ", chair.name, " | Occupied: ", chair.is_occupied)
+			var dist = global_position.distance_to(chair.global_position)
+			if dist < min_dist:
+				min_dist = dist
+				closest_seat = chair
 					
 	if closest_seat:
 #		print("closest_Seat")

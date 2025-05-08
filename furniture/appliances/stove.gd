@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends placed_item
 
 @onready var interaction_area: InteractionArea = $InteractionArea
 @onready var player = get_tree().get_first_node_in_group("player")
@@ -33,6 +33,9 @@ func _ready():
 	interaction_area.type = Callable(self, "_on_check")
 	food.visible = false
 	circle.visible = false
+	
+	item_type = "stove"
+	super()
 	
 func _on_check(): # cooking is they are holding food, it gets onto stove, and itll return to their hands cooked
 	print(player.holdingObject)
@@ -75,9 +78,9 @@ func _on_interact():
 		cooking = true
 		$Pan.visible = true
 		$Food.visible = true
-		player.position = $TextureRect.global_position
-		player.position.y += 8
-		player.position.x += 20
+		#player.position = $TextureRect.global_position
+		#player.position.y += 8
+		#player.position.x += 20
 		player.update_animation("idleBack")
 	
 func _process(delta):
@@ -89,6 +92,7 @@ func _process(delta):
 #		$ProgressBar.visible = false
 #		$Pan.visible = false
 #		cooking = false
+	super(delta)
 	
 
 func _on_timer_timeout():

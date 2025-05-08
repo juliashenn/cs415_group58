@@ -2,31 +2,33 @@
 
 [ext_resource type="Script" uid="uid://npda5a57xqqa" path="res://scripts/restaurant.gd" id="1_82xtb"]
 [ext_resource type="PackedScene" uid="uid://c8xlhy0p8wot0" path="res://Player.tscn" id="2_u2x88"]
-[ext_resource type="Texture2D" uid="uid://dj6mkqdcxbf7o" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 63.png" id="3_2wmmu"]
-[ext_resource type="Texture2D" uid="uid://6tdxqq2h6d5q" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 81.png" id="4_5jf2j"]
-[ext_resource type="Texture2D" uid="uid://b2rdfecsrper6" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 1.png" id="4_174yq"]
-[ext_resource type="Texture2D" uid="uid://q3wy0p4xf0j3" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 61.png" id="6_a1xxl"]
-[ext_resource type="Texture2D" uid="uid://bufj0p36isx4j" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 71.png" id="6_n0b4b"]
-[ext_resource type="Texture2D" uid="uid://rlqsik4t3rf3" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 73.png" id="7_ryk5y"]
-[ext_resource type="Texture2D" uid="uid://cfp101yodgesd" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 67.png" id="8_vy8mu"]
-[ext_resource type="Texture2D" uid="uid://c6rw1g01k7kis" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 83.png" id="9_eie4v"]
-[ext_resource type="PackedScene" uid="uid://bvb3s013wm172" path="res://table_chairs.tscn" id="11_3undw"]
-[ext_resource type="Texture2D" uid="uid://c2mlx7npmfgmr" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 489.png" id="11_wf0ci"]
-[ext_resource type="PackedScene" uid="uid://dfy2v1213lere" path="res://stove.tscn" id="12_4ec08"]
-[ext_resource type="Texture2D" uid="uid://dadmggrqb5w55" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 488.png" id="12_bi1dk"]
-[ext_resource type="Texture2D" uid="uid://ccm6dm7usuche" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 90.png" id="12_i0gfi"]
+[ext_resource type="Texture2D" uid="uid://bme8pfb2l32mg" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 63.png" id="3_2wmmu"]
+[ext_resource type="Texture2D" uid="uid://cccawleuhs1ut" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 81.png" id="4_5jf2j"]
+[ext_resource type="Texture2D" uid="uid://cdeit4fgalp7q" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 1.png" id="4_174yq"]
+[ext_resource type="Texture2D" uid="uid://b4xouxjkhiokq" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 61.png" id="6_a1xxl"]
+[ext_resource type="Texture2D" uid="uid://bai84wu6with7" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 71.png" id="6_n0b4b"]
+[ext_resource type="Texture2D" uid="uid://4elstwntb2lv" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 73.png" id="7_ryk5y"]
+[ext_resource type="Texture2D" uid="uid://lx7g674spe2d" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 67.png" id="8_vy8mu"]
+[ext_resource type="Texture2D" uid="uid://brhvkekdllqxv" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 83.png" id="9_eie4v"]
+[ext_resource type="Texture2D" uid="uid://c0jfjn4kdk3v5" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 489.png" id="11_wf0ci"]
+[ext_resource type="PackedScene" uid="uid://dfy2v1213lere" path="res://furniture/appliances/stove.tscn" id="12_4ec08"]
+[ext_resource type="Texture2D" uid="uid://3af7uwi083b" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 488.png" id="12_bi1dk"]
+[ext_resource type="Texture2D" uid="uid://cdcg2ousvffrd" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 90.png" id="12_i0gfi"]
 [ext_resource type="PackedScene" uid="uid://da0u2gmbyt6lu" path="res://food.tscn" id="14_3qrsg"]
-[ext_resource type="PackedScene" uid="uid://c3mvml62iyc8p" path="res://counter.tscn" id="14_bvwq6"]
+[ext_resource type="PackedScene" uid="uid://c3mvml62iyc8p" path="res://furniture/appliances/counter.tscn" id="14_bvwq6"]
 [ext_resource type="PackedScene" uid="uid://c2iixnta5l20k" path="res://plate.tscn" id="15_dg7ln"]
-[ext_resource type="PackedScene" uid="uid://drc5ahbsufdex" path="res://counter_2.tscn" id="15_tqc25"]
-[ext_resource type="PackedScene" uid="uid://8mw21oglmtr8" path="res://fridge.tscn" id="16_dvxpe"]
+[ext_resource type="PackedScene" uid="uid://drc5ahbsufdex" path="res://furniture/appliances/counter_2.tscn" id="15_tqc25"]
+[ext_resource type="PackedScene" uid="uid://8mw21oglmtr8" path="res://furniture/appliances/fridge.tscn" id="16_dvxpe"]
 [ext_resource type="PackedScene" uid="uid://4x4shgoweud" path="res://customer_amelia.tscn" id="17_mv1iw"]
 [ext_resource type="Script" uid="uid://cvukqdxbhanbc" path="res://customer_spawner.gd" id="18_obl2x"]
-[ext_resource type="PackedScene" uid="uid://qhj16dyijiao" path="res://cutting_board.tscn" id="19_3pth6"]
-[ext_resource type="PackedScene" uid="uid://bwlmenkk8j66g" path="res://dish_pile.tscn" id="19_q8ksr"]
+[ext_resource type="PackedScene" uid="uid://qhj16dyijiao" path="res://furniture/appliances/cutting_board.tscn" id="19_3pth6"]
+[ext_resource type="PackedScene" uid="uid://hh3laq4w1ki0" path="res://furniture/appliances/dish_pile.tscn" id="19_q8ksr"]
 [ext_resource type="PackedScene" uid="uid://cgg3wj7qmm82k" path="res://ui.tscn" id="21_ts0aw"]
 [ext_resource type="PackedScene" uid="uid://c6mna2joda3xo" path="res://coin.tscn" id="25_3s3im"]
-[ext_resource type="AudioStream" uid="uid://cel4mvgsl22lc" path="res://assets/sound/Aylex - Italy (freetouse.com).mp3" id="26_5qofs"]
+[ext_resource type="AudioStream" uid="uid://dfk2yewkyiwrm" path="res://assets/sound/Aylex - Italy (freetouse.com).mp3" id="26_5qofs"]
+
+[sub_resource type="TileSet" id="TileSet_o1kau"]
+tile_size = Vector2i(32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0l62f"]
 atlas = ExtResource("11_wf0ci")
@@ -45,6 +47,9 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(83, 210, 87, 564, 1069,
 
 [node name="Restaurant" type="Node2D"]
 script = ExtResource("1_82xtb")
+
+[node name="tilegrid" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_o1kau")
 
 [node name="Floor" type="TextureRect" parent="."]
 texture_filter = 1
@@ -237,48 +242,14 @@ one_way_collision = true
 
 [node name="tables" type="Node" parent="."]
 
-[node name="TableChairs" parent="tables" instance=ExtResource("11_3undw")]
-position = Vector2(542, 386)
-
-[node name="TableChairs2" parent="tables" instance=ExtResource("11_3undw")]
-position = Vector2(734, 384)
-
-[node name="TableChairs3" parent="tables" instance=ExtResource("11_3undw")]
-position = Vector2(350, 387)
-
-[node name="TableChairs4" parent="tables" instance=ExtResource("11_3undw")]
-position = Vector2(157, 386)
-
-[node name="TableChairs5" parent="tables" instance=ExtResource("11_3undw")]
-position = Vector2(923, 385)
-
-[node name="TableChairs6" parent="tables" instance=ExtResource("11_3undw")]
-position = Vector2(542, 524)
-
-[node name="TableChairs7" parent="tables" instance=ExtResource("11_3undw")]
-position = Vector2(734, 522)
-
-[node name="TableChairs8" parent="tables" instance=ExtResource("11_3undw")]
-position = Vector2(350, 525)
-
-[node name="TableChairs9" parent="tables" instance=ExtResource("11_3undw")]
-position = Vector2(157, 524)
-
-[node name="TableChairs10" parent="tables" instance=ExtResource("11_3undw")]
-position = Vector2(923, 523)
-
-[node name="Stove" parent="." instance=ExtResource("12_4ec08")]
+[node name="Stove" parent="." groups=["stove"] instance=ExtResource("12_4ec08")]
 position = Vector2(428, 46)
 
-[node name="CuttingBoard" parent="." instance=ExtResource("19_3pth6")]
-position = Vector2(585, 46)
+[node name="CuttingBoard" parent="." groups=["cuttingBoard"] instance=ExtResource("19_3pth6")]
+position = Vector2(579, 120)
 
 [node name="Fridge" parent="." instance=ExtResource("16_dvxpe")]
-position = Vector2(672, 20)
-
-[node name="dishPile" parent="." instance=ExtResource("19_q8ksr")]
-position = Vector2(686, 48)
-scale = Vector2(0.89, 0.89)
+position = Vector2(675, 142)
 
 [node name="Food" parent="." groups=["food"] instance=ExtResource("14_3qrsg")]
 z_index = 1
@@ -306,17 +277,21 @@ seat_container_path = NodePath("../tables")
 wait_time = 0.5
 autostart = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="UI" parent="CanvasLayer" groups=["ui"] instance=ExtResource("21_ts0aw")]
-
 [node name="coin" parent="." instance=ExtResource("25_3s3im")]
 position = Vector2(331, 196)
 
 [node name="DoorMarker" type="Marker2D" parent="."]
 position = Vector2(98, 53)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" groups=["ui"] instance=ExtResource("21_ts0aw")]
+mouse_filter = 2
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("26_5qofs")
 volume_db = -30.0
 autoplay = true
+
+[node name="dishPile" parent="." instance=ExtResource("19_q8ksr")]
+position = Vector2(781, 223)

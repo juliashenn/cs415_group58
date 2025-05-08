@@ -1,5 +1,7 @@
 extends Control
 
+signal buy_furniture(item_name)
+
 @onready var chair = $Chairs
 @onready var table = $Tables
 @onready var misc = $Misc
@@ -22,8 +24,34 @@ func _ready():
 		button.pressed.connect(_on_level_stove_button_pressed.bind(button))
 
 func _on_furniture_button_pressed(button):
-	ui.removeCoins(100)
-	pop()
+	if button == $Chairs/GridContainer/VSplitContainer/Button:
+		emit_signal("buy_furniture", "chair1")
+	if button == $Chairs/GridContainer/VSplitContainer2/Button:
+		emit_signal("buy_furniture", "chair2")
+	if button == $Chairs/GridContainer/VSplitContainer3/Button:
+		emit_signal("buy_furniture", "chair3")
+		
+	if button == $Tables/GridContainer/VSplitContainer/Button:
+		emit_signal("buy_furniture", "table1")
+	if button == $Tables/GridContainer/VSplitContainer2/Button:
+		emit_signal("buy_furniture", "table2")
+	if button == $Tables/GridContainer/VSplitContainer3/Button:
+		emit_signal("buy_furniture", "table3")
+	
+	if button == $Misc/GridContainer/VSplitContainer/Button:
+		emit_signal("buy_furniture", "stove")
+	if button == $Misc/GridContainer/VSplitContainer2/Button:
+		emit_signal("buy_furniture", "fridge")
+	if button == $Misc/GridContainer/VSplitContainer3/Button:
+		emit_signal("buy_furniture", "cutting")
+	if button == $Misc/GridContainer/VSplitContainer4/Button:
+		emit_signal("buy_furniture", "counter1")
+	if button == $Misc/GridContainer/VSplitContainer5/Button:
+		emit_signal("buy_furniture", "counter2")
+	if button == $Misc/GridContainer/VSplitContainer6/Button:
+		emit_signal("buy_furniture", "dishpile")
+	
+	_on_texture_button_pressed()
 	
 func _on_level_cutting_button_pressed(button):
 	pop()

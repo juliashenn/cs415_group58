@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://hh3laq4w1ki0"]
+
+[ext_resource type="Script" uid="uid://d3xoco18wmwmq" path="res://furniture/appliances/dishPile.gd" id="1_4ya3h"]
+[ext_resource type="Texture2D" uid="uid://vcj3ji2phxqh" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 106.png" id="2_737dp"]
+[ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="3_hc7un"]
+[ext_resource type="Texture2D" uid="uid://1osgqbb5c3qb" path="res://assets/03_dish_pile.png" id="4_7vwwp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s0phm"]
+size = Vector2(80, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tsese"]
+size = Vector2(112, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hohmn"]
+size = Vector2(78, 46)
+
+[node name="dishPile" type="Sprite2D"]
+script = ExtResource("1_4ya3h")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = -40.0
+offset_top = -24.0
+offset_right = 40.0
+offset_bottom = 24.0
+texture = ExtResource("2_737dp")
+expand_mode = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_s0phm")
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_hc7un")]
+position = Vector2(41, -2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(-41, 2)
+shape = SubResource("RectangleShape2D_tsese")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = -13.0
+offset_top = -25.0
+offset_right = 11.0
+offset_bottom = -1.0
+texture = ExtResource("4_7vwwp")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(41.5, 8.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-41.5, -8.5)
+shape = SubResource("RectangleShape2D_hohmn")

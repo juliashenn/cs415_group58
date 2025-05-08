@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends placed_item
 
 @onready var interaction_area: InteractionArea = $InteractionArea
 @onready var player = get_tree().get_first_node_in_group("player")
@@ -9,7 +9,12 @@ func _ready():
 	interaction_area.interact = Callable(self, "_on_interact")
 	interaction_area.type = Callable(self, "_on_check")
 	$Item.visible = false
+	
+	item_type = "counter1"
+	super()
 
+func _process(delta):
+	super(delta)
 	
 func _on_check():
 	if not player.holdingObject:

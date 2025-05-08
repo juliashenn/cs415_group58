@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends placed_item
 
 
 @onready var interaction_area: InteractionArea = $InteractionArea
@@ -13,26 +13,31 @@ var SPEED: float = 1
 var opened = false
 
 func _ready():
+	item_type = "fridge"
+	super()
+	
 	interaction_area.interact = Callable(self, "_on_interact")
 	openedImg.visible = false
 	ui.closeFridge()
 
 func _on_interact():
-	player.position = openedImg.global_position
-	player.position.x += 50
-	player.position.y += 60
+	#player.position = openedImg.global_position
+	#player.position.x += 50
+	#player.position.y += 60
 	player.update_animation("idleBack")
-	if not opened:
-		open()
+	#if not opened:
+	open()
 	
 func _process(delta):
-	if player.position.distance_to(position) < 50:
-		close()
+	super(delta)
+	
+	#if player.position.distance_to(position) < 50:
+	#	close()
 	
 func open():
 	opened = true
-	openedImg.visible = true
-	closedImg.visible = false
+	openedImg.visible = false
+	closedImg.visible = true
 	ui.openFridge()
 	
 func close():

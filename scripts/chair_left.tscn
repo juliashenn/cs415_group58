@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://baep800syp21e"]
 
-[ext_resource type="Script" uid="uid://divofucxg6vke" path="res://scripts/chair_left.gd" id="1_2gsp2"]
+[ext_resource type="Script" uid="uid://divofucxg6vke" path="res://furniture/chairs/chair1.gd" id="1_2gsp2"]
 [ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="1_lid8i"]
-[ext_resource type="Texture2D" uid="uid://c8ouyklhmtmxh" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 3.png" id="2_nd5yd"]
-[ext_resource type="Texture2D" uid="uid://ce2f6tvbbau3v" path="res://assets/01_dish.png" id="4_kxr2f"]
-[ext_resource type="Texture2D" uid="uid://cap1bc50lgicl" path="res://assets/ingredients/salad.png" id="5_5rt8f"]
+[ext_resource type="Texture2D" uid="uid://cv8r2qgqf10o5" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 3.png" id="2_nd5yd"]
+[ext_resource type="Texture2D" uid="uid://bt8024x5hu125" path="res://assets/01_dish.png" id="4_kxr2f"]
+[ext_resource type="Texture2D" uid="uid://boc3orqsbhw8f" path="res://assets/ingredients/salad.png" id="5_5rt8f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xoviv"]
 size = Vector2(96, 112)

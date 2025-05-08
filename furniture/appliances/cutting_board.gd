@@ -1,5 +1,4 @@
-extends StaticBody2D
-
+extends placed_item
 
 @onready var interaction_area: InteractionArea = $InteractionArea
 @onready var player = get_tree().get_first_node_in_group("player")
@@ -29,6 +28,9 @@ func _ready():
 	$Food.visible = false
 	interaction_area.interact = Callable(self, "_on_interact")
 	interaction_area.type = Callable(self, "_on_check")
+	
+	item_type = "cutting"
+	super()
 	
 func _on_check(): # cooking is they are holding food, it gets onto board, and itll return to their hands chopped
 #	print(player.holdingObject)
@@ -65,9 +67,9 @@ func _on_interact():
 		$Timer.start()
 		$Knife.visible = true
 		$Food.visible = true
-		player.position = $TextureRect.global_position
-		player.position.y += 8
-		player.position.x += 20
+		#player.position = $TextureRect.global_position
+		#player.position.y += 8
+		#player.position.x += 20
 		player.update_animation("idleBack")
 	
 func _process(delta):
@@ -80,6 +82,7 @@ func _process(delta):
 #		$Timer.stop()
 #		$ProgressBar.visible = false
 #		$Knife.visible = false
+	super(delta)
 	
 
 func _on_timer_timeout():

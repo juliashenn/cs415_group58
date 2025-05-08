@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends placed_item
 
 @onready var interaction_area: InteractionArea = $InteractionArea
 @onready var interaction_area2: InteractionArea = $InteractionArea2
@@ -7,6 +7,8 @@ extends StaticBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	item_type = "counter2"
+	super()
 	interaction_area.interact = Callable(self, "_on_interact")
 	interaction_area.type = Callable(self, "_on_check")
 	if interaction_area2:
@@ -15,7 +17,10 @@ func _ready():
 	$Item.visible = false
 	if $Item2:
 		$Item2.visible = false
-	
+
+func _process(delta):
+	super(delta)
+
 func _on_check():
 	if not player.holdingObject:
 		return false
