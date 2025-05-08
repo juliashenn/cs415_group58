@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c2iixnta5l20k"]
 
 [ext_resource type="Script" uid="uid://d1xq1pihkjblx" path="res://scripts/plate.gd" id="1_3pa1j"]
-[ext_resource type="Texture2D" uid="uid://ce2f6tvbbau3v" path="res://assets/01_dish.png" id="2_nlu2m"]
+[ext_resource type="Texture2D" uid="uid://btpr2hachs56b" path="res://assets/01_dish.png" id="2_nlu2m"]
 [ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="3_dfp54"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_drkwh"]

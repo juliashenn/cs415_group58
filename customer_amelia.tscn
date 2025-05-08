@@ -1,10 +1,10 @@
 [gd_scene load_steps=59 format=3 uid="uid://4x4shgoweud"]
 
 [ext_resource type="Script" uid="uid://dl1ry5qu37jbx" path="res://scripts/customer.gd" id="1_f7asb"]
-[ext_resource type="Texture2D" uid="uid://xhh538qwew8c" path="res://assets/Modern tiles_Free/Characters_free/Amelia_run_16x16.png" id="1_r8ta2"]
-[ext_resource type="Texture2D" uid="uid://bxh08twxjcix" path="res://assets/Modern tiles_Free/Characters_free/Amelia_sit3_16x16.png" id="2_f7asb"]
-[ext_resource type="Texture2D" uid="uid://brhx451fffu16" path="res://assets/Modern tiles_Free/Characters_free/Amelia_idle_anim_16x16.png" id="2_gn8fi"]
-[ext_resource type="Texture2D" uid="uid://cbqx2rjt46f8f" path="res://assets/Modern tiles_Free/Characters_free/Amelia_phone_16x16.png" id="3_eas7q"]
+[ext_resource type="Texture2D" uid="uid://snjiaoj37o4g" path="res://assets/Modern tiles_Free/Characters_free/Amelia_run_16x16.png" id="1_r8ta2"]
+[ext_resource type="Texture2D" uid="uid://c3s4f2fgcd2ps" path="res://assets/Modern tiles_Free/Characters_free/Amelia_sit3_16x16.png" id="2_f7asb"]
+[ext_resource type="Texture2D" uid="uid://06vcb861llfu" path="res://assets/Modern tiles_Free/Characters_free/Amelia_idle_anim_16x16.png" id="2_gn8fi"]
+[ext_resource type="Texture2D" uid="uid://be63lrxhw4b47" path="res://assets/Modern tiles_Free/Characters_free/Amelia_phone_16x16.png" id="3_eas7q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hrg8v"]
 atlas = ExtResource("2_gn8fi")
@@ -431,3 +431,8 @@ disabled = true
 
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
 radius = 8.0
+
+[node name="FoodOrderSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -20)
+scale = Vector2(0.7, 0.7)
