@@ -19,18 +19,6 @@ func _ready():
 	super()
 	item_type = "chair2l"
 
-#func _on_interact():
-##	$CollisionShape2D.disabled = true
-	#player.position = $TextureRect.global_position
-	#player.position.x += 18
-	#player.position.y -= 8
-	#print("Player sitting at left chair: ", player.position)
-#
-	#player.update_sit_animation(false)
-	#
-#func _on_interact():
-	#seat_character(player, sit_right)
-	
 func _on_check(): # cooking is they are holding food, it gets onto board, and itll return to their hands chopped
 #	print(player.holdingObject)
 	if servedFood and finishedEating:
@@ -62,6 +50,8 @@ func _on_interact():
 		$Plate.visible = false
 		seated_customer = null
 		is_occupied = false
+		#if coin.is_coin_collected == true:
+		call_deferred("_check_waiting_line")
 	elif not servedFood and hasFood:
 		servedFood = true
 		player.holdingObject = false
@@ -73,7 +63,27 @@ func _on_interact():
 		$ProgressBar.visible = true
 		$Timer.start()
 
-#	seat_character(player, sit_right)
+		if seated_customer and seated_customer.has_node("FoodOrderSprite"):
+			seated_customer.get_node("FoodOrderSprite").visible = false
+
+
+func _check_waiting_line():
+	var waiting_customers = get_tree().get_nodes_in_group("waiting_customers")
+	waiting_customers.sort_custom(Callable(self, "_compare_queue_index"))
+	for customer in waiting_customers:
+		customer.check_if_seat_open()
+
+func _compare_queue_index(a, b):
+	return a.queue_index > b.queue_index
+
+#func shift_waiting_line():
+	#var customers = get_tree().get_nodes_in_group("waiting_customers")
+	#customers.sort_custom(Callable(self, "_compare_queue_index"))  # sort oldest → newest
+	#
+	#for i in range(customers.size()):
+		#customers[i].queue_index = i
+		#customers[i].move_to_line_position(i)
+		#
 
 
 # seating customers and players

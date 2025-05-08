@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://bpcvrf3jy6jo3"]
 
 [ext_resource type="Script" uid="uid://412jhqthsxve" path="res://furniture/chairs/chair1l.gd" id="1_5m4q2"]
-[ext_resource type="Texture2D" uid="uid://vwnv5e1khghm" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 233.png" id="2_q4muf"]
-[ext_resource type="Texture2D" uid="uid://bt8024x5hu125" path="res://assets/01_dish.png" id="3_gscy6"]
-[ext_resource type="Texture2D" uid="uid://boc3orqsbhw8f" path="res://assets/ingredients/salad.png" id="4_2j1fr"]
+[ext_resource type="Texture2D" uid="uid://cg5sq28ji0unf" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 233.png" id="2_q4muf"]
+[ext_resource type="Texture2D" uid="uid://btpr2hachs56b" path="res://assets/01_dish.png" id="3_gscy6"]
+[ext_resource type="Texture2D" uid="uid://qqqcqab6vgqt" path="res://assets/ingredients/salad.png" id="4_2j1fr"]
 [ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="5_fmeh2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pq6ee"]

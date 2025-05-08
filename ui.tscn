@@ -1,11 +1,11 @@
 [gd_scene load_steps=14 format=3 uid="uid://cgg3wj7qmm82k"]
 
-[ext_resource type="Texture2D" uid="uid://b31bmq6ic45x4" path="res://assets/UiCozyFree.png" id="1_0nmgk"]
+[ext_resource type="Texture2D" uid="uid://d1berrcdk6q5h" path="res://assets/UiCozyFree.png" id="1_0nmgk"]
 [ext_resource type="Script" uid="uid://dd1h42n0pur8v" path="res://scripts/ui.gd" id="1_jrgg3"]
-[ext_resource type="Texture2D" uid="uid://okjhhhakrv5i" path="res://assets/coin.png" id="2_nl5x1"]
-[ext_resource type="FontFile" uid="uid://cnsanuu30yju6" path="res://assets/Pixeloid_Font_0_5/TrueType (.ttf)/PixeloidSans.ttf" id="3_3ad0y"]
+[ext_resource type="Texture2D" uid="uid://m32urgor4lr" path="res://assets/coin.png" id="2_nl5x1"]
+[ext_resource type="FontFile" uid="uid://bvn5qwiyahjf2" path="res://assets/Pixeloid_Font_0_5/TrueType (.ttf)/PixeloidSans.ttf" id="3_3ad0y"]
 [ext_resource type="PackedScene" uid="uid://b0lpmhv6mixl3" path="res://esc_menu.tscn" id="5_7r1d0"]
-[ext_resource type="Texture2D" uid="uid://db0h5imsbqj4f" path="res://assets/basket_metal.png" id="5_ek2fw"]
+[ext_resource type="Texture2D" uid="uid://bamlbg5mwsaks" path="res://assets/basket_metal.png" id="5_ek2fw"]
 [ext_resource type="PackedScene" uid="uid://djl2sfnh1uyib" path="res://furniture/appliances/fridge_menu.tscn" id="6_q2og3"]
 [ext_resource type="PackedScene" uid="uid://buqmkep1ld8xc" path="res://store.tscn" id="7_6lp0b"]
 
