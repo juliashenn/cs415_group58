@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bmp4y3r64mrl4"]
+[gd_scene load_steps=33 format=3 uid="uid://bmp4y3r64mrl4"]
 
 [ext_resource type="Script" uid="uid://npda5a57xqqa" path="res://scripts/restaurant.gd" id="1_82xtb"]
 [ext_resource type="PackedScene" uid="uid://c8xlhy0p8wot0" path="res://Player.tscn" id="2_u2x88"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://c2iixnta5l20k" path="res://plate.tscn" id="15_dg7ln"]
 [ext_resource type="PackedScene" uid="uid://drc5ahbsufdex" path="res://furniture/appliances/counter_2.tscn" id="15_tqc25"]
 [ext_resource type="PackedScene" uid="uid://8mw21oglmtr8" path="res://furniture/appliances/fridge.tscn" id="16_dvxpe"]
+[ext_resource type="PackedScene" uid="uid://bpcvrf3jy6jo3" path="res://furniture/chairs/chair1l.tscn" id="16_o1kau"]
 [ext_resource type="PackedScene" uid="uid://4x4shgoweud" path="res://customer_amelia.tscn" id="17_mv1iw"]
 [ext_resource type="Script" uid="uid://cvukqdxbhanbc" path="res://customer_spawner.gd" id="18_obl2x"]
 [ext_resource type="PackedScene" uid="uid://qhj16dyijiao" path="res://furniture/appliances/cutting_board.tscn" id="19_3pth6"]
@@ -241,6 +242,9 @@ shape = SubResource("RectangleShape2D_q6nsb")
 one_way_collision = true
 
 [node name="tables" type="Node" parent="."]
+
+[node name="Chair1" parent="tables" instance=ExtResource("16_o1kau")]
+position = Vector2(423, 324)
 
 [node name="Stove" parent="." groups=["stove"] instance=ExtResource("12_4ec08")]
 position = Vector2(428, 46)
