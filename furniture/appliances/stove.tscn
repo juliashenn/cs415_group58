@@ -125,8 +125,17 @@ shape = SubResource("RectangleShape2D_eim6s")
 position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_v45k4")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_yqlgm")
-volume_db = -10.0
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 14.7059)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(9.53674e-07, -14.7059)
+shape = SubResource("RectangleShape2D_eim6s")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_v45k4")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

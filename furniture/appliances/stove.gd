@@ -15,12 +15,14 @@ var cookingdict = {
 	"res://assets/ingredients/meat.png": "res://assets/ingredients/steak.png",
 	"res://assets/ingredients/frenchfries.png": "res://assets/ingredients/fries.png",
 	"res://assets/ingredients/bacon_raw.png": "res://assets/ingredients/bacon.png",
+	"res://assets/ingredients/flour.png": "res://assets/ingredients/bread.png",
 	"res://assets/ingredients/fish.png": "res://assets/ingredients/fish_cooked.png",
-	"res://assets/ingredients/corn.png": "res://assets/ingredients/popcorn.png"
+	"res://assets/ingredients/carrot.png": "res://assets/ingredients/carrot_cake.png"
 }
 
 var canchop = [
-	"res://assets/ingredients/friedegg.png"
+	"res://assets/ingredients/friedegg.png", 
+	"res://assets/ingredients/bread.png"
 ]
 
 #carrot -> carrot cake, corn -> popcorn
@@ -38,7 +40,7 @@ func _ready():
 	super()
 	
 func _on_check(): # cooking is they are holding food, it gets onto stove, and itll return to their hands cooked
-	print(player.holdingObject)
+#	print(player.holdingObject)
 	if not player.holdingObject:
 		return false
 #	print(player.has_node("Food"))
@@ -58,9 +60,7 @@ func _on_interact():
 			foodobj = child
 	if cooking:
 		$Timer.paused = false
-		$AudioStreamPlayer.play()
 	elif hasFood:
-		$AudioStreamPlayer.play()
 		foodpath = foodobj.getFood()
 		player.holdingObject = false
 		player.remove_child(foodobj)
@@ -88,7 +88,6 @@ func _process(delta):
 		$ProgressBar.value = ($Timer.wait_time - $Timer.time_left)/$Timer.wait_time*100
 	elif $ProgressBar.visible:
 		$Timer.paused = true
-		$AudioStreamPlayer.stop()
 #		$ProgressBar.visible = false
 #		$Pan.visible = false
 #		cooking = false
@@ -100,7 +99,7 @@ func _on_timer_timeout():
 	$Pan.visible = false
 	$Food.visible = false
 	if cooking:
-		$AudioStreamPlayer.stop()
+	
 		var foodref = load("res://food.tscn").instantiate()
 
 		foodref.setFood(cookingdict[foodpath])
@@ -112,7 +111,3 @@ func _on_timer_timeout():
 		player.updateObjectPosition(3)
 		player.holdingObject = true
 		cooking = false
-
-func levelUp():
-	SPEED += 1
-	$Timer.wait_time /= SPEED

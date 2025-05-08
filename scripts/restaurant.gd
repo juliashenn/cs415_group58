@@ -17,11 +17,10 @@ func _ready():
 	)
 	print(Global.currently_placing_item)
 
-func _on_audio_finished():
-	$AudioStreamPlayer.play()
-	
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
 	if Input.is_action_just_pressed("escape"):
 		get_tree().paused = not get_tree().paused
 		$CanvasLayer/UI.openEsc()

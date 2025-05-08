@@ -4,32 +4,20 @@ extends placed_item
 @onready var player = get_tree().get_first_node_in_group("player")
 
 var is_occupied: bool = false
-var sit_right: bool = false  # false for left chairs
+var sit_right: bool = true  # false for left chairs
 var servedFood = false
 var finishedEating = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	super()
 	interaction_area.interact = Callable(self, "_on_interact")
 	interaction_area.type = Callable(self, "_on_check")
 	$ProgressBar.visible = false
 	$Plate.visible = false
 	
-	super()
-	item_type = "chair1"
+	item_type = "chair3"
 
-#func _on_interact():
-##	$CollisionShape2D.disabled = true
-	#player.position = $TextureRect.global_position
-	#player.position.x += 18
-	#player.position.y -= 8
-	#print("Player sitting at left chair: ", player.position)
-#
-	#player.update_sit_animation(false)
-	#
-#func _on_interact():
-	#seat_character(player, sit_right)
-	
 func _on_check(): # cooking is they are holding food, it gets onto board, and itll return to their hands chopped
 #	print(player.holdingObject)
 	if servedFood and finishedEating:
@@ -80,24 +68,12 @@ func seat_character(character: Node2D, sit_right: bool):
 		character.update_sit_animation(sit_right)
 
 	is_occupied = true # false for left chair
-	
-	#character.leave_waiting_line()
-	
+
+	#character.leave_waiting_line()  # Make sure the customer leaves the queue
+
 
 func _on_timer_timeout():
 	$Timer.stop()
 	$ProgressBar.visible = false
 	finishedEating = true
 	$Plate/Food.visible = false
-
-	# Customer paying
-	var coin = preload("res://Coin.tscn").instantiate()
-	coin.global_position = $Plate.global_position + Vector2(10, 8)
-	get_tree().current_scene.add_child(coin)
-
-	# Tell customer to leave
-	if seated_customer:
-		seated_customer.leave_restaurant()
-		seated_customer.assigned_seat = null
-		seated_customer.in_queue = false
-		seated_customer.queue_index = -1

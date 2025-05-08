@@ -61,13 +61,13 @@ func _on_furniture_button_pressed(button):
 	
 func _on_level_cutting_button_pressed(button):
 	pop()
-	ui.removeCoins(1000*cuttingBoard.SPEED)
+	Global.money -= (1000*cuttingBoard.SPEED)
 	cuttingBoard.levelUp()
 	$Level/Level/GridContainer/VSplitContainer2/HBoxContainer/Label.text = str(1000*cuttingBoard.SPEED)
 	
 func _on_level_stove_button_pressed(button):
 	pop()
-	ui.removeCoins(1000*stove.SPEED)
+	Global.money -= (1000*stove.SPEED)
 	stove.levelUp()
 	$Level/Level/GridContainer/VSplitContainer/HBoxContainer/Label.text = str(1000*stove.SPEED)
 	

@@ -4,7 +4,7 @@ var tilemap
 var edit_mode := false
 var shop_mode := false
 
-#var money := 5000
+var money := 5000
 var currently_placing_item : Node = null
 
 #tscn, price, qty owned

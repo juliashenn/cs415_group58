@@ -1,6 +1,5 @@
 extends placed_item
 
-
 @onready var interaction_area: InteractionArea = $InteractionArea
 @onready var player = get_tree().get_first_node_in_group("player")
 
@@ -8,7 +7,7 @@ var SPEED: float = 1
 
 @onready var openedImg = $Opened
 @onready var closedImg = $Closed
-@onready var ui = get_tree().get_first_node_in_group("ui")
+@onready var menu = $CanvasLayer/FridgeMenu
 
 var opened = false
 
@@ -18,7 +17,7 @@ func _ready():
 	
 	interaction_area.interact = Callable(self, "_on_interact")
 	openedImg.visible = false
-	ui.closeFridge()
+	menu.visible = false
 
 func _on_interact():
 	#player.position = openedImg.global_position
@@ -41,7 +40,8 @@ func open():
 	ui.openFridge()
 	
 func close():
+	#print("WHY WILL YOU NOT CLOSE")
 	opened = false
 	openedImg.visible = false
 	closedImg.visible = true
-	ui.closeFridge()
+	menu.visible = false

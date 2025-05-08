@@ -1,6 +1,5 @@
 extends Control
 
-
 @onready var player = get_tree().get_first_node_in_group("player")
 #@onready var fridge = get_tree().get_first_node_in_group("fridge")
 
@@ -28,19 +27,15 @@ var cookchop = {
 func _ready():
 	for button in $PanelContainer/GridContainer.get_children():
 		button.pressed.connect(_on_food_button_pressed.bind(button))
-		
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
-
 func _on_texture_button_pressed():
 	visible = false
 	#fridge.close()
 #	get_parent().get_parent().close()
-
 
 func _on_food_button_pressed(button):
 	var foodtext = button.texture_normal

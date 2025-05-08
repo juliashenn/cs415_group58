@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://boc3orqsbhw8f" path="res://assets/ingredients/salad.png" id="5_5rt8f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xoviv"]
-size = Vector2(96, 112)
+size = Vector2(180, 148)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ctq0h"]
 size = Vector2(31, 32)
@@ -28,7 +28,7 @@ script = ExtResource("1_2gsp2")
 action_name = "sit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-position = Vector2(-9, -1)
+position = Vector2(-14, 4)
 shape = SubResource("RectangleShape2D_xoviv")
 
 [node name="TextureRect" type="TextureRect" parent="."]

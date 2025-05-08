@@ -56,6 +56,7 @@ texture = ExtResource("3_tsc4r")
 metadata/_edit_use_anchors_ = true
 
 [node name="InteractionArea" parent="." instance=ExtResource("4_qt2xl")]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 position = Vector2(0, 12)
@@ -113,8 +114,7 @@ shape = SubResource("RectangleShape2D_w3tbc")
 position = Vector2(0, -12)
 shape = SubResource("RectangleShape2D_jhklc")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_paprl")
-volume_db = -10.0
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 14.7059)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
