@@ -1,0 +1,88 @@
+[gd_scene load_steps=8 format=3 uid="uid://drc5ahbsufdex"]
+
+[ext_resource type="Script" uid="uid://d0jwxudm4eq13" path="res://furniture/appliances/counter_2.gd" id="1_ivo4p"]
+[ext_resource type="Texture2D" uid="uid://cgcspai02rckr" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 129.png" id="2_kn74g"]
+[ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="3_pq8gm"]
+[ext_resource type="Texture2D" uid="uid://bhyrl5m2ofd7p" path="res://assets/ingredients/banana.png" id="4_uwbq1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mnax2"]
+size = Vector2(80, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gl2wf"]
+size = Vector2(24.25, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_70fkt"]
+size = Vector2(78, 46)
+
+[node name="Counter2" type="Sprite2D"]
+texture_filter = 1
+script = ExtResource("1_ivo4p")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_left = -1.0
+anchor_right = 2.0
+anchor_bottom = 8.0
+offset_left = -39.0
+offset_top = -24.0
+offset_right = 38.0
+offset_bottom = 16.0
+texture = ExtResource("2_kn74g")
+expand_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_mnax2")
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_pq8gm")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(-20.125, -11)
+shape = SubResource("RectangleShape2D_gl2wf")
+
+[node name="Item" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.5
+offset_top = -10.5
+offset_right = 4.5
+offset_bottom = 16.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_uwbq1")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="InteractionArea2" parent="." instance=ExtResource("3_pq8gm")]
+position = Vector2(40, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea2"]
+position = Vector2(-21, -11)
+shape = SubResource("RectangleShape2D_gl2wf")
+
+[node name="Item2" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 16.5
+offset_top = -11.5
+offset_right = 42.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_uwbq1")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_70fkt")

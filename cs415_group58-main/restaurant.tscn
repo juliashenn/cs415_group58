@@ -1,0 +1,246 @@
+[gd_scene load_steps=27 format=3 uid="uid://bmp4y3r64mrl4"]
+
+[ext_resource type="Script" uid="uid://npda5a57xqqa" path="res://scripts/restaurant.gd" id="1_82xtb"]
+[ext_resource type="PackedScene" uid="uid://c8xlhy0p8wot0" path="res://Player.tscn" id="2_u2x88"]
+[ext_resource type="Texture2D" uid="uid://dx4og1nqmwrd4" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 63.png" id="3_2wmmu"]
+[ext_resource type="Texture2D" uid="uid://dxfwci4xuwih" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 81.png" id="4_5jf2j"]
+[ext_resource type="Texture2D" uid="uid://cgfs4y8he880r" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 1.png" id="4_174yq"]
+[ext_resource type="Texture2D" uid="uid://bogymfw37htnt" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 61.png" id="6_a1xxl"]
+[ext_resource type="Texture2D" uid="uid://dvoe270llbqkr" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 71.png" id="6_n0b4b"]
+[ext_resource type="Texture2D" uid="uid://1mwjb38j5r53" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 73.png" id="7_ryk5y"]
+[ext_resource type="Texture2D" uid="uid://cw3m7kbea3v55" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 67.png" id="8_vy8mu"]
+[ext_resource type="Texture2D" uid="uid://dsj1nx0fiikeq" path="res://assets/sierrassets furniture pack/floors and walls/individual sprites/Slice 83.png" id="9_eie4v"]
+[ext_resource type="PackedScene" uid="uid://dfy2v1213lere" path="res://furniture/appliances/stove.tscn" id="12_4ec08"]
+[ext_resource type="Texture2D" uid="uid://mmw3uq0fl7k4" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 488.png" id="12_bi1dk"]
+[ext_resource type="PackedScene" uid="uid://c3mvml62iyc8p" path="res://furniture/appliances/counter.tscn" id="14_bvwq6"]
+[ext_resource type="PackedScene" uid="uid://8mw21oglmtr8" path="res://furniture/appliances/fridge.tscn" id="16_dvxpe"]
+[ext_resource type="PackedScene" uid="uid://bpcvrf3jy6jo3" path="res://furniture/chairs/chair1l.tscn" id="16_o1kau"]
+[ext_resource type="Script" uid="uid://cvukqdxbhanbc" path="res://customer_spawner.gd" id="18_obl2x"]
+[ext_resource type="PackedScene" uid="uid://qhj16dyijiao" path="res://furniture/appliances/cutting_board.tscn" id="19_3pth6"]
+[ext_resource type="PackedScene" uid="uid://hh3laq4w1ki0" path="res://furniture/appliances/dish_pile.tscn" id="19_q8ksr"]
+[ext_resource type="PackedScene" uid="uid://dc1qigu4eikai" path="res://furniture/chairs/chair1r.tscn" id="20_c81dn"]
+[ext_resource type="PackedScene" uid="uid://d1yvbk2n05b3w" path="res://furniture/tables/table1.tscn" id="21_pghrv"]
+[ext_resource type="PackedScene" uid="uid://cgg3wj7qmm82k" path="res://ui.tscn" id="21_ts0aw"]
+[ext_resource type="AudioStream" uid="uid://dn0gtad18gyth" path="res://assets/sound/Aylex - Italy (freetouse.com).mp3" id="26_5qofs"]
+
+[sub_resource type="TileSet" id="TileSet_o1kau"]
+tile_size = Vector2i(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i66li"]
+size = Vector2(1156, 72.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q6nsb"]
+size = Vector2(672, 67)
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_womg2"]
+vertices = PackedVector2Array(83, 210, 81, 187, 131, 191, 133, 340, 87, 564, 1069, 566, 1070.13, 434.522, 1071, 334)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 0, 3), PackedInt32Array(5, 4, 3, 6), PackedInt32Array(6, 3, 7)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(83, 210, 87, 564, 1069, 566, 1070.13, 434.522, 1071, 334, 133, 340, 131, 191, 81, 187)])
+
+[node name="Restaurant" type="Node2D"]
+script = ExtResource("1_82xtb")
+
+[node name="Sprite2D" type="TextureRect" parent="."]
+z_index = 2
+texture_filter = 1
+offset_left = 81.0
+offset_top = -2.0
+offset_right = 97.0
+offset_bottom = 30.0
+scale = Vector2(2.875, 2.25)
+texture = ExtResource("12_bi1dk")
+stretch_mode = 4
+
+[node name="tilegrid" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_o1kau")
+
+[node name="Floor" type="TextureRect" parent="."]
+z_index = -2
+texture_filter = 1
+offset_right = 1151.0
+offset_bottom = 648.0
+texture = ExtResource("4_174yq")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="WallN" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 1152.0
+offset_bottom = 46.0
+texture = ExtResource("3_2wmmu")
+
+[node name="CornerSW" type="TextureRect" parent="WallN"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_top = 604.0
+offset_right = 48.0
+offset_bottom = 650.0
+texture = ExtResource("4_5jf2j")
+stretch_mode = 4
+
+[node name="CornerNE" type="TextureRect" parent="WallN"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1107.0
+offset_right = 1155.0
+offset_bottom = 46.0
+texture = ExtResource("6_a1xxl")
+stretch_mode = 4
+flip_h = true
+
+[node name="WallE" type="TextureRect" parent="WallN"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1107.0
+offset_top = 73.0
+offset_right = 1153.0
+offset_bottom = 647.0
+texture = ExtResource("6_n0b4b")
+flip_h = true
+
+[node name="TextureRect" type="TextureRect" parent="WallN"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 34.0
+offset_right = 1151.0
+offset_bottom = 74.0
+texture = ExtResource("7_ryk5y")
+
+[node name="TextureRect2" type="TextureRect" parent="WallN"]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 46.0
+offset_bottom = 74.0
+texture = ExtResource("8_vy8mu")
+
+[node name="TextureRect3" type="TextureRect" parent="WallN"]
+layout_mode = 0
+offset_left = 1107.0
+offset_top = 32.0
+offset_right = 1153.0
+offset_bottom = 74.0
+texture = ExtResource("8_vy8mu")
+flip_h = true
+
+[node name="WallW" type="TextureRect" parent="WallN"]
+texture_filter = 1
+layout_mode = 0
+offset_top = 72.0
+offset_right = 46.0
+offset_bottom = 645.0
+texture = ExtResource("6_n0b4b")
+
+[node name="TextureRect" type="TextureRect" parent="WallN/WallW"]
+layout_mode = 0
+offset_top = 534.0
+offset_right = 46.0
+offset_bottom = 576.0
+texture = ExtResource("4_5jf2j")
+
+[node name="TextureRect2" type="TextureRect" parent="WallN/WallW"]
+layout_mode = 0
+offset_left = 1107.0
+offset_top = 534.0
+offset_right = 1153.0
+offset_bottom = 576.0
+texture = ExtResource("4_5jf2j")
+flip_h = true
+
+[node name="CornerNW" type="TextureRect" parent="WallN"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 48.0
+offset_bottom = 46.0
+texture = ExtResource("6_a1xxl")
+stretch_mode = 4
+
+[node name="WallS" type="TextureRect" parent="WallN"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 45.0
+offset_top = 606.0
+offset_right = 1107.0
+offset_bottom = 648.0
+texture = ExtResource("9_eie4v")
+
+[node name="Player" parent="." instance=ExtResource("2_u2x88")]
+position = Vector2(517, 243)
+
+[node name="WallCollision" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallCollision"]
+position = Vector2(578, 10)
+rotation = -3.14159
+shape = SubResource("RectangleShape2D_i66li")
+one_way_collision = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="WallCollision"]
+position = Vector2(575, 643.125)
+shape = SubResource("RectangleShape2D_i66li")
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="WallCollision"]
+position = Vector2(11.5, 326)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_q6nsb")
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="WallCollision"]
+position = Vector2(1147, 322)
+rotation = -1.5708
+shape = SubResource("RectangleShape2D_q6nsb")
+one_way_collision = true
+
+[node name="tables" type="Node" parent="."]
+
+[node name="Chair1" parent="tables" instance=ExtResource("16_o1kau")]
+position = Vector2(361, 421)
+
+[node name="Chair2" parent="tables" instance=ExtResource("20_c81dn")]
+position = Vector2(218, 418)
+
+[node name="Stove" parent="." groups=["stove"] instance=ExtResource("12_4ec08")]
+position = Vector2(432, 107)
+
+[node name="CuttingBoard" parent="." groups=["cuttingBoard"] instance=ExtResource("19_3pth6")]
+position = Vector2(505, 107)
+
+[node name="Fridge" parent="." instance=ExtResource("16_dvxpe")]
+position = Vector2(359, 110)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_womg2")
+
+[node name="CustomerLineStartMarker" type="Marker2D" parent="."]
+position = Vector2(108, 303)
+
+[node name="CustomerSpawner" type="Node2D" parent="."]
+script = ExtResource("18_obl2x")
+seat_container_path = NodePath("../tables")
+
+[node name="SpawnTimer" type="Timer" parent="CustomerSpawner"]
+wait_time = 0.5
+autostart = true
+
+[node name="DoorMarker" type="Marker2D" parent="."]
+position = Vector2(98, 53)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" groups=["ui"] instance=ExtResource("21_ts0aw")]
+mouse_filter = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("26_5qofs")
+volume_db = -30.0
+autoplay = true
+
+[node name="dishPile" parent="." instance=ExtResource("19_q8ksr")]
+position = Vector2(655, 104)
+
+[node name="Counter" parent="." instance=ExtResource("14_bvwq6")]
+position = Vector2(571, 107)
+
+[node name="Table1" parent="." instance=ExtResource("21_pghrv")]
+position = Vector2(289, 411)

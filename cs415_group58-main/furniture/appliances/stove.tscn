@@ -1,0 +1,132 @@
+[gd_scene load_steps=12 format=3 uid="uid://dfy2v1213lere"]
+
+[ext_resource type="Script" uid="uid://doidrue4qfm3q" path="res://furniture/appliances/stove.gd" id="1_gdtb6"]
+[ext_resource type="Texture2D" uid="uid://dasukw8neycr3" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 19.png" id="1_knrlc"]
+[ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="2_mvdwu"]
+[ext_resource type="Texture2D" uid="uid://dxyb0pgt8xmi7" path="res://assets/frying pan.png" id="4_jg10j"]
+[ext_resource type="AudioStream" uid="uid://b7ogikisxr8da" path="res://assets/sound/140453__aesqe__cooking_02.wav" id="5_yqlgm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8tfon"]
+size = Vector2(64, 80)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6wjoo"]
+bg_color = Color(0.552941, 0.87451, 0.603922, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="Gradient" id="Gradient_1jst1"]
+offsets = PackedFloat32Array(0, 0.954839, 0.980645, 1)
+colors = PackedColorArray(0.219501, 0.219501, 0.219501, 0.631373, 0.192556, 0.192556, 0.192556, 0.847826, 0, 0, 0, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sg4c5"]
+gradient = SubResource("Gradient_1jst1")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eim6s"]
+size = Vector2(46, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v45k4"]
+size = Vector2(48, 32)
+
+[node name="Stove" type="Sprite2D"]
+script = ExtResource("1_gdtb6")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = -1
+anchor_left = -5.0
+anchor_right = 3.0
+anchor_bottom = 8.0
+offset_left = -19.0
+offset_top = -24.0
+offset_right = 21.0
+offset_bottom = 16.0
+grow_horizontal = 2
+texture = ExtResource("1_knrlc")
+metadata/_edit_use_anchors_ = true
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_mvdwu")]
+position = Vector2(0, -11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(0, 27)
+shape = SubResource("RectangleShape2D_8tfon")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+texture_filter = 1
+anchors_preset = -1
+anchor_left = -1.0
+anchor_top = 25.0
+anchor_right = -1.0
+anchor_bottom = 25.0
+offset_left = -18.0
+offset_top = -65.0
+offset_right = 20.0
+offset_bottom = -57.0
+theme_override_font_sizes/font_size = 10
+theme_override_styles/fill = SubResource("StyleBoxFlat_6wjoo")
+value = 50.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+
+[node name="Pan" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = -4.0
+offset_top = -20.0
+offset_right = 28.0
+offset_bottom = 12.0
+texture = ExtResource("4_jg10j")
+stretch_mode = 4
+flip_h = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Food" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = -1
+anchor_left = -1.0
+anchor_top = 25.0
+anchor_right = -1.0
+anchor_bottom = 25.0
+offset_left = 4.0
+offset_top = -39.0
+offset_right = 17.0
+offset_bottom = -26.0
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Circle" type="TextureRect" parent="."]
+offset_left = -8.0
+offset_top = -64.0
+offset_right = 8.0
+offset_bottom = -48.0
+texture = SubResource("GradientTexture2D_sg4c5")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 14.7059)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(9.53674e-07, -14.7059)
+shape = SubResource("RectangleShape2D_eim6s")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_v45k4")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_yqlgm")
+volume_db = -10.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

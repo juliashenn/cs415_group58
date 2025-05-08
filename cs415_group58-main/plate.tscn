@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2iixnta5l20k"]
+
+[ext_resource type="Script" uid="uid://d1xq1pihkjblx" path="res://scripts/plate.gd" id="1_3pa1j"]
+[ext_resource type="Texture2D" uid="uid://btpr2hachs56b" path="res://assets/01_dish.png" id="2_nlu2m"]
+[ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="3_dfp54"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_drkwh"]
+size = Vector2(59.5, 54)
+
+[node name="Plate" type="Node2D" groups=["object"]]
+script = ExtResource("1_3pa1j")
+
+[node name="plate" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -18.0
+offset_right = 24.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_nlu2m")
+
+[node name="Food" type="TextureRect" parent="."]
+visible = false
+texture_filter = 1
+offset_left = -14.0
+offset_top = -14.0
+offset_right = 15.0
+offset_bottom = 17.0
+expand_mode = 1
+stretch_mode = 4
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_dfp54")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_drkwh")

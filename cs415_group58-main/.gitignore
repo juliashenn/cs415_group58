@@ -1,0 +1,20 @@
+# Godot 4+ specific ignores
+.godot/
+.import/
+.export/
+.export-*/*
+*.import
+*.godot-export
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs/editors
+.vscode/
+*.code-workspace
+.idea/
+
+# Misc
+*.log
