@@ -1,9 +1,9 @@
 [gd_scene load_steps=55 format=3 uid="uid://dqk5shdm1rnw3"]
 
 [ext_resource type="Script" uid="uid://dl1ry5qu37jbx" path="res://scripts/customer.gd" id="1_5od4o"]
-[ext_resource type="Texture2D" uid="uid://cilovyt31kgeb" path="res://assets/Modern tiles_Free/Characters_free/Alex_idle_anim_16x16.png" id="1_63mbx"]
-[ext_resource type="Texture2D" uid="uid://d1jrhtyobx2st" path="res://assets/Modern tiles_Free/Characters_free/Alex_run_16x16.png" id="2_5od4o"]
-[ext_resource type="Texture2D" uid="uid://cwb3qpuvj1s5v" path="res://assets/Modern tiles_Free/Characters_free/Alex_sit3_16x16.png" id="3_5fpov"]
+[ext_resource type="Texture2D" uid="uid://cgu5q0s53xxgj" path="res://assets/Modern tiles_Free/Characters_free/Alex_idle_anim_16x16.png" id="1_63mbx"]
+[ext_resource type="Texture2D" uid="uid://bfxqbe7gp0v8n" path="res://assets/Modern tiles_Free/Characters_free/Alex_run_16x16.png" id="2_5od4o"]
+[ext_resource type="Texture2D" uid="uid://x105f55x480w" path="res://assets/Modern tiles_Free/Characters_free/Alex_sit3_16x16.png" id="3_5fpov"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_foryv"]
 atlas = ExtResource("1_63mbx")
@@ -408,3 +408,8 @@ disabled = true
 
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
 radius = 8.0
+
+[node name="FoodOrderSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -20)
+scale = Vector2(0.7, 0.7)

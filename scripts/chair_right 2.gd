@@ -8,6 +8,7 @@ var sit_right: bool = true  # false for left chairs
 var servedFood = false
 var finishedEating = false
 var seated_customer: Node2D = null
+#var coin: Node2D = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -57,6 +58,8 @@ func _on_interact():
 		$Plate.visible = false
 		seated_customer = null
 		is_occupied = false
+		#if coin.is_coin_collected == true:
+		call_deferred("_check_waiting_line")
 	elif not servedFood and hasFood:
 		servedFood = true
 		player.holdingObject = false
@@ -64,12 +67,32 @@ func _on_interact():
 		$Plate/Food.texture = load(foodobj.foodpath)
 		$Plate/Food.visible = true
 		foodobj.queue_free()
-
+	
 		$ProgressBar.visible = true
 		$Timer.start()
+		
+		if seated_customer and seated_customer.has_node("FoodOrderSprite"):
+			seated_customer.get_node("FoodOrderSprite").visible = false
 
-#	seat_character(player, sit_right)
 
+
+func _check_waiting_line():
+	var waiting_customers = get_tree().get_nodes_in_group("waiting_customers")
+	waiting_customers.sort_custom(Callable(self, "_compare_queue_index"))
+	for customer in waiting_customers:
+		customer.check_if_seat_open()
+
+func _compare_queue_index(a, b):
+	return a.queue_index > b.queue_index
+
+#func shift_waiting_line():
+	#var customers = get_tree().get_nodes_in_group("waiting_customers")
+	#customers.sort_custom(Callable(self, "_compare_queue_index"))  # sort oldest → newest
+	#
+	#for i in range(customers.size()):
+		#customers[i].queue_index = i
+		#customers[i].move_to_line_position(i)
+		#
 
 # seating customers and players
 func seat_character(character: Node2D, sit_right: bool):
