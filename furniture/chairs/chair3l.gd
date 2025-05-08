@@ -4,7 +4,7 @@ extends placed_item
 @onready var player = get_tree().get_first_node_in_group("player")
 
 var is_occupied: bool = false
-var sit_right: bool = true  # false for left chairs
+var sit_right: bool = false  # false for left chairs
 var servedFood = false
 var finishedEating = false
 var seated_customer: Node2D = null
@@ -17,7 +17,7 @@ func _ready():
 	$Plate.visible = false
 	
 	super()
-	item_type = "chair3"
+	item_type = "chair3l"
 
 #func _on_interact():
 ##	$CollisionShape2D.disabled = true

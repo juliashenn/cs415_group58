@@ -1,10 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://cvgfuhbxk0nie"]
+[gd_scene load_steps=10 format=3 uid="uid://duwtcj5341ryn"]
 
-[ext_resource type="Script" uid="uid://cuinta4p7e6wk" path="res://furniture/chairs/chair3.gd" id="1_xfdd0"]
-[ext_resource type="Texture2D" uid="uid://dv0mempx0tcwv" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 237.png" id="2_wnu8j"]
-[ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="3_tm58c"]
-[ext_resource type="Texture2D" uid="uid://bt8024x5hu125" path="res://assets/01_dish.png" id="4_bb2xu"]
-[ext_resource type="Texture2D" uid="uid://boc3orqsbhw8f" path="res://assets/ingredients/salad.png" id="5_p8oi2"]
+[ext_resource type="Script" uid="uid://cuinta4p7e6wk" path="res://furniture/chairs/chair3r.gd" id="1_6pktd"]
+[ext_resource type="Texture2D" uid="uid://dv0mempx0tcwv" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 237.png" id="2_le37q"]
+[ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="3_wndre"]
+[ext_resource type="Texture2D" uid="uid://bt8024x5hu125" path="res://assets/01_dish.png" id="4_ppvf4"]
+[ext_resource type="Texture2D" uid="uid://boc3orqsbhw8f" path="res://assets/ingredients/salad.png" id="5_4we2w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3t0ta"]
 size = Vector2(160, 19.3939)
@@ -23,7 +23,7 @@ size = Vector2(32, 32)
 size = Vector2(32, 16)
 
 [node name="Chair3" type="Sprite2D"]
-script = ExtResource("1_xfdd0")
+script = ExtResource("1_6pktd")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -39,9 +39,10 @@ offset_bottom = 23.5
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("2_wnu8j")
+texture = ExtResource("2_le37q")
+flip_h = true
 
-[node name="InteractionArea" parent="." instance=ExtResource("3_tm58c")]
+[node name="InteractionArea" parent="." instance=ExtResource("3_wndre")]
 action_name = "sit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
@@ -64,12 +65,12 @@ wait_time = 4.0
 
 [node name="Plate" type="TextureRect" parent="."]
 texture_filter = 1
-offset_left = 23.0
-offset_top = -35.0
-offset_right = 72.0
-offset_bottom = 21.0
+offset_left = -56.0
+offset_top = -39.0
+offset_right = -6.99999
+offset_bottom = 17.0
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("4_bb2xu")
+texture = ExtResource("4_ppvf4")
 
 [node name="Food" type="TextureRect" parent="Plate"]
 layout_mode = 0
@@ -78,7 +79,7 @@ offset_top = 14.0
 offset_right = 63.0
 offset_bottom = 63.0
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("5_p8oi2")
+texture = ExtResource("5_4we2w")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(0, 14.7059)

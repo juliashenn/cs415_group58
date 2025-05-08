@@ -1,0 +1,97 @@
+[gd_scene load_steps=10 format=3 uid="uid://cd2jib8u6ruxd"]
+
+[ext_resource type="Script" uid="uid://bieymrl5qqe75" path="res://furniture/chairs/chair2l.gd" id="1_vlw5n"]
+[ext_resource type="Texture2D" uid="uid://carqm6ykcox8h" path="res://assets/sierrassets furniture pack/furniture/individual sprites/part-Slice 236.png" id="2_4tkhe"]
+[ext_resource type="PackedScene" uid="uid://10x4q8d16gbp" path="res://interaction_area.tscn" id="3_hejf1"]
+[ext_resource type="Texture2D" uid="uid://bt8024x5hu125" path="res://assets/01_dish.png" id="4_esofi"]
+[ext_resource type="Texture2D" uid="uid://boc3orqsbhw8f" path="res://assets/ingredients/salad.png" id="5_o3wnb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3t0ta"]
+size = Vector2(160, 19.3939)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pq6ee"]
+bg_color = Color(0.552941, 0.87451, 0.603922, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6g0a"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_18hws"]
+size = Vector2(32, 16)
+
+[node name="Chair2" type="Sprite2D"]
+script = ExtResource("1_vlw5n")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.5
+offset_top = -16.5
+offset_right = 23.5
+offset_bottom = 23.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_4tkhe")
+flip_h = true
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_hejf1")]
+action_name = "sit"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+scale = Vector2(0.8, 6.6)
+shape = SubResource("RectangleShape2D_3t0ta")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+texture_filter = 1
+offset_left = -19.0
+offset_top = -48.0
+offset_right = 19.0
+offset_bottom = -40.0
+theme_override_font_sizes/font_size = 10
+theme_override_styles/fill = SubResource("StyleBoxFlat_pq6ee")
+value = 50.0
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+
+[node name="Plate" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = -54.0
+offset_top = -38.0
+offset_right = -4.99999
+offset_bottom = 18.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("4_esofi")
+
+[node name="Food" type="TextureRect" parent="Plate"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 14.0
+offset_right = 63.0
+offset_bottom = 63.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_o3wnb")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 14.7059)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -14.7059)
+shape = SubResource("RectangleShape2D_o6g0a")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_18hws")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

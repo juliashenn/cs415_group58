@@ -16,9 +16,12 @@ var furniture = {
 	"counter2": ["res://furniture/appliances/counter_2.tscn"],
 	"dishpile": ["res://furniture/appliances/dish_pile.tscn"],
 	
-	"chair1": ["res://furniture/chairs/chair1.tscn"],
-	"chair2": ["res://furniture/chairs/chair2.tscn"],
-	"chair3": ["res://furniture/chairs/chair3.tscn"],
+	"chair1r": ["res://furniture/chairs/chair1r.tscn"],
+	"chair1l": ["res://furniture/chairs/chair1l.tscn"],
+	"chair2r": ["res://furniture/chairs/chair2r.tscn"],
+	"chair2l": ["res://furniture/chairs/chair2l.tscn"],
+	"chair3r": ["res://furniture/chairs/chair3r.tscn"],
+	"chair3l": ["res://furniture/chairs/chair3l.tscn"],
 	
 	"table1": ["res://furniture/tables/table1.tscn"],
 	"table2": ["res://furniture/tables/table2.tscn"],

@@ -25,11 +25,17 @@ func _ready():
 
 func _on_furniture_button_pressed(button):
 	if button == $Chairs/GridContainer/VSplitContainer/Button:
-		emit_signal("buy_furniture", "chair1")
+		emit_signal("buy_furniture", "chair1r")
+	if button == $Chairs/GridContainer/VSplitContainer4/Button:
+		emit_signal("buy_furniture", "chair1l")
 	if button == $Chairs/GridContainer/VSplitContainer2/Button:
-		emit_signal("buy_furniture", "chair2")
+		emit_signal("buy_furniture", "chair2r")
+	if button == $Chairs/GridContainer/VSplitContainer5/Button:
+		emit_signal("buy_furniture", "chair2l")
 	if button == $Chairs/GridContainer/VSplitContainer3/Button:
-		emit_signal("buy_furniture", "chair3")
+		emit_signal("buy_furniture", "chair3r")
+	if button == $Chairs/GridContainer/VSplitContainer6/Button:
+		emit_signal("buy_furniture", "chair3l")
 		
 	if button == $Tables/GridContainer/VSplitContainer/Button:
 		emit_signal("buy_furniture", "table1")

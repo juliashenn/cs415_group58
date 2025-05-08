@@ -17,7 +17,7 @@ func _ready():
 	$Plate.visible = false
 	
 	super()
-	item_type = "chair1"
+	item_type = "chair2r"
 
 #func _on_interact():
 ##	$CollisionShape2D.disabled = true

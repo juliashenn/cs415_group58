@@ -133,6 +133,37 @@ theme_override_fonts/font = ExtResource("5_tq4q4")
 theme_override_font_sizes/font_size = 14
 text = "100"
 
+[node name="VSplitContainer4" type="VBoxContainer" parent="Chairs/GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="TextureButton" parent="Chairs/GridContainer/VSplitContainer4" groups=["furnitureButton"]]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("3_epy04")
+stretch_mode = 5
+flip_h = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Chairs/GridContainer/VSplitContainer4"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Chairs/GridContainer/VSplitContainer4/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("4_mhflm")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Chairs/GridContainer/VSplitContainer4/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_tq4q4")
+theme_override_font_sizes/font_size = 14
+text = "100"
+
 [node name="VSplitContainer2" type="VBoxContainer" parent="Chairs/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
@@ -163,6 +194,37 @@ theme_override_fonts/font = ExtResource("5_tq4q4")
 theme_override_font_sizes/font_size = 14
 text = "100"
 
+[node name="VSplitContainer5" type="VBoxContainer" parent="Chairs/GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="TextureButton" parent="Chairs/GridContainer/VSplitContainer5" groups=["furnitureButton"]]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("6_i1767")
+stretch_mode = 5
+flip_h = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Chairs/GridContainer/VSplitContainer5"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Chairs/GridContainer/VSplitContainer5/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("4_mhflm")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Chairs/GridContainer/VSplitContainer5/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_tq4q4")
+theme_override_font_sizes/font_size = 14
+text = "100"
+
 [node name="VSplitContainer3" type="VBoxContainer" parent="Chairs/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
@@ -187,6 +249,37 @@ texture = ExtResource("4_mhflm")
 expand_mode = 3
 
 [node name="Label" type="Label" parent="Chairs/GridContainer/VSplitContainer3/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_tq4q4")
+theme_override_font_sizes/font_size = 14
+text = "100"
+
+[node name="VSplitContainer6" type="VBoxContainer" parent="Chairs/GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="TextureButton" parent="Chairs/GridContainer/VSplitContainer6" groups=["furnitureButton"]]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("7_jm01f")
+stretch_mode = 5
+flip_h = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Chairs/GridContainer/VSplitContainer6"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Chairs/GridContainer/VSplitContainer6/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("4_mhflm")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Chairs/GridContainer/VSplitContainer6/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_tq4q4")
